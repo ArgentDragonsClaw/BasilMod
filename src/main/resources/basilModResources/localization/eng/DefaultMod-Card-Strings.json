@@ -1,0 +1,70 @@
+{
+  "basilMod:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "basilMod:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL basilMod:Multiword_Keyword."
+  },
+  "basilMod:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! basilMod:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! basilMod:Keywords."
+  },
+  "basilMod:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "basilMod:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "basilMod:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X basilMod:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 basilMod:Keywords."
+  },
+  "basilMod:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "basilMod:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
+  },
+  "basilMod:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "basilMod:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !basilMod:ENERGY_DAMAGE! damage total.)"
+  },
+  "basilMod:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !basilMod:SecondMagic! poison to an enemy."
+  },
+  "basilMod:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "basilMod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "basilMod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "basilMod:Coffee": {
+    "NAME": "Coffee",
+    "DESCRIPTION": "Gain 2 Caffeine each turn."
+  },
+  "basilMod:Sip": {
+    "NAME": "Sip",
+    "DESCRIPTION": "Gain 1 Caffeine.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Caffeine and heal 1 HP."
+  }
+}
