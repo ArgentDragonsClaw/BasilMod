@@ -50,7 +50,9 @@ public class Rebuttal extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.intent.name().contains("ATTACK")) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, m.getIntentDmg())));
+            for (int i = 0; i < m.damage.size(); i++) { //Attack the same number of times as the enemy
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, m.getIntentDmg())));
+            }
         }
     }
 
