@@ -101,5 +101,10 @@
     "NAME": "Frost Rune",
     "DESCRIPTION": "basilmod:Rune. NL Apply !basilMod:RunescarredValue! Slow. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Apply !basilMod:RunescarredValue! Slow."
+  },
+  "basilMod:EarthRune": {
+    "NAME": "Earth Rune",
+    "DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy."
   }
 }

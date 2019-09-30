@@ -446,6 +446,7 @@ public class BasilMod implements
         BaseMod.addCard(new LightningRune());
         BaseMod.addCard(new FlameRune());
         BaseMod.addCard(new FrostRune());
+        BaseMod.addCard(new EarthRune());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
