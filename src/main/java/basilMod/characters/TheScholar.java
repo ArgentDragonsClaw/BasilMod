@@ -4,6 +4,7 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
+import basilMod.cards.skills.Counter;
 import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
 import com.badlogic.gdx.graphics.Color;
@@ -166,7 +167,7 @@ public class TheScholar extends CustomPlayer {
             retVal.add(Defend.ID);
         }
 
-        retVal.add(Counterspell.ID);
+        retVal.add(Counter.ID);
 
         return retVal;
     }
