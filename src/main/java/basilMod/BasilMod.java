@@ -7,6 +7,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
+import basilMod.cards.powers.Retribution;
 import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
 import basilMod.cards.skills.Sip;
@@ -437,6 +438,7 @@ public class BasilMod implements
         BaseMod.addCard(new Coffee());
         BaseMod.addCard(new Sip());
         BaseMod.addCard(new Counterspell());
+        BaseMod.addCard(new Retribution());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

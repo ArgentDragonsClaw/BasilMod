@@ -70,5 +70,9 @@
   "basilMod:Counterspell": {
     "NAME": "Counterspell",
     "DESCRIPTION": "If the enemy intends to debuff, gain !M! artifact."
+  },
+  "basilMod:Retribution": {
+    "NAME": "Retribution",
+    "DESCRIPTION": "Whenever an enemy inflicts a debuff, apply 2 constricted to ALL enemies."
   }
 }

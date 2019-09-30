@@ -14,5 +14,13 @@
         "basilMod:Coffee": {
                 "NAME": "Coffee",
                 "DESCRIPTIONS": ["Gain ", " Caffeine each turn."]
+        },
+        "basilMod:Retribution": {
+                "NAME": "Retribution",
+                "DESCRIPTIONS": [
+                        "When an enemy inflicts a debuff, apply 2 constricted to all enemies ",
+                        " time.",
+                        " times."
+                ]
         }
 }
