@@ -66,5 +66,9 @@
     "NAME": "Sip",
     "DESCRIPTION": "Gain 1 Caffeine.",
     "UPGRADE_DESCRIPTION": "Gain 1 Caffeine and heal 1 HP."
+  },
+  "basilMod:Counterspell": {
+    "NAME": "Counterspell",
+    "DESCRIPTION": "If the enemy intends to debuff, gain !M! artifact."
   }
 }

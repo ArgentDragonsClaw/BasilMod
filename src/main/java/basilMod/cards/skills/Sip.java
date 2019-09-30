@@ -50,7 +50,6 @@ public class Sip extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO:: What does this card do?
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Caffeine(p,p,1),1));
         if(this.upgraded) AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, 1));
     }

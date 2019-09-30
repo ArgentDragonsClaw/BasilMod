@@ -7,6 +7,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
+import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
 import basilMod.cards.skills.Sip;
 import basilMod.characters.TheScholar;
@@ -14,6 +15,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -434,6 +436,7 @@ public class BasilMod implements
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new Coffee());
         BaseMod.addCard(new Sip());
+        BaseMod.addCard(new Counterspell());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
