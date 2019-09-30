@@ -32,7 +32,7 @@ public class Counter extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
@@ -47,7 +47,7 @@ public class Counter extends AbstractDynamicCard {
 
     public Counter() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
 
     }
 
