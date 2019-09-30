@@ -5,10 +5,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import basilMod.cards.attacks.LightningRune;
-import basilMod.cards.attacks.Rebuttal;
-import basilMod.cards.attacks.RunicStrike;
-import basilMod.cards.attacks.Strike;
+import basilMod.cards.attacks.*;
 import basilMod.cards.powers.Coffee;
 import basilMod.cards.powers.Retribution;
 import basilMod.cards.skills.Counter;
@@ -24,8 +21,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -46,6 +45,7 @@ import basilMod.util.IDCheckDontTouchPls;
 import basilMod.util.TextureLoader;
 import basilMod.variables.DefaultCustomVariable;
 import basilMod.variables.DefaultSecondMagicNumber;
+import basilMod.CustomTags;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -448,6 +448,7 @@ public class BasilMod implements
         BaseMod.addCard(new Counter());
         BaseMod.addCard(new RunicStrike());
         BaseMod.addCard(new LightningRune());
+        BaseMod.addCard(new FlameRune());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -547,4 +548,8 @@ public class BasilMod implements
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
+
+
 }
+
+

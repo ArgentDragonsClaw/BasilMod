@@ -69,15 +69,15 @@
   },
   "basilMod:Counterspell": {
     "NAME": "Counterspell",
-    "DESCRIPTION": "If the enemy intends to debuff, gain !M! artifact."
+    "DESCRIPTION": "If the enemy intends to debuff, gain !M! Artifact."
   },
   "basilMod:Retribution": {
     "NAME": "Retribution",
-    "DESCRIPTION": "Whenever an enemy inflicts a debuff, apply 2 constricted to ALL enemies."
+    "DESCRIPTION": "Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies."
   },
   "basilMod:Rebuttal": {
     "NAME": "Rebuttal",
-    "DESCRIPTION": "Deal damage equal to an enemy's intended damage."
+    "DESCRIPTION": "Deal Damage equal to an enemy's intended damage."
   },
   "basilMod:Counter": {
     "NAME": "Counter",
@@ -85,11 +85,16 @@
   },
   "basilMod:RunicStrike": {
     "NAME": "Runic Strike",
-    "DESCRIPTION": "Deal !D! damage and gain !M! Runescarred."
+    "DESCRIPTION": "Deal !D! Damage and gain !M! Runescarred."
   },
   "basilMod:LightningRune": {
     "NAME": "Lightning Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! damage to all enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! damage to all enemies."
+    "DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! Damage to all enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! Damage to all enemies."
+  },
+  "basilMod:FlameRune": {
+    "NAME": "Flame Rune",
+    "DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! Strength."
   }
 }
