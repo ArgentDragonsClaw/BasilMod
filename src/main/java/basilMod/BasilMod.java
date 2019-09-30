@@ -8,10 +8,7 @@ import basemod.interfaces.*;
 import basilMod.cards.attacks.*;
 import basilMod.cards.powers.Coffee;
 import basilMod.cards.powers.Retribution;
-import basilMod.cards.skills.Counter;
-import basilMod.cards.skills.Counterspell;
-import basilMod.cards.skills.Defend;
-import basilMod.cards.skills.Sip;
+import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
 import basilMod.variables.RunescarredValue;
 import com.badlogic.gdx.Gdx;
@@ -45,7 +42,6 @@ import basilMod.util.IDCheckDontTouchPls;
 import basilMod.util.TextureLoader;
 import basilMod.variables.DefaultCustomVariable;
 import basilMod.variables.DefaultSecondMagicNumber;
-import basilMod.CustomTags;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -449,6 +445,7 @@ public class BasilMod implements
         BaseMod.addCard(new RunicStrike());
         BaseMod.addCard(new LightningRune());
         BaseMod.addCard(new FlameRune());
+        BaseMod.addCard(new FrostRune());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -466,7 +463,8 @@ public class BasilMod implements
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
-        
+
+
         logger.info("Done adding cards!");
     }
     
