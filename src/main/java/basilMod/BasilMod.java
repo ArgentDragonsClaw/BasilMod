@@ -5,7 +5,9 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import basilMod.cards.attacks.LightningRune;
 import basilMod.cards.attacks.Rebuttal;
+import basilMod.cards.attacks.RunicStrike;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
 import basilMod.cards.powers.Retribution;
@@ -14,6 +16,7 @@ import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
 import basilMod.cards.skills.Sip;
 import basilMod.characters.TheScholar;
+import basilMod.variables.RunescarredValue;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -411,10 +414,10 @@ public class BasilMod implements
         //Ignore this
         pathCheck();
         // Add the Custom Dynamic Variables
-        logger.info("Add variabls");
-        // Add the Custom Dynamic variabls
+        logger.info("Add variables");
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+        BaseMod.addDynamicVariable(new RunescarredValue());
         
         logger.info("Adding cards");
         // Add the cards
@@ -443,6 +446,8 @@ public class BasilMod implements
         BaseMod.addCard(new Retribution());
         BaseMod.addCard(new Rebuttal());
         BaseMod.addCard(new Counter());
+        BaseMod.addCard(new RunicStrike());
+        BaseMod.addCard(new LightningRune());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

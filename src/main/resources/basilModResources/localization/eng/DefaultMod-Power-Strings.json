@@ -22,5 +22,12 @@
                         " time.",
                         " times."
                 ]
+        },
+  "basilMod:Runescarred": {
+    "NAME": "Runescarred",
+    "DESCRIPTIONS": [
+      "Increase the effects of Runes by ",
+      "."
+    ]
         }
 }
