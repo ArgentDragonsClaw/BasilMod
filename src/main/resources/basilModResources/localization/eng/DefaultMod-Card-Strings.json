@@ -106,5 +106,11 @@
     "NAME": "Earth Rune",
     "DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy."
+  },
+  "basilMod:MixedBag": {
+    "NAME": "Mixed Bag",
+    "DESCRIPTION": "Draw 3 basilmod:Runes.",
+    "UPGRADE_DESCRIPTION": "Draw 3 Upgraded basilmod:Runes."
+
   }
 }
