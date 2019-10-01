@@ -2,15 +2,12 @@ package basilMod.cards.powers;
 
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import basilMod.powers.RetributionPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
-import basilMod.characters.TheScholar;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -49,7 +46,7 @@ public class Retribution extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new basilMod.powers.Retribution(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RetributionPower(p, p, 1), 1));
     }
 
 

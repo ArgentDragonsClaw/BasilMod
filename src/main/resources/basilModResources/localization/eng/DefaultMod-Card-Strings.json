@@ -72,5 +72,10 @@
   "basilMod:CurseRune": {
     "NAME": "Curse Rune",
     "DESCRIPTION": "Unplayable. NL basilmod:Rune. NL At the end of your turn, lose !basilMod:RunescarredValue! HP. NL Exhaust."
+  },
+  "basilMod:Counterbuff": {
+    "NAME": "Counterbuff",
+    "DESCRIPTION": "If the enemy intends to buff, apply !M! basilmod:Rust."
+
   }
 }

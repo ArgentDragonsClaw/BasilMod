@@ -384,6 +384,7 @@ public class BasilMod implements
         BaseMod.addCard(new CreepingBriars());
         BaseMod.addCard(new AstralBrew());
         BaseMod.addCard(new CurseRune());
+        BaseMod.addCard(new Counterbuff());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -405,6 +406,7 @@ public class BasilMod implements
         UnlockTracker.addCard(CreepingBriars.ID);
         UnlockTracker.addCard(AstralBrew.ID);
         UnlockTracker.addCard(CurseRune.ID);
+        UnlockTracker.addCard(Counterbuff.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 

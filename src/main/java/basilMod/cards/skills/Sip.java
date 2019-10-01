@@ -2,7 +2,7 @@ package basilMod.cards.skills;
 
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import basilMod.powers.Caffeine;
+import basilMod.powers.CaffeinePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,7 +50,7 @@ public class Sip extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Caffeine(p,p,1),1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CaffeinePower(p, p, 1), 1));
         if(this.upgraded) AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, 1));
     }
 

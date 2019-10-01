@@ -3,10 +3,9 @@ package basilMod.cards.attacks;
 import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import basilMod.powers.Runescarred;
+import basilMod.powers.RunescarredPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
-import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static basilMod.BasilMod.makeCardPath;
@@ -62,7 +60,7 @@ public class LightningRune extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower pow = p.getPower(Runescarred.POWER_ID);
+        AbstractPower pow = p.getPower(RunescarredPower.POWER_ID);
         int[] amount = new int[1];
         if (pow != null) {
 
@@ -72,7 +70,7 @@ public class LightningRune extends AbstractDynamicCard {
             amount[0] = 1;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, amount, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Runescarred(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
     }
 
 

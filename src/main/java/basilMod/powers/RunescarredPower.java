@@ -5,25 +5,19 @@ import basilMod.BasilMod;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import static basilMod.BasilMod.makePowerPath;
 
-public class Caffeine extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
+//Gain 1 dex for the turn for each card played.
 
-    public static final Logger logger = LogManager.getLogger(BasilMod.class.getName());
+public class RunescarredPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = BasilMod.makeID("Caffeine");
+    public static final String POWER_ID = BasilMod.makeID("Runescarred");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -33,7 +27,7 @@ public class Caffeine extends AbstractPower implements CloneablePowerInterface, 
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public Caffeine(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public RunescarredPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -51,34 +45,15 @@ public class Caffeine extends AbstractPower implements CloneablePowerInterface, 
         updateDescription();
     }
 
-
-
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        if (true) { //If we don't have the coffee cup //TODO:: CHANGE ONCE THE COFFEE CUP EXISTS
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
-        } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
-        }
+
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new Caffeine(owner, source, amount);
-    }
-
-    @Override
-    public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-        if (abstractPower.ID.equals(POWER_ID)) {
-            // We're applying Caffeine
-            if (abstractCreature.hasPower(Caffeine.POWER_ID)) {
-                if (abstractCreature.getPower(Caffeine.POWER_ID).amount + abstractPower.amount >= 3) {
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractCreature, source, Caffeine.POWER_ID, 3));
-                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1)); //TODO:: The coffee cup relic doubles this
-                }
-            }
-        }
-        return true;
+        return new RunescarredPower(owner, source, amount);
     }
 }

@@ -1,12 +1,11 @@
 package basilMod.variables;
 
 import basemod.abstracts.DynamicVariable;
-import basilMod.powers.Runescarred;
+import basilMod.powers.RunescarredPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen;
 
 import static basilMod.BasilMod.makeID;
 
@@ -34,7 +33,7 @@ public class RunescarredValue extends DynamicVariable {   // Custom Dynamic Vari
         if (CardCrawlGame.mode != CardCrawlGame.GameMode.GAMEPLAY) {
             return 1;
         }
-        AbstractPower rs = AbstractDungeon.player.getPower(Runescarred.POWER_ID);
+        AbstractPower rs = AbstractDungeon.player.getPower(RunescarredPower.POWER_ID);
         if (rs != null) {
             return 1 + rs.amount;
         }
@@ -48,7 +47,7 @@ public class RunescarredValue extends DynamicVariable {   // Custom Dynamic Vari
         if (CardCrawlGame.mode != CardCrawlGame.GameMode.GAMEPLAY) {
             return 1;
         }
-        AbstractPower rs = AbstractDungeon.player.getPower(Runescarred.POWER_ID);
+        AbstractPower rs = AbstractDungeon.player.getPower(RunescarredPower.POWER_ID);
         if (rs != null) {
             return 1 + rs.amount;
         }
@@ -61,7 +60,7 @@ public class RunescarredValue extends DynamicVariable {   // Custom Dynamic Vari
         if (CardCrawlGame.mode != CardCrawlGame.GameMode.GAMEPLAY) {
             return false;
         }
-        AbstractPower rs = AbstractDungeon.player.getPower(Runescarred.POWER_ID);
+        AbstractPower rs = AbstractDungeon.player.getPower(RunescarredPower.POWER_ID);
         return rs != null;
     }
 }

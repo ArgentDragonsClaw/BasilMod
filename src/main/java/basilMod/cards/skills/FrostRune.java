@@ -2,19 +2,14 @@ package basilMod.cards.skills;
 
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import basilMod.powers.Runescarred;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import basilMod.powers.RunescarredPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
-import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import basilMod.CustomTags;
 import com.megacrit.cardcrawl.powers.SlowPower;
@@ -62,14 +57,14 @@ public class FrostRune extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower pow = p.getPower(Runescarred.POWER_ID);
+        AbstractPower pow = p.getPower(RunescarredPower.POWER_ID);
         int amount = 1;
         if (pow != null) {
             amount += pow.amount;
         }
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlowPower(m, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Runescarred(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
     }
 
 

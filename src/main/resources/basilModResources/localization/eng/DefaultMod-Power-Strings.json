@@ -36,5 +36,13 @@
       " Thorns at the start of your turn.",
       " Thorns at the start of your turn."
     ]
+  },
+  "basilMod:Rust": {
+    "NAME": "Rust",
+    "DESCRIPTIONS": [
+      "Prevent ",
+      " buff from being applied.",
+      " buffs from being applied."
+    ]
   }
 }

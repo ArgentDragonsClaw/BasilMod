@@ -5,31 +5,21 @@ import basilMod.BasilMod;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ConstrictedPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 import static basilMod.BasilMod.makePowerPath;
 
-public class Retribution extends AbstractPower implements CloneablePowerInterface, OnReceivePowerPower {
+//Gain 1 dex for the turn for each card played.
 
-    public static final Logger logger = LogManager.getLogger(BasilMod.class.getName());
+public class CoffeePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = BasilMod.makeID("Retribution");
+    public static final String POWER_ID = BasilMod.makeID("Coffee");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -39,7 +29,7 @@ public class Retribution extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public Retribution(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public CoffeePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -57,35 +47,19 @@ public class Retribution extends AbstractPower implements CloneablePowerInterfac
         updateDescription();
     }
 
+    @Override
+    public void atStartOfTurn() {
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new CaffeinePower(owner, owner, amount), amount));
+    }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        if (amount == 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
-        }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new Retribution(owner, source, amount);
-    }
-
-    @Override
-    public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature owner, AbstractCreature source) {
-        if (abstractPower.type == PowerType.DEBUFF && owner == AbstractDungeon.player && source != AbstractDungeon.player) {
-            for (int i = 0; i < amount; i++) {
-                for (AbstractCreature m : AbstractDungeon.getMonsters().monsters) {
-                    if (m != AbstractDungeon.player)
-
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, new ConstrictedPower(m, owner, 2), 2));
-
-                }
-            }
-
-        }
-        return true;
+        return new CoffeePower(owner, source, amount);
     }
 }

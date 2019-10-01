@@ -1,6 +1,7 @@
 package basilMod.cards.powers;
 
 import basilMod.cards.AbstractDynamicCard;
+import basilMod.powers.CoffeePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -52,7 +53,7 @@ public class Coffee extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new basilMod.powers.Coffee(p, p, magicNumber), magicNumber));
+                new ApplyPowerAction(p, p, new CoffeePower(p, p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.
