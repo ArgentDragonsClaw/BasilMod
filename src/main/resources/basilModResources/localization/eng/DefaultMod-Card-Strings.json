@@ -76,6 +76,9 @@
   "basilMod:Counterbuff": {
     "NAME": "Counterbuff",
     "DESCRIPTION": "If the enemy intends to buff, apply !M! basilmod:Rust."
-
+  },
+  "basilMod:Slurp": {
+    "NAME": "Slurp",
+    "DESCRIPTION": "Gain !M! basilmod:Inebriated."
   }
 }

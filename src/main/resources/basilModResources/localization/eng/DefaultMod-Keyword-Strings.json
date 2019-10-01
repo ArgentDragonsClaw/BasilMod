@@ -13,5 +13,12 @@
       "rust"
     ],
     "DESCRIPTION": "Rust prevents enemies from applying buffs."
+  },
+  {
+    "PROPER_NAME": "Inebriated",
+    "NAMES": [
+      "inebriated"
+    ],
+    "DESCRIPTION": "Inebriated temporarily applies 4 Strength and Dexterity and randomizes card costs."
   }
 ]

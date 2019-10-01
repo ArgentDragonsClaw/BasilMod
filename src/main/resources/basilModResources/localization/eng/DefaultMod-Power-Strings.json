@@ -44,5 +44,13 @@
       " buff from being applied.",
       " buffs from being applied."
     ]
+  },
+  "basilMod:Inebriated": {
+    "NAME": "Inebriated",
+    "DESCRIPTIONS": [
+      "Gain 4 Strength and Dexterity and randomize card costs. These effects wear off in ",
+      " turn.",
+      " turns."
+    ]
   }
 }
