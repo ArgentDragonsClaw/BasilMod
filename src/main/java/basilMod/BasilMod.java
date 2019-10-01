@@ -5,9 +5,8 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.*;
-import basilMod.cards.powers.Coffee;
-import basilMod.cards.powers.CreepingBriars;
-import basilMod.cards.powers.Retribution;
+import basilMod.cards.curses.*;
+import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
 import basilMod.variables.RunescarredValue;
@@ -37,34 +36,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-// Please don't just mass replace "theDefault" with "yourMod" everywhere.
-// It'll be a bigger pain for you. You only need to replace it in 3 places.
-// I comment those places below, under the place where you set your ID.
-
-//TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
-// Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll down in this file. Change the ID from "theDefault:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "theDefault". You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories (Be careful.).
-// Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
-// After you sorta get the hang of how to make cards, check out the card template which will make your life easier
-
-/*
- * With that out of the way:
- * Welcome to this super over-commented Slay the Spire modding base.
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (character,
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, couple of relics, etc.
- * If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add
- * https://github.com/daviscook477/BaseMod/wiki - work your way through with this base.
- * Feel free to use this in any way you like, of course. MIT licence applies. Happy modding!
- *
- * And pls. Read the comments.
- */
-
 @SpireInitializer
 public class BasilMod implements
         EditCardsSubscriber,
@@ -92,7 +63,6 @@ public class BasilMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
     public static final Color BASIL_PURPLE = CardHelper.getColor(103.0f, 78.0f, 167.0f);
     
     // Potion Colors in RGB
@@ -271,22 +241,20 @@ public class BasilMod implements
     
     @SuppressWarnings("unused")
     public static void initialize() {
-        logger.info("========================= Initializing Default Mod. Hi. =========================");
+        logger.info("========================= Initializing Basil Mod. =========================");
         BasilMod defaultmod = new BasilMod();
-        logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
+        logger.info("========================= /Basil Mod Initialized./ =========================");
     }
-    
+
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
-    
+
     
     // =============== LOAD THE CHARACTER =================
     
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheScholar.Enums.THE_SCHOLAR.toString());
-        
-//        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-//                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+
         BaseMod.addCharacter(new TheScholar("the Scholar", TheScholar.Enums.THE_SCHOLAR),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheScholar.Enums.THE_SCHOLAR);
 
@@ -374,7 +342,8 @@ public class BasilMod implements
 
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+
+
         logger.info("Done adding relics!");
     }
     
@@ -414,9 +383,28 @@ public class BasilMod implements
         BaseMod.addCard(new MixedBag());
         BaseMod.addCard(new CreepingBriars());
         BaseMod.addCard(new AstralBrew());
-        
+        BaseMod.addCard(new CurseRune());
+
+
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
+        UnlockTracker.addCard(Strike.ID);
+        UnlockTracker.addCard(Defend.ID);
+        UnlockTracker.addCard(Coffee.ID);
+        UnlockTracker.addCard(Sip.ID);
+        UnlockTracker.addCard(Counterspell.ID);
+        UnlockTracker.addCard(Retribution.ID);
+        UnlockTracker.addCard(Rebuttal.ID);
+        UnlockTracker.addCard(Counter.ID);
+        UnlockTracker.addCard(RunicStrike.ID);
+        UnlockTracker.addCard(LightningRune.ID);
+        UnlockTracker.addCard(FlameRune.ID);
+        UnlockTracker.addCard(FrostRune.ID);
+        UnlockTracker.addCard(EarthRune.ID);
+        UnlockTracker.addCard(MixedBag.ID);
+        UnlockTracker.addCard(CreepingBriars.ID);
+        UnlockTracker.addCard(AstralBrew.ID);
+        UnlockTracker.addCard(CurseRune.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 

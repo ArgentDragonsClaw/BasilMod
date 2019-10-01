@@ -2,6 +2,7 @@ package basilMod.cards.skills;
 
 import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
+import basilMod.cards.curses.CurseRune;
 import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -66,7 +67,7 @@ public class MixedBag extends AbstractDynamicCard {
 
         //get three random runes
         for (int i = 0; i < 3; i++) {
-            int choice = AbstractDungeon.cardRandomRng.random(runes.size());
+            int choice = AbstractDungeon.cardRandomRng.random(runes.size() - 1);
             AbstractCard to_add = runes.get(choice);
             if (upgraded) {
                 to_add.upgrade();
@@ -75,7 +76,8 @@ public class MixedBag extends AbstractDynamicCard {
         }
         //rarely, draw the curse rune
         if (AbstractDungeon.cardRandomRng.random(0f, 1f) > .95) {
-            // to_draw.remove(0); //Arbitrarily remove the first card and replace it with the curse //TODO
+            to_draw.remove(0); //Arbitrarily remove the first card and replace it with the curse
+            to_draw.add(new CurseRune());
         }
 
 

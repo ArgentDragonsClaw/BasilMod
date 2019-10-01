@@ -68,5 +68,9 @@
   "basilMod:AstralBrew": {
     "NAME": "Astral Brew",
     "DESCRIPTION": "Gain 1 Intangible."
+  },
+  "basilMod:CurseRune": {
+    "NAME": "Curse Rune",
+    "DESCRIPTION": "Unplayable. NL basilmod:Rune. NL At the end of your turn, lose !basilMod:RunescarredValue! HP. NL Exhaust."
   }
 }
