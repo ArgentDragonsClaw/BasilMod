@@ -115,5 +115,9 @@
   "basilMod:CreepingBriars": {
     "NAME": "Creeping Briars",
     "DESCRIPTION": "Gain !M! Thorns at the start of your turn."
+  },
+  "basilMod:AstralBrew": {
+    "NAME": "Astral Brew",
+    "DESCRIPTION": "Gain 1 Intangible."
   }
 }

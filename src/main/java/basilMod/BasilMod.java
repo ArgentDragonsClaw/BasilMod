@@ -431,7 +431,7 @@ public class BasilMod implements
         //BaseMod.addCard(new DefaultUncommonAttack());
         //BaseMod.addCard(new DefaultUncommonPower());
         //BaseMod.addCard(new DefaultRareAttack());
-        BaseMod.addCard(new DefaultRareSkill());
+        //BaseMod.addCard(new DefaultRareSkill());
         //BaseMod.addCard(new DefaultRarePower());
 
         //Basil's Cards
@@ -450,6 +450,7 @@ public class BasilMod implements
         BaseMod.addCard(new EarthRune());
         BaseMod.addCard(new MixedBag());
         BaseMod.addCard(new CreepingBriars());
+        BaseMod.addCard(new AstralBrew());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
