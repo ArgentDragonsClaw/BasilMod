@@ -7,6 +7,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.*;
 import basilMod.cards.powers.Coffee;
+import basilMod.cards.powers.CreepingBriars;
 import basilMod.cards.powers.Retribution;
 import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
@@ -425,7 +426,7 @@ public class BasilMod implements
         //BaseMod.addCard(new DefaultCommonAttack());
         //BaseMod.addCard(new DefaultAttackWithVariable());
         //BaseMod.addCard(new DefaultCommonSkill());
-        BaseMod.addCard(new DefaultCommonPower());
+        //BaseMod.addCard(new DefaultCommonPower());
         //BaseMod.addCard(new DefaultUncommonSkill());
         //BaseMod.addCard(new DefaultUncommonAttack());
         //BaseMod.addCard(new DefaultUncommonPower());
@@ -448,6 +449,7 @@ public class BasilMod implements
         BaseMod.addCard(new FrostRune());
         BaseMod.addCard(new EarthRune());
         BaseMod.addCard(new MixedBag());
+        BaseMod.addCard(new CreepingBriars());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

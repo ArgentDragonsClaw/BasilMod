@@ -111,6 +111,9 @@
     "NAME": "Mixed Bag",
     "DESCRIPTION": "Draw 3 basilmod:Runes.",
     "UPGRADE_DESCRIPTION": "Draw 3 Upgraded basilmod:Runes."
-
+  },
+  "basilMod:CreepingBriars": {
+    "NAME": "Creeping Briars",
+    "DESCRIPTION": "Gain !M! Thorns at the start of your turn."
   }
 }

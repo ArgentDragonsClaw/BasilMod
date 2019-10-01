@@ -1,33 +1,56 @@
 {
-"basilMod:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"basilMod:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-},
-        "basilMod:Caffeine": {
-                "NAME": "Caffeine",
-                "DESCRIPTIONS" : ["When you reach 3 Caffeine, gain ", "[E] .", "[E] [E] ."]
-},
-        "basilMod:Coffee": {
-                "NAME": "Coffee",
-                "DESCRIPTIONS": ["Gain ", " Caffeine each turn."]
-        },
-        "basilMod:Retribution": {
-                "NAME": "Retribution",
-                "DESCRIPTIONS": [
-                        "When an enemy inflicts a debuff, apply 2 constricted to all enemies ",
-                        " time.",
-                        " times."
-                ]
-        },
+  "basilMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "basilMod:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "basilMod:Caffeine": {
+    "NAME": "Caffeine",
+    "DESCRIPTIONS": [
+      "When you reach 3 Caffeine, gain ",
+      "[E] .",
+      "[E] [E] ."
+    ]
+  },
+  "basilMod:Coffee": {
+    "NAME": "Coffee",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Caffeine each turn."
+    ]
+  },
+  "basilMod:Retribution": {
+    "NAME": "Retribution",
+    "DESCRIPTIONS": [
+      "When an enemy inflicts a debuff, apply 2 constricted to all enemies ",
+      " time.",
+      " times."
+    ]
+  },
   "basilMod:Runescarred": {
     "NAME": "Runescarred",
     "DESCRIPTIONS": [
       "Increase the effects of Runes by ",
       "."
     ]
-        }
+  },
+  "basilMod:CreepingBriars": {
+    "NAME": "Creeping Briars",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Thorns at the start of your turn.",
+      " Thorns at the start of your turn."
+    ]
+  }
 }
