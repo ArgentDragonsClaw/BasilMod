@@ -1,20 +1,4 @@
 {
-  "basilMod:CommonPower": {
-    "NAME": "Placeholder Power",
-    "DESCRIPTIONS": [
-      "You applied #b",
-      " keyword.",
-      " keywords."
-    ]
-  },
-  "basilMod:RarePower": {
-    "NAME": "Placeholder Power",
-    "DESCRIPTIONS": [
-      "At the start of your turn, TOUCH #b",
-      " enemy.",
-      " enemies."
-    ]
-  },
   "basilMod:Caffeine": {
     "NAME": "Caffeine",
     "DESCRIPTIONS": [

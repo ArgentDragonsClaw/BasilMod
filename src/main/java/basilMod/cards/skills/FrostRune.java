@@ -86,4 +86,10 @@ public class FrostRune extends AbstractDynamicCard {
             exhaust = false;
         }
     }
+
+    @Override
+    public void update() {
+        super.update();
+        retain = true;
+    }
 }

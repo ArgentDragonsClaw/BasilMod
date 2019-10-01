@@ -88,4 +88,10 @@ public class FlameRune extends AbstractDynamicCard {
             exhaust = false;
         }
     }
+
+    @Override
+    public void update() {
+        super.update();
+        retain = true;
+    }
 }

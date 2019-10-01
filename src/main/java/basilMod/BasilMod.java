@@ -3,7 +3,6 @@ package basilMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.*;
 import basilMod.cards.powers.Coffee;
@@ -16,13 +15,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -31,18 +27,10 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import basilMod.cards.*;
-import basilMod.characters.TheDefault;
 import basilMod.events.IdentityCrisisEvent;
-import basilMod.potions.PlaceholderPotion;
 import basilMod.relics.BottledPlaceholderRelic;
-import basilMod.relics.DefaultClickableRelic;
-import basilMod.relics.PlaceholderRelic;
-import basilMod.relics.PlaceholderRelic2;
 import basilMod.util.IDCheckDontTouchPls;
 import basilMod.util.TextureLoader;
-import basilMod.variables.DefaultCustomVariable;
-import basilMod.variables.DefaultSecondMagicNumber;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -209,14 +197,9 @@ public class BasilMod implements
         // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
         
         logger.info("Done subscribing");
-        
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
-        
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+
+        logger.info("Creating the color " + TheScholar.Enums.BASIL_PURPLE.toString());
+
         BaseMod.addColor(TheScholar.Enums.BASIL_PURPLE, BASIL_PURPLE, BASIL_PURPLE, BASIL_PURPLE,
                 BASIL_PURPLE, BASIL_PURPLE, BASIL_PURPLE, BASIL_PURPLE,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
@@ -373,7 +356,7 @@ public class BasilMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
         
         logger.info("Done editing potions");
     }
@@ -388,13 +371,8 @@ public class BasilMod implements
         logger.info("Adding relics");
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
-        
-        // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
-        
+
+
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         logger.info("Done adding relics!");
@@ -412,27 +390,12 @@ public class BasilMod implements
         pathCheck();
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
-        BaseMod.addDynamicVariable(new DefaultCustomVariable());
-        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         BaseMod.addDynamicVariable(new RunescarredValue());
         
         logger.info("Adding cards");
         // Add the cards
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
-
-        //TODO:: Produce enough cards to comment these out. Once commented out, delete the class?
-        //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        //BaseMod.addCard(new DefaultCommonAttack());
-        //BaseMod.addCard(new DefaultAttackWithVariable());
-        //BaseMod.addCard(new DefaultCommonSkill());
-        //BaseMod.addCard(new DefaultCommonPower());
-        //BaseMod.addCard(new DefaultUncommonSkill());
-        //BaseMod.addCard(new DefaultUncommonAttack());
-        //BaseMod.addCard(new DefaultUncommonPower());
-        //BaseMod.addCard(new DefaultRareAttack());
-        //BaseMod.addCard(new DefaultRareSkill());
-        //BaseMod.addCard(new DefaultRarePower());
 
         //Basil's Cards
         BaseMod.addCard(new Strike());
@@ -456,18 +419,6 @@ public class BasilMod implements
         // Unlock the cards
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
-//        UnlockTracker.unlockCard(OrbSkill.ID);
-//        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-//        UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-//        UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-//        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultRareAttack.ID);
-//        UnlockTracker.unlockCard(DefaultRareSkill.ID);
-//        UnlockTracker.unlockCard(DefaultRarePower.ID);
 
 
         logger.info("Done adding cards!");

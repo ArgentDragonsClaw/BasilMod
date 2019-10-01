@@ -75,7 +75,7 @@ public class MixedBag extends AbstractDynamicCard {
         }
         //rarely, draw the curse rune
         if (AbstractDungeon.cardRandomRng.random(0f, 1f) > .95) {
-            // to_draw.remove(0); //Arbitrarily remove the first card and replace it with the curse
+            // to_draw.remove(0); //Arbitrarily remove the first card and replace it with the curse //TODO
         }
 
 

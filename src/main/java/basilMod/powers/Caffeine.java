@@ -56,7 +56,7 @@ public class Caffeine extends AbstractPower implements CloneablePowerInterface, 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        if (true) { //If we don't have the coffee cup
+        if (true) { //If we don't have the coffee cup //TODO:: CHANGE ONCE THE COFFEE CUP EXISTS
             description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else if (amount > 1) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
@@ -70,7 +70,7 @@ public class Caffeine extends AbstractPower implements CloneablePowerInterface, 
 
     @Override
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
-        if (abstractPower.ID == POWER_ID) {
+        if (abstractPower.ID.equals(POWER_ID)) {
             // We're applying Caffeine
             if (abstractCreature.hasPower(Caffeine.POWER_ID)) {
                 if (abstractCreature.getPower(Caffeine.POWER_ID).amount + abstractPower.amount >= 3) {

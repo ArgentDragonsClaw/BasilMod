@@ -90,4 +90,10 @@ public class EarthRune extends AbstractDynamicCard {
             exhaust = false;
         }
     }
+
+    @Override
+    public void update() {
+        super.update();
+        retain = true;
+    }
 }
