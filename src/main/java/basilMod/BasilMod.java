@@ -389,6 +389,7 @@ public class BasilMod implements
         BaseMod.addCard(new Counterbuff());
         BaseMod.addCard(new Slurp());
         BaseMod.addCard(new Whiskey());
+        BaseMod.addCard(new TakeABreak());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -413,6 +414,7 @@ public class BasilMod implements
         UnlockTracker.addCard(Counterbuff.ID);
         UnlockTracker.addCard(Slurp.ID);
         UnlockTracker.addCard(Whiskey.ID);
+        UnlockTracker.addCard(TakeABreak.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 
