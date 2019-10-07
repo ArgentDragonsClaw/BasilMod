@@ -20,5 +20,19 @@
       "inebriated"
     ],
     "DESCRIPTION": "Inebriated temporarily applies 4 Strength and Dexterity and randomizes card costs."
+  },
+  {
+    "PROPER_NAME": "Caffeine",
+    "NAMES": [
+      "caffeine"
+    ],
+    "DESCRIPTION": "When you reach 3 Caffeine, gain [E] ."
+  },
+  {
+    "PROPER_NAME": "Runescarred",
+    "NAMES": [
+      "runescarred"
+    ],
+    "DESCRIPTION": "Increases the effect of Runes."
   }
 ]

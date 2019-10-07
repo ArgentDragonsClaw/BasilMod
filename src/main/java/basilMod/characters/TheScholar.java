@@ -7,6 +7,7 @@ import basilMod.cards.powers.Coffee;
 import basilMod.cards.skills.Counter;
 import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
+import basilMod.relics.ScholarsNotes;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -87,17 +88,17 @@ public class TheScholar extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer6.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "basilModResources/images/char/defaultCharacter/orb/layer1.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer2.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer3.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer4.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer5.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer6.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer1d.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer2d.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer3d.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer4d.png",
+            "basilModResources/images/char/defaultCharacter/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -105,9 +106,9 @@ public class TheScholar extends CustomPlayer {
 
     public TheScholar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theDefaultResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "basilModResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theDefaultResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "basilModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================
@@ -176,11 +177,7 @@ public class TheScholar extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        //retVal.add(PlaceholderRelic.ID);
-        //retVal.add(PlaceholderRelic2.ID);
-
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+        retVal.add(ScholarsNotes.ID);
 
         return retVal;
     }

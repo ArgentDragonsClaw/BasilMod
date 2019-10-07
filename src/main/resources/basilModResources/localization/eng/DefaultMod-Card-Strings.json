@@ -9,12 +9,16 @@
   },
   "basilMod:Coffee": {
     "NAME": "Coffee",
-    "DESCRIPTION": "Gain 2 Caffeine each turn."
+    "DESCRIPTION": "Gain 2 basilmod:Caffeine each turn."
+  },
+  "basilMod:Whiskey": {
+    "NAME": "Whiskey",
+    "DESCRIPTION": "Gain 2 extra Strength and Dexterity from basilmod:Inebriated ."
   },
   "basilMod:Sip": {
     "NAME": "Sip",
     "DESCRIPTION": "Gain 1 Caffeine.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Caffeine and heal 1 HP."
+    "UPGRADE_DESCRIPTION": "Gain 1 basilmod:Caffeine and heal 1 HP."
   },
   "basilMod:Counterspell": {
     "NAME": "Counterspell",
@@ -34,7 +38,7 @@
   },
   "basilMod:RunicStrike": {
     "NAME": "Runic Strike",
-    "DESCRIPTION": "Deal !D! Damage and gain !M! Runescarred."
+    "DESCRIPTION": "Deal !D! Damage and gain !M! basilmod:Runescarred."
   },
   "basilMod:LightningRune": {
     "NAME": "Lightning Rune",

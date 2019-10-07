@@ -30,5 +30,20 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "basilMod:ScholarsNotes": {
+    "NAME": "Scholar's Notes",
+    "FLAVOR": "The deranged writings of a scholar well behind on his grant proposals.",
+    "DESCRIPTIONS": [
+      "At the start of combat, choose a card to add to your hand from your deck."
+    ]
+  },
+  "basilMod:ScholarsThesis": {
+    "NAME": "Scholar's Thesis",
+    "FLAVOR": "I sure hope that angel got their degree.",
+    "DESCRIPTIONS": [
+      "Every ",
+      " turns, choose a card to add to your hand from your deck. NL Replaces Scholar's Notes."
+    ]
   }
 }

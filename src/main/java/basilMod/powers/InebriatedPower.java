@@ -59,9 +59,9 @@ public class InebriatedPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
     }
 
@@ -92,21 +92,19 @@ public class InebriatedPower extends AbstractPower implements CloneablePowerInte
         if (card.cost < 6 && card.cost >= 0) {
             int newCost = AbstractDungeon.cardRandomRng.random(3);
             if (card.cost != newCost) {
-                card.cost = newCost;
-                card.costForTurn = card.cost;
+                card.costForTurn = newCost;
                 card.isCostModified = true;
             }
         }
     }
 
     @Override
-    public void atEndOfRound() {
-        if (this.amount == 0) {
+    public void atEndOfTurn(boolean isPlayer) {
+        if (this.amount == 1) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
         }
-
-
     }
+
 }

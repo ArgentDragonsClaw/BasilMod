@@ -52,5 +52,13 @@
       " turn.",
       " turns."
     ]
+  },
+  "basilMod:Whiskey": {
+    "NAME": "Whiskey",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " extra stack of Strength and Dexterity when Inebriated.",
+      " extra stacks of Strength and Dexterity when Inebriated."
+    ]
   }
 }

@@ -9,12 +9,13 @@ import basilMod.cards.curses.*;
 import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
+import basilMod.relics.ScholarsNotes;
+import basilMod.relics.ScholarsThesis;
 import basilMod.variables.RunescarredValue;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -28,7 +29,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import basilMod.events.IdentityCrisisEvent;
-import basilMod.relics.BottledPlaceholderRelic;
 import basilMod.util.IDCheckDontTouchPls;
 import basilMod.util.TextureLoader;
 
@@ -92,10 +92,10 @@ public class BasilMod implements
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "basilModResources/images/1024/card_default_gray_orb.png";
     
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "basilModResources/images/charSelect/DefaultCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "basilModResources/images/charSelect/DefaultCharacterPortraitBG.png";
-    public static final String THE_DEFAULT_SHOULDER_1 = "basilModResources/images/char/defaultCharacter/shoulder.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "basilModResources/images/char/defaultCharacter/shoulder2.png";
+    private static final String BASIL_BUTTON = "basilModResources/images/charSelect/BasilButton.png";
+    private static final String THE_DEFAULT_PORTRAIT = "basilModResources/images/charSelect/basil_background.png";
+    public static final String THE_DEFAULT_SHOULDER_1 = "basilModResources/images/char/defaultCharacter/campfire1.png";
+    public static final String THE_DEFAULT_SHOULDER_2 = "basilModResources/images/char/defaultCharacter/campfire2.png";
     public static final String THE_DEFAULT_CORPSE = "basilModResources/images/char/defaultCharacter/corpse.png";
     
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
@@ -257,7 +257,7 @@ public class BasilMod implements
         logger.info("Beginning to edit characters. " + "Add " + TheScholar.Enums.THE_SCHOLAR.toString());
 
         BaseMod.addCharacter(new TheScholar("the Scholar", TheScholar.Enums.THE_SCHOLAR),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheScholar.Enums.THE_SCHOLAR);
+                BASIL_BUTTON, THE_DEFAULT_PORTRAIT, TheScholar.Enums.THE_SCHOLAR);
 
         receiveEditPotions();
         logger.info("Added " + TheScholar.Enums.THE_SCHOLAR.toString());
@@ -340,7 +340,8 @@ public class BasilMod implements
         logger.info("Adding relics");
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-
+        BaseMod.addRelicToCustomPool(new ScholarsNotes(), TheScholar.Enums.BASIL_PURPLE);
+        BaseMod.addRelicToCustomPool(new ScholarsThesis(), TheScholar.Enums.BASIL_PURPLE);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
 
@@ -387,6 +388,7 @@ public class BasilMod implements
         BaseMod.addCard(new CurseRune());
         BaseMod.addCard(new Counterbuff());
         BaseMod.addCard(new Slurp());
+        BaseMod.addCard(new Whiskey());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -410,6 +412,7 @@ public class BasilMod implements
         UnlockTracker.addCard(CurseRune.ID);
         UnlockTracker.addCard(Counterbuff.ID);
         UnlockTracker.addCard(Slurp.ID);
+        UnlockTracker.addCard(Whiskey.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 
