@@ -88,5 +88,9 @@
   "basilMod:TakeABreak": {
     "NAME": "Take A Break!",
     "DESCRIPTION": "Heal !M! HP for each stack of basilmod:Runescarred. NL Remove all basilmod:Runescarred. NL Exhaust."
+  },
+  "basilMod:Cleanse": {
+    "NAME": "Cleanse",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each stack of basilmod:Runescarred. NL Remove all basilmod:Runescarred."
   }
 }
