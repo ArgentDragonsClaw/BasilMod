@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -71,6 +72,11 @@ public class LightningRune extends AbstractDynamicCard {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, amount, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
+
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            AbstractDungeon.effectList.add(new LightningEffect(monster.drawX, monster.drawY));
+        }
+
     }
 
 
