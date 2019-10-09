@@ -92,5 +92,9 @@
   "basilMod:Cleanse": {
     "NAME": "Cleanse",
     "DESCRIPTION": "Deal !D! damage to a random enemy for each stack of basilmod:Runescarred. NL Remove all basilmod:Runescarred."
+  },
+  "basilMod:Procrastinate": {
+    "NAME": "Procrastinate",
+    "DESCRIPTION": "Every time you draw this card, increase its effects by !M!. NL Gain !basilMod:MiscValue! stacks of #yRegen, Strength, and Dexterity. NL Exhaust."
   }
 }

@@ -11,6 +11,7 @@ import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
 import basilMod.relics.ScholarsNotes;
 import basilMod.relics.ScholarsThesis;
+import basilMod.variables.MiscValue;
 import basilMod.variables.RunescarredValue;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -362,6 +363,7 @@ public class BasilMod implements
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
         BaseMod.addDynamicVariable(new RunescarredValue());
+        BaseMod.addDynamicVariable(new MiscValue());
         
         logger.info("Adding cards");
         // Add the cards
@@ -391,6 +393,7 @@ public class BasilMod implements
         BaseMod.addCard(new Whiskey());
         BaseMod.addCard(new TakeABreak());
         BaseMod.addCard(new Cleanse());
+        BaseMod.addCard(new Procrastinate());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -417,6 +420,7 @@ public class BasilMod implements
         UnlockTracker.addCard(Whiskey.ID);
         UnlockTracker.addCard(TakeABreak.ID);
         UnlockTracker.addCard(Cleanse.ID);
+        UnlockTracker.addCard(Procrastinate.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 

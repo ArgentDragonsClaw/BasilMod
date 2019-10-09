@@ -116,6 +116,7 @@ public class DeckToHandAction extends AbstractGameAction {
                         }
                         this.player.createHandIsFullDialog();
                     } else {
+                        c.triggerWhenDrawn(); //Manually make this count as drawing the card. not sure why I have to do this?
                         if (player.drawPile.contains(c)) {
                             this.player.drawPile.moveToHand(c, this.player.drawPile);
                         } else {
