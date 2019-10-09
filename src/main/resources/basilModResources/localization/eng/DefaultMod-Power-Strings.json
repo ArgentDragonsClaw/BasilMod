@@ -60,5 +60,13 @@
       " extra stack of Strength and Dexterity when Inebriated.",
       " extra stacks of Strength and Dexterity when Inebriated."
     ]
+  },
+  "basilMod:Runeburn": {
+    "NAME": "Runeburn",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal damage equal to your #yRunescarred to ",
+      " random enemy.",
+      " random enemies."
+    ]
   }
 }

@@ -403,21 +403,102 @@ public class BasilMod implements
         library.add(new LongDraw());
         library.add(new RobinHood());
         library.add(new AnotherBook());
+        library.add(new Runeburn());
+
+
+        int counter_basic = 0;
+        int counter_common = 0;
+        int counter_uncommon = 0;
+        int counter_rare = 0;
+
+        int counter_attack = 0;
+        int counter_skill = 0;
+        int counter_power = 0;
+
+        int cost_X = 0;
+        int cost_0 = 0;
+        int cost_1 = 0;
+        int cost_2 = 0;
+        int cost_3 = 0;
+        int cost_4plus = 0;
 
         logger.info("Adding " + library.size() + " cards...");
         for (AbstractCard card : library) {
             BaseMod.addCard(card);
             UnlockTracker.addCard(card.cardID);
+
+            switch (card.type) {
+                case ATTACK:
+                    counter_attack++;
+                    break;
+                case SKILL:
+                    counter_skill++;
+                    break;
+                case POWER:
+                    counter_power++;
+                    break;
+                case CURSE:
+                    break;
+                case STATUS:
+                    break;
+            }
+
+            switch (card.rarity) {
+                case BASIC:
+                    counter_basic++;
+                    break;
+                case COMMON:
+                    counter_common++;
+                    break;
+                case UNCOMMON:
+                    counter_uncommon++;
+                    break;
+                case RARE:
+                    counter_rare++;
+                    break;
+                case CURSE:
+                    break;
+                case SPECIAL:
+                    break;
+            }
+
+            switch (card.cost) {
+                case -2:
+                    break; //unplayable cards
+                case -1:
+                    cost_X++;
+                    break;
+                case 0:
+                    cost_0++;
+                    break;
+                case 1:
+                    cost_1++;
+                    break;
+                case 2:
+                    cost_2++;
+                    break;
+                case 3:
+                    cost_3++;
+                    break;
+                default:
+                    cost_4plus++;
+                    break;
+            }
+
+
+
+
         }
 
+        logger.info("Rarity Info\nBasic: " + counter_basic + "\nCommon: " + counter_common + "\nUncommon: " + counter_uncommon +
+                "\nRare: " + counter_rare);
+        logger.info("Type Info\nAttack: " + counter_attack + "\nSkill: " + counter_skill + "\nPower: " + counter_power);
+        logger.info("Cost Info:\nX: " + cost_X + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
 
         logger.info("Done adding cards!");
     }
-    
-    // There are better ways to do this than listing every single individual card, but I do not want to complicate things
-    // in a "tutorial" mod. This will do and it's completely ok to use. If you ever want to clean up and
-    // shorten all the imports, go look take a look at other mods, such as Hubris.
-    
+
+
     // ================ /ADD CARDS/ ===================
     
     
