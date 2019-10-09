@@ -95,6 +95,11 @@
   },
   "basilMod:Procrastinate": {
     "NAME": "Procrastinate",
-    "DESCRIPTION": "Every time you draw this card, increase its effects by !M!. NL Gain !basilMod:MiscValue! stacks of #yRegen, Strength, and Dexterity. NL Exhaust."
+    "DESCRIPTION": "Every time you draw this card, increase its effects by !M!. NL Gain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity. NL Exhaust."
+  },
+  "basilMod:QuickDraw": {
+    "NAME": "Quick Draw",
+    "DESCRIPTION": "Deal !D! Damage and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage and draw !M! cards."
   }
 }

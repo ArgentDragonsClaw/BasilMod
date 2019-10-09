@@ -17,6 +17,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -394,6 +395,7 @@ public class BasilMod implements
         BaseMod.addCard(new TakeABreak());
         BaseMod.addCard(new Cleanse());
         BaseMod.addCard(new Procrastinate());
+        BaseMod.addCard(new QuickDraw());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -421,6 +423,7 @@ public class BasilMod implements
         UnlockTracker.addCard(TakeABreak.ID);
         UnlockTracker.addCard(Cleanse.ID);
         UnlockTracker.addCard(Procrastinate.ID);
+        UnlockTracker.addCard(QuickDraw.ID);
         // This is so that they are all "seen" in the library, for people who like to look at the card list
         // before playing your mod.
 

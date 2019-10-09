@@ -26,7 +26,7 @@
     "NAMES": [
       "caffeine"
     ],
-    "DESCRIPTION": "When you reach 3 Caffeine, gain [E] ."
+    "DESCRIPTION": "When you reach 3 Caffeine, gain [E]."
   },
   {
     "PROPER_NAME": "Runescarred",
@@ -34,5 +34,13 @@
       "runescarred"
     ],
     "DESCRIPTION": "Increases the effect of Runes."
+  },
+  {
+    "PROPER_NAME": "Regeneration",
+    "NAMES": [
+      "regneration",
+      "regen"
+    ],
+    "DESCRIPTION": "At the end of your turn, heals you and reduces its value by 1."
   }
 ]

@@ -2,6 +2,7 @@ package basilMod.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import basilMod.cards.attacks.QuickDraw;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
 import basilMod.cards.skills.Counter;
@@ -169,6 +170,7 @@ public class TheScholar extends CustomPlayer {
         }
 
         retVal.add(Counter.ID);
+        retVal.add(QuickDraw.ID);
 
         return retVal;
     }
