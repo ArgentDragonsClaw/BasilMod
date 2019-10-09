@@ -402,6 +402,7 @@ public class BasilMod implements
         library.add(new QuickDraw());
         library.add(new LongDraw());
         library.add(new RobinHood());
+        library.add(new AnotherBook());
 
         logger.info("Adding " + library.size() + " cards...");
         for (AbstractCard card : library) {

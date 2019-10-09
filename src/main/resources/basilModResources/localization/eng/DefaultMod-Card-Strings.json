@@ -109,6 +109,11 @@
   "basilMod:RobinHood": {
     "NAME": "Robin Hood",
     "DESCRIPTION": "Deal !D! Damage and gain !M! gold for each point of unblocked damage."
+  },
+  "basilMod:AnotherBook": {
+    "NAME": "Another Book",
+    "DESCRIPTION": "Add a random skill to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded random skill to your hand. Exhaust."
   }
 
 
