@@ -105,5 +105,11 @@
   "basilMod:LongDraw": {
     "NAME": "Long Draw",
     "DESCRIPTION": "Deal !D! Damage and draw !M! card."
+  },
+  "basilMod:RobinHood": {
+    "NAME": "Robin Hood",
+    "DESCRIPTION": "Deal !D! Damage and gain !M! gold for each point of unblocked damage."
   }
+
+
 }

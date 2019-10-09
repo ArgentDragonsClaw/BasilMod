@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.interfaces.*;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.cards.attacks.*;
 import basilMod.cards.curses.*;
 import basilMod.cards.powers.*;
@@ -400,6 +401,7 @@ public class BasilMod implements
         library.add(new Procrastinate());
         library.add(new QuickDraw());
         library.add(new LongDraw());
+        library.add(new RobinHood());
 
         logger.info("Adding " + library.size() + " cards...");
         for (AbstractCard card : library) {
