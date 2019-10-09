@@ -15,13 +15,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static basilMod.BasilMod.makeCardPath;
 
-public class QuickDraw extends AbstractDynamicCard {
+public class LongDraw extends AbstractDynamicCard {
 
 
 // TEXT DECLARATION
 
-    public static final String ID = BasilMod.makeID(QuickDraw.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
-    public static final String IMG = makeCardPath("QuickDraw.png");// "public static final String IMG = makeCardPath("QuickDraw.png");
+    public static final String ID = BasilMod.makeID(LongDraw.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+    public static final String IMG = makeCardPath("LongDraw.png");// "public static final String IMG = makeCardPath("LongDraw.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -31,29 +31,27 @@ public class QuickDraw extends AbstractDynamicCard {
 
 // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
-    private static final int COST = 0;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 2;
 
-    private static final int DAMAGE = 3;
-    private static final int UPGRADED_DAMAGE = 1;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADED_DAMAGE = 5;
 
 
     private static final int MAGIC = 1;
-    private static final int UPGRADED_MAGIC = 1;
-
 
 // /STAT DECLARATION/
 
 
-    public QuickDraw() {
+    public LongDraw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = damage = DAMAGE;
 
     }
 
@@ -73,8 +71,6 @@ public class QuickDraw extends AbstractDynamicCard {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
             upgradeDamage(UPGRADED_DAMAGE);
-            upgradeMagicNumber(UPGRADED_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

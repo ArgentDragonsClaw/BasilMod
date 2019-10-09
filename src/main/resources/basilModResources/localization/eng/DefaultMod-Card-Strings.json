@@ -101,5 +101,9 @@
     "NAME": "Quick Draw",
     "DESCRIPTION": "Deal !D! Damage and draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! Damage and draw !M! cards."
+  },
+  "basilMod:LongDraw": {
+    "NAME": "Long Draw",
+    "DESCRIPTION": "Deal !D! Damage and draw !M! card."
   }
 }

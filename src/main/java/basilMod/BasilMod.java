@@ -22,6 +22,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -37,6 +38,7 @@ import basilMod.util.TextureLoader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Properties;
 
 @SpireInitializer
@@ -372,60 +374,38 @@ public class BasilMod implements
         // when generating card rewards/shop screen items.
 
         //Basil's Cards
-        BaseMod.addCard(new Strike());
-        BaseMod.addCard(new Defend());
-        BaseMod.addCard(new Coffee());
-        BaseMod.addCard(new Sip());
-        BaseMod.addCard(new Counterspell());
-        BaseMod.addCard(new Retribution());
-        BaseMod.addCard(new Rebuttal());
-        BaseMod.addCard(new Counter());
-        BaseMod.addCard(new RunicStrike());
-        BaseMod.addCard(new LightningRune());
-        BaseMod.addCard(new FlameRune());
-        BaseMod.addCard(new FrostRune());
-        BaseMod.addCard(new EarthRune());
-        BaseMod.addCard(new MixedBag());
-        BaseMod.addCard(new CreepingBriars());
-        BaseMod.addCard(new AstralBrew());
-        BaseMod.addCard(new CurseRune());
-        BaseMod.addCard(new Counterbuff());
-        BaseMod.addCard(new Slurp());
-        BaseMod.addCard(new Whiskey());
-        BaseMod.addCard(new TakeABreak());
-        BaseMod.addCard(new Cleanse());
-        BaseMod.addCard(new Procrastinate());
-        BaseMod.addCard(new QuickDraw());
+        ArrayList<AbstractCard> library = new ArrayList<>();
+        library.add(new Strike());
+        library.add(new Defend());
+        library.add(new Coffee());
+        library.add(new Sip());
+        library.add(new Counterspell());
+        library.add(new Retribution());
+        library.add(new Rebuttal());
+        library.add(new Counter());
+        library.add(new RunicStrike());
+        library.add(new LightningRune());
+        library.add(new FlameRune());
+        library.add(new FrostRune());
+        library.add(new EarthRune());
+        library.add(new MixedBag());
+        library.add(new CreepingBriars());
+        library.add(new AstralBrew());
+        library.add(new CurseRune());
+        library.add(new Counterbuff());
+        library.add(new Slurp());
+        library.add(new Whiskey());
+        library.add(new TakeABreak());
+        library.add(new Cleanse());
+        library.add(new Procrastinate());
+        library.add(new QuickDraw());
+        library.add(new LongDraw());
 
-
-        logger.info("Making sure the cards are unlocked.");
-        // Unlock the cards
-        UnlockTracker.addCard(Strike.ID);
-        UnlockTracker.addCard(Defend.ID);
-        UnlockTracker.addCard(Coffee.ID);
-        UnlockTracker.addCard(Sip.ID);
-        UnlockTracker.addCard(Counterspell.ID);
-        UnlockTracker.addCard(Retribution.ID);
-        UnlockTracker.addCard(Rebuttal.ID);
-        UnlockTracker.addCard(Counter.ID);
-        UnlockTracker.addCard(RunicStrike.ID);
-        UnlockTracker.addCard(LightningRune.ID);
-        UnlockTracker.addCard(FlameRune.ID);
-        UnlockTracker.addCard(FrostRune.ID);
-        UnlockTracker.addCard(EarthRune.ID);
-        UnlockTracker.addCard(MixedBag.ID);
-        UnlockTracker.addCard(CreepingBriars.ID);
-        UnlockTracker.addCard(AstralBrew.ID);
-        UnlockTracker.addCard(CurseRune.ID);
-        UnlockTracker.addCard(Counterbuff.ID);
-        UnlockTracker.addCard(Slurp.ID);
-        UnlockTracker.addCard(Whiskey.ID);
-        UnlockTracker.addCard(TakeABreak.ID);
-        UnlockTracker.addCard(Cleanse.ID);
-        UnlockTracker.addCard(Procrastinate.ID);
-        UnlockTracker.addCard(QuickDraw.ID);
-        // This is so that they are all "seen" in the library, for people who like to look at the card list
-        // before playing your mod.
+        logger.info("Adding " + library.size() + " cards...");
+        for (AbstractCard card : library) {
+            BaseMod.addCard(card);
+            UnlockTracker.addCard(card.cardID);
+        }
 
 
         logger.info("Done adding cards!");
