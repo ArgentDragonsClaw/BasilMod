@@ -2,5 +2,12 @@
 "basilMod:PlaceholderPotion": {
         "NAME": "Placeholder Potion",
         "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-}
+},
+        "basilMod:CoffeePotion": {
+                "NAME": "Coffee Potion",
+                "DESCRIPTIONS": [
+                        "Gain ",
+                        " #yCaffeine at the start of each turn."
+                ]
+        }
 }

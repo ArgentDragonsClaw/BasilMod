@@ -68,5 +68,14 @@
       " random enemy.",
       " random enemies."
     ]
+  },
+  "basilMod:DueDate": {
+    "NAME": "Due Date",
+    "DESCRIPTIONS": [
+      "If you defeat this enemy within ",
+      " turn, gain ",
+      " turns, gain ",
+      " Max HP."
+    ]
   }
 }

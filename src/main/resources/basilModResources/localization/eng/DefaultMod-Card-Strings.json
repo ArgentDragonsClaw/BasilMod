@@ -124,6 +124,14 @@
     "NAME": "Runic Overload",
     "DESCRIPTION": "Double your basilmod:Runescarred. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple your basilmod:Runescarred. NL Exhaust."
+  },
+  "basilMod:DueDate": {
+    "NAME": "Due Date",
+    "DESCRIPTION": "Can only be played if enemy is at full HP. NL If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. NL Exhaust."
+  },
+  "basilMod:Papercut": {
+    "NAME": "Papercut",
+    "DESCRIPTION": "Deal !D! Damage !M! times."
   }
 
 

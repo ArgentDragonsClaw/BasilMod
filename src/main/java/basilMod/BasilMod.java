@@ -10,8 +10,10 @@ import basilMod.cards.curses.*;
 import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
+import basilMod.potions.CoffeePotion;
 import basilMod.relics.ScholarsNotes;
 import basilMod.relics.ScholarsThesis;
+import basilMod.variables.DueDateValue;
 import basilMod.variables.MiscValue;
 import basilMod.variables.RunescarredValue;
 import com.badlogic.gdx.Gdx;
@@ -70,12 +72,8 @@ public class BasilMod implements
     // Colors (RGB)
     // Character Color
     public static final Color BASIL_PURPLE = CardHelper.getColor(103.0f, 78.0f, 167.0f);
-    
-    // Potion Colors in RGB
-    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
-    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    
+
+
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -323,15 +321,23 @@ public class BasilMod implements
     
     
     // ================ ADD POTIONS ===================
-    
+    public static final Color COFFEE_LIQUID = CardHelper.getColor(131.0f, 73.0f, 0.0f); // Orange-ish Red
+    public static final Color COFFEE_HYBRID = CardHelper.getColor(176.0f, 153.0f, 125.0f); // Near White
+    public static final Color COFFEE_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+
+
+
     public void receiveEditPotions() {
         logger.info("Beginning to edit potions");
-        
+
+
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
+
+
         //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        
+        BaseMod.addPotion(CoffeePotion.class, COFFEE_LIQUID, COFFEE_HYBRID, COFFEE_SPOTS, CoffeePotion.POTION_ID, TheScholar.Enums.THE_SCHOLAR);
         logger.info("Done editing potions");
     }
     
@@ -366,6 +372,7 @@ public class BasilMod implements
         pathCheck();
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
+        BaseMod.addDynamicVariable(new DueDateValue());
         BaseMod.addDynamicVariable(new RunescarredValue());
         BaseMod.addDynamicVariable(new MiscValue());
         
@@ -405,6 +412,8 @@ public class BasilMod implements
         library.add(new AnotherBook());
         library.add(new Runeburn());
         library.add(new RunicOverload());
+        library.add(new DueDate());
+        library.add(new Papercut());
 
 
         int counter_basic = 0;
