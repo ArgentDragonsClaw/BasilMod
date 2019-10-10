@@ -404,6 +404,7 @@ public class BasilMod implements
         library.add(new RobinHood());
         library.add(new AnotherBook());
         library.add(new Runeburn());
+        library.add(new RunicOverload());
 
 
         int counter_basic = 0;
@@ -493,7 +494,7 @@ public class BasilMod implements
         logger.info("Rarity Info\nBasic: " + counter_basic + "\nCommon: " + counter_common + "\nUncommon: " + counter_uncommon +
                 "\nRare: " + counter_rare);
         logger.info("Type Info\nAttack: " + counter_attack + "\nSkill: " + counter_skill + "\nPower: " + counter_power);
-        logger.info("Cost Info:\nX: " + cost_X + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
+        logger.info("Cost Info:\nX: " + cost_X + "\n0: " + cost_0 + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
 
         logger.info("Done adding cards!");
     }
