@@ -417,6 +417,7 @@ public class BasilMod implements
         library.add(new ShuffleNotes());
         library.add(new FaeForm());
         library.add(new NockOneBack());
+        library.add(new Shots());
 
 
         int counter_basic = 0;

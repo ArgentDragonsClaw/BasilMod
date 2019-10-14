@@ -144,5 +144,9 @@
   "basilMod:NockOneBack": {
     "NAME": "Nock One Back",
     "DESCRIPTION": "Deal !D! Damage to a random enemy. NL basilmod:Fickle: Gain !M! basilmod:Inebriated."
+  },
+  "basilMod:Shots": {
+    "NAME": "Shots!",
+    "DESCRIPTION": "Deal !D! Damage to ALL enemies. NL If you have basilmod:Inebriated, increase this damage by !M!."
   }
 }
