@@ -132,6 +132,10 @@
   "basilMod:Papercut": {
     "NAME": "Papercut",
     "DESCRIPTION": "Deal !D! Damage !M! times."
+  },
+  "basilMod:ShuffleNotes": {
+    "NAME": "Shuffle Notes",
+    "DESCRIPTION": "Draw !M! cards."
   }
 
 

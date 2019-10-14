@@ -4,6 +4,7 @@ import basemod.abstracts.DynamicVariable;
 import basilMod.BasilMod;
 import basilMod.powers.DueDatePower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,6 +24,9 @@ public class DueDateValue extends DynamicVariable {
 
     @Override
     public int value(AbstractCard abstractCard) {
+        if (CardCrawlGame.mode != CardCrawlGame.GameMode.GAMEPLAY) {
+            return 0;
+        }
         if (AbstractDungeon.getCurrRoom().combatEvent) {
             AbstractMonster m = AbstractDungeon.getMonsters().hoveredMonster;
             if (m != null) {
@@ -34,6 +38,9 @@ public class DueDateValue extends DynamicVariable {
 
     @Override
     public int baseValue(AbstractCard abstractCard) {
+        if (CardCrawlGame.mode != CardCrawlGame.GameMode.GAMEPLAY) {
+            return 0;
+        }
         if (AbstractDungeon.getCurrRoom().combatEvent) {
             AbstractMonster m = AbstractDungeon.getMonsters().hoveredMonster;
             if (m != null) {

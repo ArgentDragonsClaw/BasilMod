@@ -414,6 +414,7 @@ public class BasilMod implements
         library.add(new RunicOverload());
         library.add(new DueDate());
         library.add(new Papercut());
+        library.add(new ShuffleNotes());
 
 
         int counter_basic = 0;
