@@ -77,5 +77,11 @@
       " turns, gain ",
       " Max HP."
     ]
+  },
+  "basilMod:FaeForm": {
+    "NAME": "Fae Form",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity."
+    ]
   }
 }

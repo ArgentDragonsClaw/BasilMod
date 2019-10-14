@@ -136,6 +136,10 @@
   "basilMod:ShuffleNotes": {
     "NAME": "Shuffle Notes",
     "DESCRIPTION": "Draw !M! cards."
+  },
+  "basilMod:FaeForm": {
+    "NAME": "Fae Form",
+    "DESCRIPTION": "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity. NL basilmod:Fickle: Draw a card."
   }
 
 

@@ -42,5 +42,12 @@
       "regen"
     ],
     "DESCRIPTION": "At the end of your turn, heals you and reduces its value by 1."
+  },
+  {
+    "PROPER_NAME": "Fickle",
+    "NAMES": [
+      "fickle"
+    ],
+    "DESCRIPTION": "When drawn, this card has a 50% chance to discard itself and trigger an alternate effect."
   }
 ]

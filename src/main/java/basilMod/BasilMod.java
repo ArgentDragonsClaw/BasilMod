@@ -311,7 +311,7 @@ public class BasilMod implements
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
+        //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
         
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -415,6 +415,7 @@ public class BasilMod implements
         library.add(new DueDate());
         library.add(new Papercut());
         library.add(new ShuffleNotes());
+        library.add(new FaeForm());
 
 
         int counter_basic = 0;
