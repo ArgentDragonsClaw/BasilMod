@@ -51,7 +51,7 @@ public class FaeForm extends AbstractDynamicCard {
 
     @Override
     public void triggerWhenDrawn() {
-        //A percent of the time (defined by magic number), this card is discarded and a different card is drawn instead
+        //Fickle effect
         float to_discard = AbstractDungeon.cardRandomRng.random();
         if (to_discard <= 0.5) {
             AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));

@@ -140,7 +140,9 @@
   "basilMod:FaeForm": {
     "NAME": "Fae Form",
     "DESCRIPTION": "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity. NL basilmod:Fickle: Draw a card."
+  },
+  "basilMod:NockOneBack": {
+    "NAME": "Nock One Back",
+    "DESCRIPTION": "Deal !D! Damage to a random enemy. NL basilmod:Fickle: Gain !M! basilmod:Inebriated."
   }
-
-
 }
