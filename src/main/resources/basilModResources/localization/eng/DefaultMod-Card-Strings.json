@@ -152,5 +152,9 @@
   "basilMod:Nightmares": {
     "NAME": "Nightmares",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, gain !M! Thorns. NL basilmod:Fickle: Take !M! Damage."
+  },
+  "basilMod:Naptime": {
+    "NAME": "Naptime",
+    "DESCRIPTION": "Put all enemies to sleep. NL Exhaust."
   }
 }
