@@ -54,8 +54,8 @@ public class FaeForm extends AbstractDynamicCard {
         //Fickle effect
         float to_discard = AbstractDungeon.cardRandomRng.random();
         if (to_discard <= 0.5) {
-            AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+            AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(this));
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
         }
     }
 

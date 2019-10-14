@@ -9,6 +9,7 @@ import basilMod.cards.attacks.*;
 import basilMod.cards.curses.*;
 import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
+import basilMod.cards.statuses.Nightmares;
 import basilMod.characters.TheScholar;
 import basilMod.potions.CoffeePotion;
 import basilMod.relics.ScholarsNotes;
@@ -418,6 +419,7 @@ public class BasilMod implements
         library.add(new FaeForm());
         library.add(new NockOneBack());
         library.add(new Shots());
+        library.add(new Nightmares());
 
 
         int counter_basic = 0;
@@ -429,6 +431,7 @@ public class BasilMod implements
         int counter_skill = 0;
         int counter_power = 0;
 
+        int cost_U = 0;
         int cost_X = 0;
         int cost_0 = 0;
         int cost_1 = 0;
@@ -478,6 +481,7 @@ public class BasilMod implements
 
             switch (card.cost) {
                 case -2:
+                    cost_U++;
                     break; //unplayable cards
                 case -1:
                     cost_X++;
@@ -507,7 +511,7 @@ public class BasilMod implements
         logger.info("Rarity Info\nBasic: " + counter_basic + "\nCommon: " + counter_common + "\nUncommon: " + counter_uncommon +
                 "\nRare: " + counter_rare);
         logger.info("Type Info\nAttack: " + counter_attack + "\nSkill: " + counter_skill + "\nPower: " + counter_power);
-        logger.info("Cost Info:\nX: " + cost_X + "\n0: " + cost_0 + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
+        logger.info("Cost Info:\nUnplayable: " + cost_U + "\nX: " + cost_X + "\n0: " + cost_0 + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
 
         logger.info("Done adding cards!");
     }

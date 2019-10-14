@@ -148,5 +148,9 @@
   "basilMod:Shots": {
     "NAME": "Shots!",
     "DESCRIPTION": "Deal !D! Damage to ALL enemies. NL If you have basilmod:Inebriated, increase this damage by !M!."
+  },
+  "basilMod:Nightmares": {
+    "NAME": "Nightmares",
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, gain !M! Thorns. NL basilmod:Fickle: Take !M! Damage."
   }
 }
