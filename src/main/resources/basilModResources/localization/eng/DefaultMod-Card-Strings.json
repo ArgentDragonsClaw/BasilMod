@@ -156,5 +156,9 @@
   "basilMod:Naptime": {
     "NAME": "Naptime",
     "DESCRIPTION": "Put all enemies to sleep. NL Exhaust."
+  },
+  "basilMod:CoinToss": {
+    "NAME": "Coin Toss",
+    "DESCRIPTION": "Deal !D! Damage. NL basilmod:Fickle: Add a copy of this card to the top of your draw pile."
   }
 }

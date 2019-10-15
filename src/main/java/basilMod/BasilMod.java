@@ -421,7 +421,7 @@ public class BasilMod implements
         library.add(new Shots());
         library.add(new Nightmares());
         library.add(new Naptime());
-
+        library.add(new CoinToss());
 
         int counter_basic = 0;
         int counter_common = 0;
