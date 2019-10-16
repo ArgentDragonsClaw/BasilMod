@@ -194,5 +194,9 @@
   "basilMod:FinalsWeek": {
     "NAME": "Finals Week",
     "DESCRIPTION": "This card's cost cannot be externally modified. NL Deal !D! Damage 7 times to all enemies and Exhaust. NL basilmod:Fickle: Reduce this card's cost by !M!."
+  },
+  "basilMod:CrowCloak": {
+    "NAME": "Crow Cloak",
+    "DESCRIPTION": "Gain !M! Dexterity."
   }
 }

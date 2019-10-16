@@ -428,6 +428,7 @@ public class BasilMod implements
         library.add(new Inscribe());
         library.add(new RunicDefend());
         library.add(new FinalsWeek());
+        library.add(new CrowCloak());
 
         int counter_basic = 0;
         int counter_common = 0;
