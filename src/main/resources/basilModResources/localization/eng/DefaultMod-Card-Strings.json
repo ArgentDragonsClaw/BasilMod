@@ -173,5 +173,9 @@
   "basilMod:DealWithIt": {
     "NAME": "Deal With It",
     "DESCRIPTION": "When you draw a card, gain !M! Block."
+  },
+  "basilMod:CoverPage": {
+    "NAME": "Cover Page",
+    "DESCRIPTION": "Gain !B! Block and draw a card. NL basilmod:Fickle: Gain !M! Block (not affected by Dexterity)."
   }
 }
