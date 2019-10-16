@@ -6,6 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CustomTags {
     @SpireEnum
-    public static AbstractCard.CardTags RUNE;
+    public static AbstractCard.CardTags BASIL_RUNE;
 
 }

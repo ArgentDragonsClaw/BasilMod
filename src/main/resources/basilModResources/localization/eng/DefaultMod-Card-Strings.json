@@ -177,5 +177,10 @@
   "basilMod:CoverPage": {
     "NAME": "Cover Page",
     "DESCRIPTION": "Gain !B! Block and draw a card. NL basilmod:Fickle: Gain !M! Block (not affected by Dexterity)."
+  },
+  "basilMod:BlankRune": {
+    "NAME": "Blank Rune",
+    "DESCRIPTION": "basilmod:Rune. NL Copy the effects of another basilmod:Rune in your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Copy the effects of another basilmod:Rune in your deck."
   }
 }

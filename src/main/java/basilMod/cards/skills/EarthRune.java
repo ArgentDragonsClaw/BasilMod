@@ -49,7 +49,7 @@ public class EarthRune extends AbstractDynamicCard {
         retain = true;
         exhaust = true;
         damage = baseDamage = 1;
-        tags.add(CustomTags.RUNE);
+        tags.add(CustomTags.BASIL_RUNE);
 
     }
 

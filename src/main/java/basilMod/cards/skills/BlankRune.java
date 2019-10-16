@@ -3,26 +3,29 @@ package basilMod.cards.skills;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.RunescarredPower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AutoplayCardAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import basilMod.CustomTags;
-import com.megacrit.cardcrawl.powers.SlowPower;
+
+import java.util.ArrayList;
 
 import static basilMod.BasilMod.makeCardPath;
 
-public class FrostRune extends AbstractDynamicCard {
+public class BlankRune extends AbstractDynamicCard {
 
 
     // TEXT DECLARATION
 
-    public static final String ID = BasilMod.makeID(FrostRune.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
-    public static final String IMG = makeCardPath("FrostRune.png");// "public static final String IMG = makeCardPath("LightningRune.png");
+    public static final String ID = BasilMod.makeID(BlankRune.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+    public static final String IMG = makeCardPath("BlankRune.png");// "public static final String IMG = makeCardPath("LightningRune.png");
 
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -42,14 +45,15 @@ public class FrostRune extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 1;
 
     // /STAT DECLARATION/
+    private ArrayList<AbstractCard> runes;
 
 
-    public FrostRune() {
+    public BlankRune() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         retain = true;
         exhaust = true;
-        damage = baseDamage = 1;
-        tags.add(CustomTags.BASIL_RUNE);
+        // We're not tagging this card as a rune, because it'd be pretty dumb to draw randomly.
+        // Also, you could recursively loop playing this card. Bad.
 
     }
 
@@ -57,14 +61,22 @@ public class FrostRune extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower pow = p.getPower(RunescarredPower.POWER_ID);
-        int amount = 1;
-        if (pow != null) {
-            amount += pow.amount;
+        ArrayList<AbstractCard> runes = (ArrayList<AbstractCard>) AbstractDungeon.player.masterDeck.group.clone();
+        runes.removeIf((x) -> !x.hasTag(CustomTags.BASIL_RUNE));
+
+        if (runes.size() >= 1) {
+            // random
+            int index = AbstractDungeon.cardRandomRng.random(0, runes.size() - 1);
+            AbstractCard c = runes.get(index).makeCopy();
+            c.purgeOnUse = true;
+            c.freeToPlayOnce = true;
+            c.use(p, m);
+        } else {
+            // stll get runescarred, even though there's no rune to copy....
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlowPower(m, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
+
     }
 
 
@@ -87,4 +99,5 @@ public class FrostRune extends AbstractDynamicCard {
         super.update();
         retain = true;
     }
+
 }

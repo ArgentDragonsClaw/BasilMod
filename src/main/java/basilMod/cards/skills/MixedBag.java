@@ -4,23 +4,16 @@ import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.cards.curses.CurseRune;
 import basilMod.characters.TheScholar;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basilMod.BasilMod;
-import basilMod.characters.TheScholar;
 
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.function.Predicate;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -55,7 +48,7 @@ public class MixedBag extends AbstractDynamicCard {
     public MixedBag() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         ArrayList<AbstractCard> runes = AbstractDungeon.uncommonCardPool.group;
-        runes.removeIf((x) -> !x.hasTag(CustomTags.RUNE));
+        runes.removeIf((x) -> !x.hasTag(CustomTags.BASIL_RUNE));
         this.runes = runes;
     }
 

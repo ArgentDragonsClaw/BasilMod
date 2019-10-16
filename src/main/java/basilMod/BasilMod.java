@@ -428,6 +428,7 @@ public class BasilMod implements
         library.add(new Research());
         library.add(new DealWithIt());
         library.add(new CoverPage());
+        library.add(new BlankRune());
 
         int counter_basic = 0;
         int counter_common = 0;
