@@ -65,6 +65,7 @@ public class BasilMod implements
     private static final String AUTHOR = "Ops"; // And pretty soon - You!
     private static final String DESCRIPTION = "The things you do to get your thesis on timeloops published.";
 
+
     // =============== INPUT TEXTURE LOCATION =================
 
     // Colors (RGB)
@@ -429,6 +430,7 @@ public class BasilMod implements
         library.add(new RunicDefend());
         library.add(new FinalsWeek());
         library.add(new CrowCloak());
+        library.add(new CaffeineJitters());
 
         int counter_basic = 0;
         int counter_common = 0;

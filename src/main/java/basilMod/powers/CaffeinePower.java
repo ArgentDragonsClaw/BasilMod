@@ -2,6 +2,7 @@ package basilMod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import basilMod.BasilMod;
+import basilMod.cards.attacks.CaffeineJitters;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -49,6 +50,8 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
+
+        CaffeineJitters.caff_amount += amount;
     }
 
 

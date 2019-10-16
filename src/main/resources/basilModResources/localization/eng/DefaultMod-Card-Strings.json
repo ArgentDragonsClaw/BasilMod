@@ -198,5 +198,14 @@
   "basilMod:CrowCloak": {
     "NAME": "Crow Cloak",
     "DESCRIPTION": "Gain !M! Dexterity."
+  },
+  "basilMod:CaffeineJitters": {
+    "NAME": "Caffeine Jitters",
+    "DESCRIPTION": "Deal !D! Damage to a random enemy for each stack of basilmod:Caffeine gained this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Attacks ",
+      " time).",
+      " times)."
+    ]
   }
 }
