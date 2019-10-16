@@ -92,5 +92,12 @@
       " card you draw by ",
       " this combat."
     ]
+  },
+  "basilMod:DealWithIt": {
+    "NAME": "Deal With It",
+    "DESCRIPTIONS": [
+      "When you draw a card, gain ",
+      " Block (not affected by Dexterity)."
+    ]
   }
 }

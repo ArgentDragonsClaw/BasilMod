@@ -426,6 +426,7 @@ public class BasilMod implements
         library.add(new CoinToss());
         library.add(new Experiment());
         library.add(new Research());
+        library.add(new DealWithIt());
 
         int counter_basic = 0;
         int counter_common = 0;
