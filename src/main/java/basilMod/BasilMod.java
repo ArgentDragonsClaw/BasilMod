@@ -427,6 +427,7 @@ public class BasilMod implements
         library.add(new BlankRune());
         library.add(new Inscribe());
         library.add(new RunicDefend());
+        library.add(new FinalsWeek());
 
         int counter_basic = 0;
         int counter_common = 0;

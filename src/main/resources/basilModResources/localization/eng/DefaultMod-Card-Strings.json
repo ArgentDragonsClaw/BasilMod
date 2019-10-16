@@ -190,5 +190,9 @@
   "basilMod:RunicDefend": {
     "NAME": "Runic Defend",
     "DESCRIPTION": "Gain !B! Block and !M! basilmod:Runescarred."
+  },
+  "basilMod:FinalsWeek": {
+    "NAME": "Finals Week",
+    "DESCRIPTION": "This card's cost cannot be externally modified. NL Deal !D! Damage 7 times to all enemies and Exhaust. NL basilmod:Fickle: Reduce this card's cost by !M!."
   }
 }
