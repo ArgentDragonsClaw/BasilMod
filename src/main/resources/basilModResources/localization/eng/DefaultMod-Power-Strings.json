@@ -83,5 +83,14 @@
     "DESCRIPTIONS": [
       "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity."
     ]
+  },
+  "basilMod:Research": {
+    "NAME": "Research",
+    "DESCRIPTIONS": [
+      "Lower the cost of the next ",
+      " cards you draw by ",
+      " card you draw by ",
+      " this combat."
+    ]
   }
 }

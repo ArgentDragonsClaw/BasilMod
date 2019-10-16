@@ -49,5 +49,14 @@
       "fickle"
     ],
     "DESCRIPTION": "When drawn, this card has a 50% chance to discard itself and trigger an alternate effect."
+  },
+  {
+    "PROPER_NAME": "Research",
+    "NAMES": [
+      "research",
+      "research+",
+      "Research+"
+    ],
+    "DESCRIPTION": "An X cost power that lowers the cost of X other cards for the rest of combat."
   }
 ]

@@ -160,5 +160,14 @@
   "basilMod:CoinToss": {
     "NAME": "Coin Toss",
     "DESCRIPTION": "Deal !D! Damage. NL basilmod:Fickle: Add a copy of this card to the top of your draw pile."
+  },
+  "basilMod:Experiment": {
+    "NAME": "Experiment",
+    "DESCRIPTION": "Add basilmod:Research to your hand and Exhaust. NL basilmod:Fickle: Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Add basilmod:Research+ to your hand and Exhaust. NL basilmod:Fickle: Draw !M! cards."
+  },
+  "basilMod:Research": {
+    "NAME": "Research",
+    "DESCRIPTION": "The next X cards you draw cost !M! less this combat."
   }
 }

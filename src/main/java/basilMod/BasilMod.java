@@ -68,9 +68,9 @@ public class BasilMod implements
     private static final String MODNAME = "The Scholar";
     private static final String AUTHOR = "Ops"; // And pretty soon - You!
     private static final String DESCRIPTION = "The things you do to get your thesis on timeloops published.";
-    
+
     // =============== INPUT TEXTURE LOCATION =================
-    
+
     // Colors (RGB)
     // Character Color
     public static final Color BASIL_PURPLE = CardHelper.getColor(103.0f, 78.0f, 167.0f);
@@ -82,70 +82,70 @@ public class BasilMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-  
+
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "basilModResources/images/512/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY = "basilModResources/images/512/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY = "basilModResources/images/512/bg_power_default_gray.png";
-    
+
     private static final String ENERGY_ORB_DEFAULT_GRAY = "basilModResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "basilModResources/images/512/card_small_orb.png";
-    
+
     private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "basilModResources/images/1024/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "basilModResources/images/1024/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "basilModResources/images/1024/bg_power_default_gray.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "basilModResources/images/1024/card_default_gray_orb.png";
-    
+
     // Character assets
     private static final String BASIL_BUTTON = "basilModResources/images/charSelect/BasilButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "basilModResources/images/charSelect/basil_background.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "basilModResources/images/char/defaultCharacter/campfire1.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "basilModResources/images/char/defaultCharacter/campfire2.png";
     public static final String THE_DEFAULT_CORPSE = "basilModResources/images/char/defaultCharacter/corpse.png";
-    
+
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "basilModResources/images/Badge.png";
-    
+
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "basilModResources/images/char/defaultCharacter/skeleton.atlas";
     public static final String THE_DEFAULT_SKELETON_JSON = "basilModResources/images/char/defaultCharacter/skeleton.json";
-    
+
     // =============== MAKE IMAGE PATHS =================
-    
+
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
-    
+
     public static String makeRelicPath(String resourcePath) {
         return getModID() + "Resources/images/relics/" + resourcePath;
     }
-    
+
     public static String makeRelicOutlinePath(String resourcePath) {
         return getModID() + "Resources/images/relics/outline/" + resourcePath;
     }
-    
+
     public static String makeOrbPath(String resourcePath) {
         return getModID() + "Resources/images/orbs/" + resourcePath;
     }
-    
+
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
-    
+
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
-    
+
     // =============== /MAKE IMAGE PATHS/ =================
-    
+
     // =============== /INPUT TEXTURE LOCATION/ =================
-    
-    
+
+
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
-    
+
     public BasilMod() {
         logger.info("Subscribe to BaseMod hooks");
-        
+
         BaseMod.subscribe(this);
         
       /*
@@ -157,21 +157,21 @@ public class BasilMod implements
          | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
           \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
       */
-      
+
         setModID("basilMod");
         // cool
         // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
-        
+
         // 1. Go to your resources folder in the project panel, and refactor> rename theDefaultResources to
         // yourModIDResources.
-        
+
         // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
         // replace all instances of theDefault with yourModID.
         // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
-        
+
         // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
         // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
-        
+
         logger.info("Done subscribing");
 
         logger.info("Creating the color " + TheScholar.Enums.BASIL_PURPLE.toString());
@@ -181,10 +181,10 @@ public class BasilMod implements
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
-        
+
         logger.info("Done creating the color");
-        
-        
+
+
         logger.info("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
@@ -198,13 +198,13 @@ public class BasilMod implements
             e.printStackTrace();
         }
         logger.info("Done adding mod settings");
-        
+
     }
-    
+
     // ====== NO EDIT AREA ======
     // DON'T TOUCH THIS STUFF. IT IS HERE FOR STANDARDIZATION BETWEEN MODS AND TO ENSURE GOOD CODE PRACTICES.
     // IF YOU MODIFY THIS I WILL HUNT YOU DOWN AND DOWNVOTE YOUR MOD ON WORKSHOP
-    
+
     public static void setModID(String ID) { // DON'T EDIT
         Gson coolG = new Gson(); // EY DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i hate u Gdx.files
@@ -220,11 +220,11 @@ public class BasilMod implements
         } // NO
         logger.info("Success! ID is " + modID); // WHY WOULD U WANT IT NOT TO LOG?? DON'T EDIT THIS.
     } // NO
-    
+
     public static String getModID() { // NO
         return modID; // DOUBLE NO
     } // NU-UH
-    
+
     private static void pathCheck() { // ALSO NO
         Gson coolG = new Gson(); // NNOPE DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i still hate u btw Gdx.files
@@ -241,10 +241,10 @@ public class BasilMod implements
             }// NO
         }// NO
     }// NO
-    
+
     // ====== YOU CAN EDIT AGAIN ======
-    
-    
+
+
     @SuppressWarnings("unused")
     public static void initialize() {
         logger.info("========================= Initializing Basil Mod. =========================");
@@ -254,9 +254,9 @@ public class BasilMod implements
 
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
 
-    
+
     // =============== LOAD THE CHARACTER =================
-    
+
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheScholar.Enums.THE_SCHOLAR.toString());
@@ -267,66 +267,66 @@ public class BasilMod implements
         receiveEditPotions();
         logger.info("Added " + TheScholar.Enums.THE_SCHOLAR.toString());
     }
-    
+
     // =============== /LOAD THE CHARACTER/ =================
-    
-    
+
+
     // =============== POST-INITIALIZE =================
-    
+
     @Override
     public void receivePostInitialize() {
         logger.info("Loading badge image and mod options");
-        
+
         // Load the Mod Badge
         Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
-        
+
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        
+
         // Create the on/off button:
         ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
                 enablePlaceholder, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
-                (label) -> {}, // thing??????? idk
+                (label) -> {
+                }, // thing??????? idk
                 (button) -> { // The actual button:
-            
-            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
-            try {
-                // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
-                config.save();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-        
+
+                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    try {
+                        // And based on that boolean, set the settings and save them
+                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
+                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
         settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
-        
+
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-        
+
         // =============== EVENTS =================
-        
+
         // This event will be exclusive to the City (act 2). If you want an event that's present at any
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
         //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
-        
+
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
     }
-    
+
     // =============== / POST-INITIALIZE/ =================
-    
-    
+
+
     // ================ ADD POTIONS ===================
     public static final Color COFFEE_LIQUID = CardHelper.getColor(131.0f, 73.0f, 0.0f); // Orange-ish Red
     public static final Color COFFEE_HYBRID = CardHelper.getColor(176.0f, 153.0f, 125.0f); // Near White
     public static final Color COFFEE_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-
 
 
     public void receiveEditPotions() {
@@ -342,16 +342,16 @@ public class BasilMod implements
         BaseMod.addPotion(CoffeePotion.class, COFFEE_LIQUID, COFFEE_HYBRID, COFFEE_SPOTS, CoffeePotion.POTION_ID, TheScholar.Enums.THE_SCHOLAR);
         logger.info("Done editing potions");
     }
-    
+
     // ================ /ADD POTIONS/ ===================
-    
-    
+
+
     // ================ ADD RELICS ===================
-    
+
     @Override
     public void receiveEditRelics() {
         logger.info("Adding relics");
-        
+
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new ScholarsNotes(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new ScholarsThesis(), TheScholar.Enums.BASIL_PURPLE);
@@ -362,12 +362,12 @@ public class BasilMod implements
 
         logger.info("Done adding relics!");
     }
-    
+
     // ================ /ADD RELICS/ ===================
-    
-    
+
+
     // ================ ADD CARDS ===================
-    
+
     @Override
     public void receiveEditCards() {
         logger.info("Adding variables");
@@ -378,7 +378,7 @@ public class BasilMod implements
         BaseMod.addDynamicVariable(new DueDateValue());
         BaseMod.addDynamicVariable(new RunescarredValue());
         BaseMod.addDynamicVariable(new MiscValue());
-        
+
         logger.info("Adding cards");
         // Add the cards
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
@@ -424,6 +424,8 @@ public class BasilMod implements
         library.add(new Nightmares());
         library.add(new Naptime());
         library.add(new CoinToss());
+        library.add(new Experiment());
+        library.add(new Research());
 
         int counter_basic = 0;
         int counter_common = 0;
@@ -507,8 +509,6 @@ public class BasilMod implements
             }
 
 
-
-
         }
 
         logger.info("Rarity Info\nBasic: " + counter_basic + "\nCommon: " + counter_common + "\nUncommon: " + counter_uncommon +
@@ -521,50 +521,50 @@ public class BasilMod implements
 
 
     // ================ /ADD CARDS/ ===================
-    
-    
+
+
     // ================ LOAD THE TEXT ===================
-    
+
     @Override
     public void receiveEditStrings() {
         logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
-        
+
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
-        
+
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
-        
+
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
-        
+
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Event-Strings.json");
-        
+
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
-        
+
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
-        
+
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
-        
+
         logger.info("Done edittting strings");
     }
-    
+
     // ================ /LOAD THE TEXT/ ===================
-    
+
     // ================ LOAD THE KEYWORDS ===================
-    
+
     @Override
     public void receiveEditKeywords() {
         // Keywords on cards are supposed to be Capitalized, while in Keyword-String.json they're lowercase
@@ -574,11 +574,11 @@ public class BasilMod implements
         // If you're using multiword keywords, the first element in your NAMES array in your keywords-strings.json has to be the same as the PROPER_NAME.
         // That is, in Card-Strings.json you would have #yA_Long_Keyword (#y highlights the keyword in yellow).
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
-        
+
         Gson gson = new Gson();
         String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-        
+
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
@@ -586,9 +586,9 @@ public class BasilMod implements
             }
         }
     }
-    
+
     // ================ /LOAD THE KEYWORDS/ ===================    
-    
+
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
