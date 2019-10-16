@@ -426,6 +426,7 @@ public class BasilMod implements
         library.add(new CoverPage());
         library.add(new BlankRune());
         library.add(new Inscribe());
+        library.add(new RunicDefend());
 
         int counter_basic = 0;
         int counter_common = 0;

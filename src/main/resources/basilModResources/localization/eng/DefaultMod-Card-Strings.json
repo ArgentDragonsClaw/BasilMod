@@ -186,5 +186,9 @@
   "basilMod:Inscribe": {
     "NAME": "Inscribe",
     "DESCRIPTION": "Unplayable. NL basilmod:Fickle: Gain !M! basilmod:Runescarred."
+  },
+  "basilMod:RunicDefend": {
+    "NAME": "Runic Defend",
+    "DESCRIPTION": "Gain !B! Block and !M! basilmod:Runescarred."
   }
 }
