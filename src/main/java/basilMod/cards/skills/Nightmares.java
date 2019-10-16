@@ -1,4 +1,4 @@
-package basilMod.cards.statuses;
+package basilMod.cards.skills;
 
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
@@ -7,7 +7,6 @@ import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
-import com.megacrit.cardcrawl.vfx.cardManip.CardFlashVfx;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import static basilMod.BasilMod.makeCardPath;

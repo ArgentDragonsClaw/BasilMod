@@ -182,5 +182,9 @@
     "NAME": "Blank Rune",
     "DESCRIPTION": "basilmod:Rune. NL Copy the effects of another basilmod:Rune in your deck. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Copy the effects of another basilmod:Rune in your deck."
+  },
+  "basilMod:Inscribe": {
+    "NAME": "Inscribe",
+    "DESCRIPTION": "Unplayable. NL basilmod:Fickle: Gain !M! basilmod:Runescarred."
   }
 }
