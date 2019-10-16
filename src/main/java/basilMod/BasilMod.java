@@ -14,6 +14,7 @@ import basilMod.characters.TheScholar;
 import basilMod.potions.CoffeePotion;
 import basilMod.relics.ScholarsNotes;
 import basilMod.relics.ScholarsThesis;
+import basilMod.relics.TrickCoin;
 import basilMod.variables.DueDateValue;
 import basilMod.variables.MiscValue;
 import basilMod.variables.RunescarredValue;
@@ -354,6 +355,7 @@ public class BasilMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new ScholarsNotes(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new ScholarsThesis(), TheScholar.Enums.BASIL_PURPLE);
+        BaseMod.addRelicToCustomPool(new TrickCoin(), TheScholar.Enums.BASIL_PURPLE);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
 

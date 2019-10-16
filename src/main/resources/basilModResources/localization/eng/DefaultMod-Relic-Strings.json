@@ -45,5 +45,13 @@
       "Every ",
       " turns, choose a card to add to your hand from your deck. NL Replaces Scholar's Notes."
     ]
+  },
+  "basilMod:TrickCoin": {
+    "NAME": "Trick Coin",
+    "FLAVOR": "Who needs luck when you can cheat?",
+    "DESCRIPTIONS": [
+      "#yFickle cards are #g25% #gless likely to activate. Right click to flip.",
+      "#yFickle cards are #r25% #rmore likely to activate. Right click to flip."
+    ]
   }
 }

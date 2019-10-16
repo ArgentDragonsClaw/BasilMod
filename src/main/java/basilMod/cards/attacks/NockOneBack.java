@@ -5,6 +5,7 @@ import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
 
 import basilMod.powers.InebriatedPower;
+import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -65,8 +66,7 @@ public class NockOneBack extends AbstractDynamicCard {
     public void triggerWhenDrawn() {
         //Fickle effect
         AbstractCreature p = AbstractDungeon.player;
-        float to_discard = AbstractDungeon.cardRandomRng.random();
-        if (to_discard <= 0.5) {
+        if (FickleHelper.getFickle()) {
             AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(this));
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new InebriatedPower(p, p, magicNumber), magicNumber));
         }

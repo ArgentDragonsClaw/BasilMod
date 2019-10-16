@@ -4,6 +4,7 @@ import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
 
+import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -65,8 +66,7 @@ public class CoinToss extends AbstractDynamicCard {
     @Override
     public void triggerWhenDrawn() {
         //Fickle effect
-        float to_discard = AbstractDungeon.cardRandomRng.random();
-        if (to_discard <= 0.5) {
+        if (FickleHelper.getFickle()) {
             AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(this));
             AbstractDungeon.actionManager.addToTop(new MakeTempCardInDrawPileAction(this, 1, false, true));
         }

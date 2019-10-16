@@ -7,6 +7,7 @@ import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
 
 import basilMod.powers.FaeFormPower;
+import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
@@ -52,8 +53,7 @@ public class FaeForm extends AbstractDynamicCard {
     @Override
     public void triggerWhenDrawn() {
         //Fickle effect
-        float to_discard = AbstractDungeon.cardRandomRng.random();
-        if (to_discard <= 0.5) {
+        if (FickleHelper.getFickle()) {
             AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(this));
             AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
         }
