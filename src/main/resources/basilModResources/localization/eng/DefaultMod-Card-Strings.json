@@ -211,5 +211,9 @@
   "basilMod:SleeplessNight": {
     "NAME": "Sleepless Night",
     "DESCRIPTION": "Apply !M! Vulnerable and Weak to all enemies. NL basilmod:Fickle: Lose [E] and gain 2 basilmod:Caffeine."
+  },
+  "basilMod:Kaluha": {
+    "NAME": "Kaluha",
+    "DESCRIPTION": "Gain !M! basilmod:Caffeine and basilmod:Inebriated."
   }
 }
