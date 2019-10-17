@@ -7,6 +7,7 @@ import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
@@ -40,16 +41,22 @@ public class ScholarsThesis extends CustomRelic {
 
     }
 
-    @Override
-    public void onEquip() {
-        AbstractDungeon.player.loseRelic(ScholarsNotes.ID);
-    }
 
     @Override
     public void atBattleStart() {
         setCounter(0);
     }
 
+    @Override
+    public void obtain() {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasRelic(ScholarsNotes.ID)) {
+            int index = AbstractDungeon.player.relics.indexOf(p.getRelic(ScholarsNotes.ID));
+            this.instantObtain(p, index, false);
+        } else {
+            super.obtain();
+        }
+    }
 
     private void doCardDraw() {
         flash();
