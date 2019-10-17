@@ -431,6 +431,7 @@ public class BasilMod implements
         library.add(new FinalsWeek());
         library.add(new CrowCloak());
         library.add(new CaffeineJitters());
+        library.add(new SleeplessNight());
 
         int counter_basic = 0;
         int counter_common = 0;

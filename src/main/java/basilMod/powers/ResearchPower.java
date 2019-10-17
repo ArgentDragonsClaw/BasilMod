@@ -99,5 +99,8 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
         card.modifyCostForCombat(-cost);
         AbstractDungeon.effectList.add(new CardFlashVfx(card));
         this.amount--;
+        if (this.amount <= 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(null, null, this));
+        }
     }
 }
