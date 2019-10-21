@@ -215,5 +215,10 @@
   "basilMod:Kaluha": {
     "NAME": "Kaluha",
     "DESCRIPTION": "Gain !M! basilmod:Caffeine and basilmod:Inebriated."
+  },
+  "basilMod:Counterstatus": {
+    "NAME": "Counterstatus",
+    "DESCRIPTION": "When you draw a Status, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "When you draw a Status, gain !M! Block and Thorns."
   }
 }

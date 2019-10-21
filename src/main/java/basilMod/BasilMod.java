@@ -433,6 +433,7 @@ public class BasilMod implements
         library.add(new CaffeineJitters());
         library.add(new SleeplessNight());
         library.add(new Kaluha());
+        library.add(new Counterstatus());
 
         int counter_basic = 0;
         int counter_common = 0;

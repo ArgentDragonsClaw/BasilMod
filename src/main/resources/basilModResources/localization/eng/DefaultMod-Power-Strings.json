@@ -99,5 +99,13 @@
       "When you draw a card, gain ",
       " Block (not affected by Dexterity)."
     ]
+  },
+  "basilMod:Counterstatus": {
+    "NAME": "Counterstatus",
+    "DESCRIPTIONS": [
+      "When you draw a Status, gain ",
+      " Block.",
+      " Block and Thorns."
+    ]
   }
 }
