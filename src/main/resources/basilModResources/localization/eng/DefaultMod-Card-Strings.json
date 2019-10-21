@@ -224,5 +224,9 @@
   "basilMod:Cawcawphony": {
     "NAME": "Cawcawphony",
     "DESCRIPTION": "Deal !D! Damage to a random enemy !M! times."
+  },
+  "basilMod:RopeArrow": {
+    "NAME": "Rope Arrow",
+    "DESCRIPTION": "Deal !D! Damage and apply !M! Constricted."
   }
 }

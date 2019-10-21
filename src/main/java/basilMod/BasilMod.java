@@ -435,6 +435,7 @@ public class BasilMod implements
         library.add(new Kaluha());
         library.add(new Counterstatus());
         library.add(new Cawcawphony());
+        library.add(new RopeArrow());
 
         int counter_basic = 0;
         int counter_common = 0;
