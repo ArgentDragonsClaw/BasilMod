@@ -1,0 +1,945 @@
+{
+  "mod": {
+    "name": "The Scholar",
+    "version": "0.0.1",
+    "authors": [
+      "Ops"
+    ],
+    "credits": "",
+    "description": "Academia has never been so deadly!",
+    "mts_version": "3.8.0",
+    "sts_version": "01-23-2019",
+    "dependencies": [
+      "basemod",
+      "stslib"
+    ],
+    "optional_dependencies": []
+  },
+  "cards": [
+    {
+      "name": "Curse Rune",
+      "color": "Curse",
+      "rarity": "Curse",
+      "type": "Curse",
+      "cost": "",
+      "description": "Unplayable.\nbasilmod:Rune.\nAt the end of your turn, lose !basilMod:RunescarredValue! HP.\nExhaust."
+    },
+    {
+      "name": "Counter",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Skill",
+      "cost": "0",
+      "description": "If the enemy intends to attack, gain 2 Thorns."
+    },
+    {
+      "name": "Counter+",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Skill",
+      "cost": "0",
+      "description": "If the enemy intends to attack, gain 4 Thorns."
+    },
+    {
+      "name": "Defend",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 5 Block."
+    },
+    {
+      "name": "Defend+",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 8 Block."
+    },
+    {
+      "name": "Quick Draw",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Attack",
+      "cost": "0",
+      "description": "Deal 3 Damage and draw 1 card."
+    },
+    {
+      "name": "Quick Draw+",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Attack",
+      "cost": "0",
+      "description": "Deal 4 Damage and draw 2 cards."
+    },
+    {
+      "name": "Strike",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 6 Damage."
+    },
+    {
+      "name": "Strike+",
+      "color": "Basil_purple_color",
+      "rarity": "Basic",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 9 Damage."
+    },
+    {
+      "name": "Research",
+      "color": "Basil_purple_color",
+      "rarity": "Special",
+      "type": "Power",
+      "cost": "X",
+      "description": "The next X cards you draw cost 1 less this combat."
+    },
+    {
+      "name": "Research+",
+      "color": "Basil_purple_color",
+      "rarity": "Special",
+      "type": "Power",
+      "cost": "X",
+      "description": "The next X cards you draw cost 2 less this combat."
+    },
+    {
+      "name": "Caffeine Jitters",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 3 Damage to a random enemy for each stack of basilmod:Caffeine gained this combat."
+    },
+    {
+      "name": "Caffeine Jitters+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 4 Damage to a random enemy for each stack of basilmod:Caffeine gained this combat."
+    },
+    {
+      "name": "Coin Toss",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "0",
+      "description": "Deal 3 Damage.\nbasilmod:Fickle: Add a copy of this card to the top of your draw pile."
+    },
+    {
+      "name": "Coin Toss+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "0",
+      "description": "Deal 5 Damage.\nbasilmod:Fickle: Add a copy of this card to the top of your draw pile."
+    },
+    {
+      "name": "Counterbuff",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "If the enemy intends to buff, apply 1 basilmod:Rust."
+    },
+    {
+      "name": "Counterbuff+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "If the enemy intends to buff, apply 2 basilmod:Rust."
+    },
+    {
+      "name": "Counterspell",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "If the enemy intends to debuff, gain 1 Artifact."
+    },
+    {
+      "name": "Counterspell+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "If the enemy intends to debuff, gain 2 Artifact."
+    },
+    {
+      "name": "Counterstatus",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "When you draw a Status, gain 5 Block."
+    },
+    {
+      "name": "Counterstatus+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "When you draw a Status, gain 5 Block and Thorns."
+    },
+    {
+      "name": "Cover Page",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 3 Block and draw a card.\nbasilmod:Fickle: Gain 5 Block (not affected by Dexterity)."
+    },
+    {
+      "name": "Cover Page+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 5 Block and draw a card.\nbasilmod:Fickle: Gain 7 Block (not affected by Dexterity)."
+    },
+    {
+      "name": "Creeping Briars",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain 2 Thorns at the start of your turn."
+    },
+    {
+      "name": "Creeping Briars+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain 3 Thorns at the start of your turn."
+    },
+    {
+      "name": "Crow Cloak",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain 2 Dexterity."
+    },
+    {
+      "name": "Crow Cloak+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "1",
+      "description": "Gain 2 Dexterity."
+    },
+    {
+      "name": "Deal With It",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "When you draw a card, gain 1 Block."
+    },
+    {
+      "name": "Deal With It+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Power",
+      "cost": "2",
+      "description": "When you draw a card, gain 2 Block."
+    },
+    {
+      "name": "Inscribe",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nbasilmod:Fickle: Gain 1 basilmod:Runescarred."
+    },
+    {
+      "name": "Inscribe+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nbasilmod:Fickle: Gain 2 basilmod:Runescarred."
+    },
+    {
+      "name": "Kaluha",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 1 basilmod:Caffeine and basilmod:Inebriated."
+    },
+    {
+      "name": "Kaluha+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 2 basilmod:Caffeine and basilmod:Inebriated."
+    },
+    {
+      "name": "Long Draw",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 10 Damage and draw 1 card."
+    },
+    {
+      "name": "Long Draw+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 15 Damage and draw 1 card."
+    },
+    {
+      "name": "Papercut",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 2 Damage 3 times."
+    },
+    {
+      "name": "Papercut+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 3 Damage 4 times."
+    },
+    {
+      "name": "Runic Defend",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 5 Block and 1 basilmod:Runescarred."
+    },
+    {
+      "name": "Runic Defend+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 7 Block and 2 basilmod:Runescarred."
+    },
+    {
+      "name": "Runic Strike",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 6 Damage and gain 1 basilmod:Runescarred."
+    },
+    {
+      "name": "Runic Strike+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 8 Damage and gain 2 basilmod:Runescarred."
+    },
+    {
+      "name": "Shuffle Notes",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Draw 3 cards."
+    },
+    {
+      "name": "Shuffle Notes+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Draw 4 cards."
+    },
+    {
+      "name": "Sip",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Gain 1 Caffeine."
+    },
+    {
+      "name": "Sip+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Gain 1 basilmod:Caffeine and heal 1 HP."
+    },
+    {
+      "name": "Slurp",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 1 basilmod:Inebriated."
+    },
+    {
+      "name": "Slurp+",
+      "color": "Basil_purple_color",
+      "rarity": "Common",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 2 basilmod:Inebriated."
+    },
+    {
+      "name": "Another Book",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Add a random skill to your hand. Exhaust."
+    },
+    {
+      "name": "Another Book+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Add an upgraded random skill to your hand. Exhaust."
+    },
+    {
+      "name": "Blank Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nCopy the effects of another basilmod:Rune in your deck.\nExhaust."
+    },
+    {
+      "name": "Blank Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nCopy the effects of another basilmod:Rune in your deck."
+    },
+    {
+      "name": "Cawcawphony",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 1 Damage to a random enemy 10 times."
+    },
+    {
+      "name": "Cawcawphony+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 2 Damage to a random enemy 10 times."
+    },
+    {
+      "name": "Cleanse",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 5 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred."
+    },
+    {
+      "name": "Cleanse+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 8 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred."
+    },
+    {
+      "name": "Coffee",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "3",
+      "description": "Gain 2 basilmod:Caffeine each turn."
+    },
+    {
+      "name": "Coffee+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain 2 basilmod:Caffeine each turn."
+    },
+    {
+      "name": "Due Date",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Can only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
+    },
+    {
+      "name": "Due Date+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Can only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
+    },
+    {
+      "name": "Earth Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nGain !basilMod:RunescarredValue! block per enemy.\nExhaust."
+    },
+    {
+      "name": "Earth Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nGain !basilMod:RunescarredValue! block per enemy."
+    },
+    {
+      "name": "Experiment",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Add basilmod:Research to your hand and Exhaust.\nbasilmod:Fickle: Draw 2 cards."
+    },
+    {
+      "name": "Experiment+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Add basilmod:Research+ to your hand and Exhaust.\nbasilmod:Fickle: Draw 3 cards."
+    },
+    {
+      "name": "Faerie Dust",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 3 Damage for each enemy in combat.\nbasilmod:Fickle: Deal 3 Damage to all enemies."
+    },
+    {
+      "name": "Faerie Dust+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "0",
+      "description": "Deal 4 Damage for each enemy in combat.\nbasilmod:Fickle: Deal 4 Damage to all enemies."
+    },
+    {
+      "name": "Flame Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "basilmod:Rune.\nDeal 1 Damage and gain !basilMod:RunescarredValue! strength.\nExhaust."
+    },
+    {
+      "name": "Flame Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "basilmod:Rune.\nDeal 1 Damage and gain !basilMod:RunescarredValue! Strength."
+    },
+    {
+      "name": "Frost Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nApply !basilMod:RunescarredValue! Slow.\nExhaust."
+    },
+    {
+      "name": "Frost Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "basilmod:Rune.\nApply !basilMod:RunescarredValue! Slow."
+    },
+    {
+      "name": "Lightning Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "basilmod:Rune.\nDeal !basilMod:RunescarredValue! Damage to all enemies.\nExhaust."
+    },
+    {
+      "name": "Lightning Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "basilmod:Rune.\nDeal !basilMod:RunescarredValue! Damage to all enemies."
+    },
+    {
+      "name": "Nightmares",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nAt the end of your turn, gain 5 Thorns.\nbasilmod:Fickle: Take 5 Damage."
+    },
+    {
+      "name": "Nightmares+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nAt the end of your turn, gain 10 Thorns.\nbasilmod:Fickle: Take 10 Damage."
+    },
+    {
+      "name": "Nock One Back",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 7 Damage to a random enemy.\nbasilmod:Fickle: Gain 1 basilmod:Inebriated."
+    },
+    {
+      "name": "Nock One Back+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 9 Damage to a random enemy.\nbasilmod:Fickle: Gain 2 basilmod:Inebriated."
+    },
+    {
+      "name": "Robin Hood",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 6 Damage and gain 1 gold for each point of unblocked damage."
+    },
+    {
+      "name": "Robin Hood+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 9 Damage and gain 2 gold for each point of unblocked damage."
+    },
+    {
+      "name": "Rope Arrow",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 3 Damage and apply 3 Constricted."
+    },
+    {
+      "name": "Rope Arrow+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 3 Damage and apply 3 Constricted."
+    },
+    {
+      "name": "Runeburn",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "2",
+      "description": "At the end of your turn, do damage equal to your basilmod:Runescarred to a random enemy."
+    },
+    {
+      "name": "Runeburn+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "2",
+      "description": "Innate.\nAt the end of your turn, do damage equal to your basilmod:Runescarred to a random enemy."
+    },
+    {
+      "name": "Shots!",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 3 Damage to ALL enemies.\nIf you have basilmod:Inebriated, increase this damage by 2."
+    },
+    {
+      "name": "Shots!+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 5 Damage to ALL enemies.\nIf you have basilmod:Inebriated, increase this damage by 3."
+    },
+    {
+      "name": "Sleepless Night",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Apply 2 Vulnerable and Weak to all enemies.\nbasilmod:Fickle: Lose [E] and gain 2 basilmod:Caffeine."
+    },
+    {
+      "name": "Sleepless Night+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Apply 3 Vulnerable and Weak to all enemies.\nbasilmod:Fickle: Lose [E] and gain 2 basilmod:Caffeine."
+    },
+    {
+      "name": "Take A Break!",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Heal 2 HP for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred.\nExhaust."
+    },
+    {
+      "name": "Take A Break!+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Heal 3 HP for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred.\nExhaust."
+    },
+    {
+      "name": "Whiskey",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "3",
+      "description": "Gain 2 extra Strength and Dexterity from basilmod:Inebriated ."
+    },
+    {
+      "name": "Whiskey+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain 2 extra Strength and Dexterity from basilmod:Inebriated ."
+    },
+    {
+      "name": "Astral Brew",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Gain 1 Intangible."
+    },
+    {
+      "name": "Astral Brew+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Gain 1 Intangible."
+    },
+    {
+      "name": "Crow Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain !basilMod:RunescarredValue! Flight.\nEthereal."
+    },
+    {
+      "name": "Crow Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "Gain !basilMod:RunescarredValue! Flight."
+    },
+    {
+      "name": "Fae Form",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "3",
+      "description": "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity.\nbasilmod:Fickle: Draw a card."
+    },
+    {
+      "name": "Fae Form+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity.\nbasilmod:Fickle: Draw a card."
+    },
+    {
+      "name": "Faerie Rune",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred.\nEthereal."
+    },
+    {
+      "name": "Faerie Rune+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred."
+    },
+    {
+      "name": "Finals Week",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "7",
+      "description": "This card's cost cannot be externally modified.\nDeal 7 Damage 7 times to all enemies and Exhaust.\nbasilmod:Fickle: Reduce this card's cost by 1."
+    },
+    {
+      "name": "Finals Week+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "7",
+      "description": "This card's cost cannot be externally modified.\nDeal 7 Damage 7 times to all enemies and Exhaust.\nbasilmod:Fickle: Reduce this card's cost by 2."
+    },
+    {
+      "name": "Mixed Bag",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Draw 3 basilmod:Runes."
+    },
+    {
+      "name": "Mixed Bag+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "1",
+      "description": "Draw 3 Upgraded basilmod:Runes."
+    },
+    {
+      "name": "Naptime",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "3",
+      "description": "Put all enemies to sleep.\nExhaust."
+    },
+    {
+      "name": "Naptime+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Put all enemies to sleep.\nExhaust."
+    },
+    {
+      "name": "Procrastinate",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Every time you draw this card, increase its effects by 1.\nGain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity.\nExhaust."
+    },
+    {
+      "name": "Procrastinate+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "0",
+      "description": "Every time you draw this card, increase its effects by 2.\nGain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity.\nExhaust."
+    },
+    {
+      "name": "Rebuttal",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "5",
+      "description": "Deal Damage equal to an enemy's intended damage."
+    },
+    {
+      "name": "Rebuttal+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "4",
+      "description": "Deal Damage equal to an enemy's intended damage."
+    },
+    {
+      "name": "Retribution",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "2",
+      "description": "Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies."
+    },
+    {
+      "name": "Retribution+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Power",
+      "cost": "1",
+      "description": "Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies."
+    },
+    {
+      "name": "Runic Overload",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Double your basilmod:Runescarred.\nExhaust."
+    },
+    {
+      "name": "Runic Overload+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Triple your basilmod:Runescarred.\nExhaust."
+    }
+  ],
+  "relics": [
+    {
+      "name": "Scholar's Notes",
+      "tier": "Starter",
+      "pool": "Basil_purple_color",
+      "description": "At the start of combat, choose a card to add to your hand from your deck.",
+      "flavorText": "The deranged writings of a scholar well behind on his grant proposals."
+    },
+    {
+      "name": "Trick Coin",
+      "tier": "Uncommon",
+      "pool": "Basil_purple_color",
+      "description": "Fickle cards are 25% less likely to activate. Right click to flip.",
+      "flavorText": "Who needs luck when you can cheat?"
+    },
+    {
+      "name": "Scholar's Thesis",
+      "tier": "Boss",
+      "pool": "Basil_purple_color",
+      "description": "Every 3 turns, choose a card to add to your hand from your deck.\nReplaces Scholar's Notes.",
+      "flavorText": "I sure hope that angel got their degree."
+    }
+  ],
+  "potions": [
+    {
+      "name": "Coffee Potion",
+      "rarity": "Common",
+      "description": "Gain 1 Caffeine at the start of each turn."
+    }
+  ],
+  "creatures": [
+    {
+      "name": "the Scholar"
+    }
+  ],
+  "keywords": [
+  ]
+}

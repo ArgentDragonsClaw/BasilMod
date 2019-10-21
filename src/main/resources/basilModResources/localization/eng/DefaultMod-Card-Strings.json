@@ -17,7 +17,7 @@
   },
   "basilMod:Sip": {
     "NAME": "Sip",
-    "DESCRIPTION": "Gain 1 Caffeine.",
+    "DESCRIPTION": "Gain 1 basilmod:Caffeine.",
     "UPGRADE_DESCRIPTION": "Gain 1 basilmod:Caffeine and heal 1 HP."
   },
   "basilMod:Counterspell": {
@@ -47,7 +47,7 @@
   },
   "basilMod:FlameRune": {
     "NAME": "Flame Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! strength. NL Exhaust.",
+    "DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! Strength. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! Strength."
   },
   "basilMod:FrostRune": {

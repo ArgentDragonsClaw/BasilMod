@@ -1,0 +1,696 @@
+<!DOCTYPE html!>
+<html>
+<head>
+    <title>The Scholar cards</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</head>
+<body>
+<h1>The Scholar cards</h1>
+<table class="sortable">
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Upgraded image</th>
+        <th>Rarity</th>
+        <th>Type</th>
+        <th>Cost</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>Curse Rune</td>
+        <td><a href="card-images/CurseRune.png"><img src="small-card-images/CurseRune.png" height="298"></a></td>
+        <td></td>
+        <td>Curse</td>
+        <td>Curse</td>
+        <td></td>
+        <td>Unplayable.
+            basilmod:Rune.
+            At the end of your turn, lose !basilMod:RunescarredValue! HP.
+            Exhaust.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Counter</td>
+        <td><a href="card-images/Counter.png"><img src="small-card-images/Counter.png" height="298"></a></td>
+        <td><a href="card-images/CounterPlus.png"><img src="small-card-images/CounterPlus.png" height="298"></a></td>
+        <td>Basic</td>
+        <td>Skill</td>
+        <td>0</td>
+        <td>If the enemy intends to attack, gain 2(4) Thorns.</td>
+    </tr>
+
+    <tr>
+        <td>Defend</td>
+        <td><a href="card-images/Defend.png"><img src="small-card-images/Defend.png" height="298"></a></td>
+        <td><a href="card-images/DefendPlus.png"><img src="small-card-images/DefendPlus.png" height="298"></a></td>
+        <td>Basic</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Gain 5(8) Block.</td>
+    </tr>
+
+    <tr>
+        <td>Quick Draw</td>
+        <td><a href="card-images/QuickDraw.png"><img src="small-card-images/QuickDraw.png" height="298"></a></td>
+        <td><a href="card-images/QuickDrawPlus.png"><img src="small-card-images/QuickDrawPlus.png" height="298"></a>
+        </td>
+        <td>Basic</td>
+        <td>Attack</td>
+        <td>0</td>
+        <td>Deal 3(4) Damage and draw 1(2) card(s).</td>
+    </tr>
+
+    <tr>
+        <td>Strike</td>
+        <td><a href="card-images/Strike.png"><img src="small-card-images/Strike.png" height="298"></a></td>
+        <td><a href="card-images/StrikePlus.png"><img src="small-card-images/StrikePlus.png" height="298"></a></td>
+        <td>Basic</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 6(9) Damage.</td>
+    </tr>
+
+    <tr>
+        <td>Research</td>
+        <td><a href="card-images/Research.png"><img src="small-card-images/Research.png" height="298"></a></td>
+        <td><a href="card-images/ResearchPlus.png"><img src="small-card-images/ResearchPlus.png" height="298"></a></td>
+        <td>Special</td>
+        <td>Power</td>
+        <td>X</td>
+        <td>The next X cards you draw cost 1(2) less this combat.</td>
+    </tr>
+
+    <tr>
+        <td>Caffeine Jitters</td>
+        <td><a href="card-images/CaffeineJitters.png"><img src="small-card-images/CaffeineJitters.png" height="298"></a>
+        </td>
+        <td><a href="card-images/CaffeineJittersPlus.png"><img src="small-card-images/CaffeineJittersPlus.png"
+                                                               height="298"></a></td>
+        <td>Common</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 3(4) Damage to a random enemy for each stack of basilmod:Caffeine gained this combat.</td>
+    </tr>
+
+    <tr>
+        <td>Coin Toss</td>
+        <td><a href="card-images/CoinToss.png"><img src="small-card-images/CoinToss.png" height="298"></a></td>
+        <td><a href="card-images/CoinTossPlus.png"><img src="small-card-images/CoinTossPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Attack</td>
+        <td>0</td>
+        <td>Deal 3(5) Damage.
+            basilmod:Fickle: Add a copy of this card to the top of your draw pile.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Counterbuff</td>
+        <td><a href="card-images/Counterbuff.png"><img src="small-card-images/Counterbuff.png" height="298"></a></td>
+        <td><a href="card-images/CounterbuffPlus.png"><img src="small-card-images/CounterbuffPlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>If the enemy intends to buff, apply 1(2) basilmod:Rust.</td>
+    </tr>
+
+    <tr>
+        <td>Counterspell</td>
+        <td><a href="card-images/Counterspell.png"><img src="small-card-images/Counterspell.png" height="298"></a></td>
+        <td><a href="card-images/CounterspellPlus.png"><img src="small-card-images/CounterspellPlus.png"
+                                                            height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>If the enemy intends to debuff, gain 1(2) Artifact.</td>
+    </tr>
+
+    <tr>
+        <td>Counterstatus</td>
+        <td><a href="card-images/Counterstatus.png"><img src="small-card-images/Counterstatus.png" height="298"></a>
+        </td>
+        <td><a href="card-images/CounterstatusPlus.png"><img src="small-card-images/CounterstatusPlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>When you draw a Status, gain 5 Block (and Thorns).</td>
+    </tr>
+
+    <tr>
+        <td>Cover Page</td>
+        <td><a href="card-images/CoverPage.png"><img src="small-card-images/CoverPage.png" height="298"></a></td>
+        <td><a href="card-images/CoverPagePlus.png"><img src="small-card-images/CoverPagePlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Gain 3(5) Block and draw a card.
+            basilmod:Fickle: Gain 5(7) Block (not affected by Dexterity).
+        </td>
+    </tr>
+
+    <tr>
+        <td>Creeping Briars</td>
+        <td><a href="card-images/CreepingBriars.png"><img src="small-card-images/CreepingBriars.png" height="298"></a>
+        </td>
+        <td><a href="card-images/CreepingBriarsPlus.png"><img src="small-card-images/CreepingBriarsPlus.png"
+                                                              height="298"></a></td>
+        <td>Common</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>Gain 2(3) Thorns at the start of your turn.</td>
+    </tr>
+
+    <tr>
+        <td>Crow Cloak</td>
+        <td><a href="card-images/CrowCloak.png"><img src="small-card-images/CrowCloak.png" height="298"></a></td>
+        <td><a href="card-images/CrowCloakPlus.png"><img src="small-card-images/CrowCloakPlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Power</td>
+        <td>2(1)</td>
+        <td>Gain 2 Dexterity.</td>
+    </tr>
+
+    <tr>
+        <td>Deal With It</td>
+        <td><a href="card-images/DealWithIt.png"><img src="small-card-images/DealWithIt.png" height="298"></a></td>
+        <td><a href="card-images/DealWithItPlus.png"><img src="small-card-images/DealWithItPlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>When you draw a card, gain 1(2) Block.</td>
+    </tr>
+
+    <tr>
+        <td>Inscribe</td>
+        <td><a href="card-images/Inscribe.png"><img src="small-card-images/Inscribe.png" height="298"></a></td>
+        <td><a href="card-images/InscribePlus.png"><img src="small-card-images/InscribePlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td></td>
+        <td>Unplayable.
+            basilmod:Fickle: Gain 1(2) basilmod:Runescarred.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Kaluha</td>
+        <td><a href="card-images/Kaluha.png"><img src="small-card-images/Kaluha.png" height="298"></a></td>
+        <td><a href="card-images/KaluhaPlus.png"><img src="small-card-images/KaluhaPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Gain 1(2) basilmod:Caffeine and basilmod:Inebriated.</td>
+    </tr>
+
+    <tr>
+        <td>Long Draw</td>
+        <td><a href="card-images/LongDraw.png"><img src="small-card-images/LongDraw.png" height="298"></a></td>
+        <td><a href="card-images/LongDrawPlus.png"><img src="small-card-images/LongDrawPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Attack</td>
+        <td>2</td>
+        <td>Deal 10(15) Damage and draw 1 card.</td>
+    </tr>
+
+    <tr>
+        <td>Papercut</td>
+        <td><a href="card-images/Papercut.png"><img src="small-card-images/Papercut.png" height="298"></a></td>
+        <td><a href="card-images/PapercutPlus.png"><img src="small-card-images/PapercutPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 2(3) Damage 3(4) times.</td>
+    </tr>
+
+    <tr>
+        <td>Runic Defend</td>
+        <td><a href="card-images/RunicDefend.png"><img src="small-card-images/RunicDefend.png" height="298"></a></td>
+        <td><a href="card-images/RunicDefendPlus.png"><img src="small-card-images/RunicDefendPlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Gain 5(7) Block and 1(2) basilmod:Runescarred.</td>
+    </tr>
+
+    <tr>
+        <td>Runic Strike</td>
+        <td><a href="card-images/RunicStrike.png"><img src="small-card-images/RunicStrike.png" height="298"></a></td>
+        <td><a href="card-images/RunicStrikePlus.png"><img src="small-card-images/RunicStrikePlus.png" height="298"></a>
+        </td>
+        <td>Common</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 6(8) Damage and gain 1(2) basilmod:Runescarred.</td>
+    </tr>
+
+    <tr>
+        <td>Shuffle Notes</td>
+        <td><a href="card-images/ShuffleNotes.png"><img src="small-card-images/ShuffleNotes.png" height="298"></a></td>
+        <td><a href="card-images/ShuffleNotesPlus.png"><img src="small-card-images/ShuffleNotesPlus.png"
+                                                            height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1(0)</td>
+        <td>Draw 3(4) cards.</td>
+    </tr>
+
+    <tr>
+        <td>Sip</td>
+        <td><a href="card-images/Sip.png"><img src="small-card-images/Sip.png" height="298"></a></td>
+        <td><a href="card-images/SipPlus.png"><img src="small-card-images/SipPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>0</td>
+        <td>Gain 1 Caffeine (basilmod:Caffeine and heal 1 HP).</td>
+    </tr>
+
+    <tr>
+        <td>Slurp</td>
+        <td><a href="card-images/Slurp.png"><img src="small-card-images/Slurp.png" height="298"></a></td>
+        <td><a href="card-images/SlurpPlus.png"><img src="small-card-images/SlurpPlus.png" height="298"></a></td>
+        <td>Common</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Gain 1(2) basilmod:Inebriated.</td>
+    </tr>
+
+    <tr>
+        <td>Another Book</td>
+        <td><a href="card-images/AnotherBook.png"><img src="small-card-images/AnotherBook.png" height="298"></a></td>
+        <td><a href="card-images/AnotherBookPlus.png"><img src="small-card-images/AnotherBookPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>0</td>
+        <td>Add a (an upgraded) random skill to your hand. Exhaust.</td>
+    </tr>
+
+    <tr>
+        <td>Blank Rune</td>
+        <td><a href="card-images/BlankRune.png"><img src="small-card-images/BlankRune.png" height="298"></a></td>
+        <td><a href="card-images/BlankRunePlus.png"><img src="small-card-images/BlankRunePlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>basilmod:Rune.
+            Copy the effects of another basilmod:Rune in your deck.
+            Exhaust. (not
+            Exhaust.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Cawcawphony</td>
+        <td><a href="card-images/Cawcawphony.png"><img src="small-card-images/Cawcawphony.png" height="298"></a></td>
+        <td><a href="card-images/CawcawphonyPlus.png"><img src="small-card-images/CawcawphonyPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>2</td>
+        <td>Deal 1(2) Damage to a random enemy 10 times.</td>
+    </tr>
+
+    <tr>
+        <td>Cleanse</td>
+        <td><a href="card-images/Cleanse.png"><img src="small-card-images/Cleanse.png" height="298"></a></td>
+        <td><a href="card-images/CleansePlus.png"><img src="small-card-images/CleansePlus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>2</td>
+        <td>Deal 5(8) damage to a random enemy for each stack of basilmod:Runescarred.
+            Remove all basilmod:Runescarred.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Coffee</td>
+        <td><a href="card-images/Coffee.png"><img src="small-card-images/Coffee.png" height="298"></a></td>
+        <td><a href="card-images/CoffeePlus.png"><img src="small-card-images/CoffeePlus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Power</td>
+        <td>3(2)</td>
+        <td>Gain 2 basilmod:Caffeine each turn.</td>
+    </tr>
+
+    <tr>
+        <td>Due Date</td>
+        <td><a href="card-images/DueDate.png"><img src="small-card-images/DueDate.png" height="298"></a></td>
+        <td><a href="card-images/DueDatePlus.png"><img src="small-card-images/DueDatePlus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>2(1)</td>
+        <td>Can only be played if enemy is at full HP.
+            If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain
+            !basilMod:DueDateValue! Max HP.
+            Exhaust.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Earth Rune</td>
+        <td><a href="card-images/EarthRune.png"><img src="small-card-images/EarthRune.png" height="298"></a></td>
+        <td><a href="card-images/EarthRunePlus.png"><img src="small-card-images/EarthRunePlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>basilmod:Rune.
+            Gain !basilMod:RunescarredValue! block per enemy.
+            Exhaust. (not
+            Exhaust.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Experiment</td>
+        <td><a href="card-images/Experiment.png"><img src="small-card-images/Experiment.png" height="298"></a></td>
+        <td><a href="card-images/ExperimentPlus.png"><img src="small-card-images/ExperimentPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Add basilmod:Research (basilmod:Research+) to your hand and Exhaust.
+            basilmod:Fickle: Draw 2(3) cards.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Faerie Dust</td>
+        <td><a href="card-images/FaerieDust.png"><img src="small-card-images/FaerieDust.png" height="298"></a></td>
+        <td><a href="card-images/FaerieDustPlus.png"><img src="small-card-images/FaerieDustPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1(0)</td>
+        <td>Deal 3(4) Damage for each enemy in combat.
+            basilmod:Fickle: Deal 3(4) Damage to all enemies.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Flame Rune</td>
+        <td><a href="card-images/FlameRune.png"><img src="small-card-images/FlameRune.png" height="298"></a></td>
+        <td><a href="card-images/FlameRunePlus.png"><img src="small-card-images/FlameRunePlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>basilmod:Rune.
+            Deal 1 Damage and gain !basilMod:RunescarredValue! strength (Strength).
+            Exhaust. (not
+            Exhaust.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Frost Rune</td>
+        <td><a href="card-images/FrostRune.png"><img src="small-card-images/FrostRune.png" height="298"></a></td>
+        <td><a href="card-images/FrostRunePlus.png"><img src="small-card-images/FrostRunePlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>basilmod:Rune.
+            Apply !basilMod:RunescarredValue! Slow.
+            Exhaust. (not
+            Exhaust.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Lightning Rune</td>
+        <td><a href="card-images/LightningRune.png"><img src="small-card-images/LightningRune.png" height="298"></a>
+        </td>
+        <td><a href="card-images/LightningRunePlus.png"><img src="small-card-images/LightningRunePlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>basilmod:Rune.
+            Deal !basilMod:RunescarredValue! Damage to all enemies.
+            Exhaust. (not
+            Exhaust.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Nightmares</td>
+        <td><a href="card-images/Nightmares.png"><img src="small-card-images/Nightmares.png" height="298"></a></td>
+        <td><a href="card-images/NightmaresPlus.png"><img src="small-card-images/NightmaresPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td></td>
+        <td>Unplayable.
+            At the end of your turn, gain 5(10) Thorns.
+            basilmod:Fickle: Take 5(10) Damage.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Nock One Back</td>
+        <td><a href="card-images/NockOneBack.png"><img src="small-card-images/NockOneBack.png" height="298"></a></td>
+        <td><a href="card-images/NockOneBackPlus.png"><img src="small-card-images/NockOneBackPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 7(9) Damage to a random enemy.
+            basilmod:Fickle: Gain 1(2) basilmod:Inebriated.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Robin Hood</td>
+        <td><a href="card-images/RobinHood.png"><img src="small-card-images/RobinHood.png" height="298"></a></td>
+        <td><a href="card-images/RobinHoodPlus.png"><img src="small-card-images/RobinHoodPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 6(9) Damage and gain 1(2) gold for each point of unblocked damage.</td>
+    </tr>
+
+    <tr>
+        <td>Rope Arrow</td>
+        <td><a href="card-images/RopeArrow.png"><img src="small-card-images/RopeArrow.png" height="298"></a></td>
+        <td><a href="card-images/RopeArrowPlus.png"><img src="small-card-images/RopeArrowPlus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>2(1)</td>
+        <td>Deal 3 Damage and apply 3 Constricted.</td>
+    </tr>
+
+    <tr>
+        <td>Runeburn</td>
+        <td><a href="card-images/Runeburn.png"><img src="small-card-images/Runeburn.png" height="298"></a></td>
+        <td><a href="card-images/RuneburnPlus.png"><img src="small-card-images/RuneburnPlus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>(Innate.)
+            At the end of your turn, do damage equal to your basilmod:Runescarred to a random enemy.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Shots!</td>
+        <td><a href="card-images/Shots!.png"><img src="small-card-images/Shots!.png" height="298"></a></td>
+        <td><a href="card-images/Shots!Plus.png"><img src="small-card-images/Shots!Plus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Attack</td>
+        <td>1</td>
+        <td>Deal 3(5) Damage to ALL enemies.
+            If you have basilmod:Inebriated, increase this damage by 2(3).
+        </td>
+    </tr>
+
+    <tr>
+        <td>Sleepless Night</td>
+        <td><a href="card-images/SleeplessNight.png"><img src="small-card-images/SleeplessNight.png" height="298"></a>
+        </td>
+        <td><a href="card-images/SleeplessNightPlus.png"><img src="small-card-images/SleeplessNightPlus.png"
+                                                              height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>2(1)</td>
+        <td>Apply 2(3) Vulnerable and Weak to all enemies.
+            basilmod:Fickle: Lose [E] and gain 2 basilmod:Caffeine.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Take A Break!</td>
+        <td><a href="card-images/TakeABreak!.png"><img src="small-card-images/TakeABreak!.png" height="298"></a></td>
+        <td><a href="card-images/TakeABreak!Plus.png"><img src="small-card-images/TakeABreak!Plus.png" height="298"></a>
+        </td>
+        <td>Uncommon</td>
+        <td>Skill</td>
+        <td>2</td>
+        <td>Heal 2(3) HP for each stack of basilmod:Runescarred.
+            Remove all basilmod:Runescarred.
+            Exhaust.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Whiskey</td>
+        <td><a href="card-images/Whiskey.png"><img src="small-card-images/Whiskey.png" height="298"></a></td>
+        <td><a href="card-images/WhiskeyPlus.png"><img src="small-card-images/WhiskeyPlus.png" height="298"></a></td>
+        <td>Uncommon</td>
+        <td>Power</td>
+        <td>3(2)</td>
+        <td>Gain 2 extra Strength and Dexterity from basilmod:Inebriated .</td>
+    </tr>
+
+    <tr>
+        <td>Astral Brew</td>
+        <td><a href="card-images/AstralBrew.png"><img src="small-card-images/AstralBrew.png" height="298"></a></td>
+        <td><a href="card-images/AstralBrewPlus.png"><img src="small-card-images/AstralBrewPlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Skill</td>
+        <td>2(1)</td>
+        <td>Gain 1 Intangible.</td>
+    </tr>
+
+    <tr>
+        <td>Crow Rune</td>
+        <td><a href="card-images/CrowRune.png"><img src="small-card-images/CrowRune.png" height="298"></a></td>
+        <td><a href="card-images/CrowRunePlus.png"><img src="small-card-images/CrowRunePlus.png" height="298"></a></td>
+        <td>Rare</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>Gain !basilMod:RunescarredValue! Flight.
+            Ethereal. (not
+            Ethereal.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Fae Form</td>
+        <td><a href="card-images/FaeForm.png"><img src="small-card-images/FaeForm.png" height="298"></a></td>
+        <td><a href="card-images/FaeFormPlus.png"><img src="small-card-images/FaeFormPlus.png" height="298"></a></td>
+        <td>Rare</td>
+        <td>Power</td>
+        <td>3(2)</td>
+        <td>At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or
+            Dexterity.
+            basilmod:Fickle: Draw a card.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Faerie Rune</td>
+        <td><a href="card-images/FaerieRune.png"><img src="small-card-images/FaerieRune.png" height="298"></a></td>
+        <td><a href="card-images/FaerieRunePlus.png"><img src="small-card-images/FaerieRunePlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Power</td>
+        <td>2</td>
+        <td>If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred.
+            Ethereal. (not
+            Ethereal.)
+        </td>
+    </tr>
+
+    <tr>
+        <td>Finals Week</td>
+        <td><a href="card-images/FinalsWeek.png"><img src="small-card-images/FinalsWeek.png" height="298"></a></td>
+        <td><a href="card-images/FinalsWeekPlus.png"><img src="small-card-images/FinalsWeekPlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Attack</td>
+        <td>7</td>
+        <td>This card's cost cannot be externally modified.
+            Deal 7 Damage 7 times to all enemies and Exhaust.
+            basilmod:Fickle: Reduce this card's cost by 1(2).
+        </td>
+    </tr>
+
+    <tr>
+        <td>Mixed Bag</td>
+        <td><a href="card-images/MixedBag.png"><img src="small-card-images/MixedBag.png" height="298"></a></td>
+        <td><a href="card-images/MixedBagPlus.png"><img src="small-card-images/MixedBagPlus.png" height="298"></a></td>
+        <td>Rare</td>
+        <td>Skill</td>
+        <td>1</td>
+        <td>Draw 3 (Upgraded) basilmod:Runes.</td>
+    </tr>
+
+    <tr>
+        <td>Naptime</td>
+        <td><a href="card-images/Naptime.png"><img src="small-card-images/Naptime.png" height="298"></a></td>
+        <td><a href="card-images/NaptimePlus.png"><img src="small-card-images/NaptimePlus.png" height="298"></a></td>
+        <td>Rare</td>
+        <td>Skill</td>
+        <td>3(2)</td>
+        <td>Put all enemies to sleep.
+            Exhaust.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Procrastinate</td>
+        <td><a href="card-images/Procrastinate.png"><img src="small-card-images/Procrastinate.png" height="298"></a>
+        </td>
+        <td><a href="card-images/ProcrastinatePlus.png"><img src="small-card-images/ProcrastinatePlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Skill</td>
+        <td>0</td>
+        <td>Every time you draw this card, increase its effects by 1(2).
+            Gain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity.
+            Exhaust.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Rebuttal</td>
+        <td><a href="card-images/Rebuttal.png"><img src="small-card-images/Rebuttal.png" height="298"></a></td>
+        <td><a href="card-images/RebuttalPlus.png"><img src="small-card-images/RebuttalPlus.png" height="298"></a></td>
+        <td>Rare</td>
+        <td>Attack</td>
+        <td>5(4)</td>
+        <td>Deal Damage equal to an enemy's intended damage.</td>
+    </tr>
+
+    <tr>
+        <td>Retribution</td>
+        <td><a href="card-images/Retribution.png"><img src="small-card-images/Retribution.png" height="298"></a></td>
+        <td><a href="card-images/RetributionPlus.png"><img src="small-card-images/RetributionPlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Power</td>
+        <td>2(1)</td>
+        <td>Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies.</td>
+    </tr>
+
+    <tr>
+        <td>Runic Overload</td>
+        <td><a href="card-images/RunicOverload.png"><img src="small-card-images/RunicOverload.png" height="298"></a>
+        </td>
+        <td><a href="card-images/RunicOverloadPlus.png"><img src="small-card-images/RunicOverloadPlus.png" height="298"></a>
+        </td>
+        <td>Rare</td>
+        <td>Skill</td>
+        <td>2</td>
+        <td>Double (Triple) your basilmod:Runescarred.
+            Exhaust.
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>
