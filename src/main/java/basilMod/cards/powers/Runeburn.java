@@ -36,7 +36,6 @@ public class Runeburn extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
 // /STAT DECLARATION/
 
@@ -59,7 +58,6 @@ public class Runeburn extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             this.isInnate = true;
             initializeDescription();

@@ -42,7 +42,6 @@ public class FlameRune extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     // /STAT DECLARATION/
 
@@ -80,7 +79,6 @@ public class FlameRune extends AbstractDynamicCard {
             upgradeName();
 
             rawDescription = UPGRADE_DESCRIPTION;
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
 
             exhaust = false;

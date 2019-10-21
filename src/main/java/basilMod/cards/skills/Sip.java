@@ -36,7 +36,6 @@ public class Sip extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 0;
-    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 

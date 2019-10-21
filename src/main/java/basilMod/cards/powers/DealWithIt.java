@@ -36,7 +36,6 @@ public class DealWithIt extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int MAGIC = 1;
     private static final int UPGRADED_MAGIC = 1;
@@ -63,7 +62,6 @@ public class DealWithIt extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UPGRADED_MAGIC);
             initializeDescription();
         }

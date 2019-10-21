@@ -33,7 +33,6 @@ public class Strike extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
@@ -65,7 +64,6 @@ public class Strike extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

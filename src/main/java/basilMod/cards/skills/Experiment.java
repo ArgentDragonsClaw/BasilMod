@@ -41,7 +41,6 @@ public class Experiment extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
 
     private static final int MAGIC = 2;
@@ -81,7 +80,6 @@ public class Experiment extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UPGRADED_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

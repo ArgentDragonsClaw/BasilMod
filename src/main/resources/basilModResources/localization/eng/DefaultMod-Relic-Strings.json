@@ -50,6 +50,7 @@
     "NAME": "Trick Coin",
     "FLAVOR": "Who needs luck when you can cheat?",
     "DESCRIPTIONS": [
+      "#yFickle cards are #g25% #gless likely to activate on heads, and #r25% #rmore likely to activate on tails. Right click to flip.",
       "#yFickle cards are #g25% #gless likely to activate. Right click to flip.",
       "#yFickle cards are #r25% #rmore likely to activate. Right click to flip."
     ]

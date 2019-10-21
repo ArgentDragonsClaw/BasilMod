@@ -35,7 +35,6 @@ public class Slurp extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int MAGIC = 1;
     private static final int UP_MAGIC = 1;
@@ -61,7 +60,6 @@ public class Slurp extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UP_MAGIC);
             initializeDescription();
         }

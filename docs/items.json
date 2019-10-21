@@ -366,7 +366,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Gain 1 Caffeine."
+      "description": "Gain 1 basilmod:Caffeine."
     },
     {
       "name": "Sip+",
@@ -542,7 +542,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "basilmod:Rune.\nDeal 1 Damage and gain !basilMod:RunescarredValue! strength.\nExhaust."
+      "description": "basilmod:Rune.\nDeal 1 Damage and gain !basilMod:RunescarredValue! Strength.\nExhaust."
     },
     {
       "name": "Flame Rune+",
@@ -917,7 +917,7 @@
       "name": "Trick Coin",
       "tier": "Uncommon",
       "pool": "Basil_purple_color",
-      "description": "Fickle cards are 25% less likely to activate. Right click to flip.",
+      "description": "Fickle cards are 25% less likely to activate on heads, and 25% more likely to activate on tails. Right click to flip.",
       "flavorText": "Who needs luck when you can cheat?"
     },
     {

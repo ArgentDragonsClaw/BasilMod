@@ -35,7 +35,6 @@ public class Cleanse extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
@@ -74,7 +73,6 @@ public class Cleanse extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

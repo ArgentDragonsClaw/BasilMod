@@ -31,7 +31,6 @@ public class Defend extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
@@ -62,7 +61,6 @@ public class Defend extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

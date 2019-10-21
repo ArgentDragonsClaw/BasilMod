@@ -38,7 +38,6 @@ public class RobinHood extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int DAMAGE = 6;
     private static final int UPGRADED_DAMAGE = 3;
@@ -75,7 +74,6 @@ public class RobinHood extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeDamage(UPGRADED_DAMAGE);
             upgradeMagicNumber(UPGRADED_MAGIC);
             initializeDescription();

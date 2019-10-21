@@ -25,7 +25,7 @@
 | Runic Defend | ![](small-card-images/RunicDefend.png) | ![](small-card-images/RunicDefendPlus.png) | Common | Skill | 1 | Gain 5(7) Block and 1(2) basilmod:Runescarred. |
 | Runic Strike | ![](small-card-images/RunicStrike.png) | ![](small-card-images/RunicStrikePlus.png) | Common | Attack | 1 | Deal 6(8) Damage and gain 1(2) basilmod:Runescarred. |
 | Shuffle Notes | ![](small-card-images/ShuffleNotes.png) | ![](small-card-images/ShuffleNotesPlus.png) | Common | Skill | 1(0) | Draw 3(4) cards. |
-| Sip | ![](small-card-images/Sip.png) | ![](small-card-images/SipPlus.png) | Common | Skill | 0 | Gain 1 Caffeine (basilmod:Caffeine and heal 1 HP). |
+| Sip | ![](small-card-images/Sip.png) | ![](small-card-images/SipPlus.png) | Common | Skill | 0 | Gain 1 basilmod:Caffeine (and heal 1 HP). |
 | Slurp | ![](small-card-images/Slurp.png) | ![](small-card-images/SlurpPlus.png) | Common | Skill | 1 | Gain 1(2) basilmod:Inebriated. |
 | Another Book | ![](small-card-images/AnotherBook.png) | ![](small-card-images/AnotherBookPlus.png) | Uncommon | Skill | 0 | Add a (an upgraded) random skill to your hand. Exhaust. |
 | Blank Rune | ![](small-card-images/BlankRune.png) | ![](small-card-images/BlankRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Copy the effects of another basilmod:Rune in your deck. Exhaust. (not Exhaust.) |
@@ -36,7 +36,7 @@
 | Earth Rune | ![](small-card-images/EarthRune.png) | ![](small-card-images/EarthRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Gain !basilMod:RunescarredValue! block per enemy. Exhaust. (not Exhaust.) |
 | Experiment | ![](small-card-images/Experiment.png) | ![](small-card-images/ExperimentPlus.png) | Uncommon | Skill | 1 | Add basilmod:Research (basilmod:Research+) to your hand and Exhaust. basilmod:Fickle: Draw 2(3) cards. |
 | Faerie Dust | ![](small-card-images/FaerieDust.png) | ![](small-card-images/FaerieDustPlus.png) | Uncommon | Attack | 1(0) | Deal 3(4) Damage for each enemy in combat. basilmod:Fickle: Deal 3(4) Damage to all enemies. |
-| Flame Rune | ![](small-card-images/FlameRune.png) | ![](small-card-images/FlameRunePlus.png) | Uncommon | Attack | 1 | basilmod:Rune. Deal 1 Damage and gain !basilMod:RunescarredValue! strength (Strength). Exhaust. (not Exhaust.) |
+| Flame Rune | ![](small-card-images/FlameRune.png) | ![](small-card-images/FlameRunePlus.png) | Uncommon | Attack | 1 | basilmod:Rune. Deal 1 Damage and gain !basilMod:RunescarredValue! Strength. Exhaust. (not Exhaust.) |
 | Frost Rune | ![](small-card-images/FrostRune.png) | ![](small-card-images/FrostRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Apply !basilMod:RunescarredValue! Slow. Exhaust. (not Exhaust.) |
 | Lightning Rune | ![](small-card-images/LightningRune.png) | ![](small-card-images/LightningRunePlus.png) | Uncommon | Attack | 1 | basilmod:Rune. Deal !basilMod:RunescarredValue! Damage to all enemies. Exhaust. (not Exhaust.) |
 | Nightmares | ![](small-card-images/Nightmares.png) | ![](small-card-images/NightmaresPlus.png) | Uncommon | Skill |  | Unplayable. At the end of your turn, gain 5(10) Thorns. basilmod:Fickle: Take 5(10) Damage. |
@@ -78,7 +78,7 @@
 | Image | Name | Rarity | Color | Description | Flavor |
 | ----- | ---- | ------ | ----- | ----------- | ------ |
 | ![](relics/ScholarsNotes.png) | Scholar's Notes | Starter | Basil_purple_color | At the start of combat, choose a card to add to your hand from your deck. | The deranged writings of a scholar well behind on his grant proposals. |
-| ![](relics/TrickCoin.png) | Trick Coin | Uncommon | Basil_purple_color | #yFickle cards are #g25% #gless likely to activate. Right click to flip. | Who needs luck when you can cheat? |
+| ![](relics/TrickCoin.png) | Trick Coin | Uncommon | Basil_purple_color | #yFickle cards are #g25% #gless likely to activate on heads, and #r25% #rmore likely to activate on tails. Right click to flip. | Who needs luck when you can cheat? |
 | ![](relics/ScholarsThesis.png) | Scholar's Thesis | Boss | Basil_purple_color | Every 3 turns, choose a card to add to your hand from your deck. NL Replaces Scholar's Notes. | I sure hope that angel got their degree. |
 
 

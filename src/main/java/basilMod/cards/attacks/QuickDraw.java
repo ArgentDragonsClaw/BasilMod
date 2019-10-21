@@ -37,7 +37,6 @@ public class QuickDraw extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 0;
-    private static final int UPGRADED_COST = 0;
 
     private static final int DAMAGE = 3;
     private static final int UPGRADED_DAMAGE = 1;
@@ -71,7 +70,6 @@ public class QuickDraw extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeDamage(UPGRADED_DAMAGE);
             upgradeMagicNumber(UPGRADED_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;

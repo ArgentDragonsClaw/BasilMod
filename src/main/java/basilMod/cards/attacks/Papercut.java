@@ -36,7 +36,6 @@ public class Papercut extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int DAMAGE = 2;
     private static final int UPGRADED_DAMAGE = 1;
@@ -73,7 +72,6 @@ public class Papercut extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UPGRADED_MAGIC);
             upgradeDamage(UPGRADED_DAMAGE);
             initializeDescription();

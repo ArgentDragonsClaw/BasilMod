@@ -39,11 +39,15 @@ public class TrickCoin extends CustomRelic implements ClickableRelic { // You mu
 
     public TrickCoin() {
         super(ID, IMG_HEADS, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
-        this.description = getUpdatedDescription();
+        this.description = DESCRIPTIONS[0];
         tips.clear();
         tips.add(new PowerTip(name + " (Heads)", description));
     }
 
+    @Override
+    public void onEquip() {
+        this.description = getUpdatedDescription();
+    }
 
     @Override
     public void onRightClick() {// On right click
@@ -105,9 +109,9 @@ public class TrickCoin extends CustomRelic implements ClickableRelic { // You mu
     @Override
     public String getUpdatedDescription() {
         if (isHeads) {
-            return DESCRIPTIONS[0];
-        } else {
             return DESCRIPTIONS[1];
+        } else {
+            return DESCRIPTIONS[2];
         }
 
 

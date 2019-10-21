@@ -39,7 +39,6 @@ public class CoverPage extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
 
     private static final int BLOCK = 3;
     private static final int UPGRADED_BLOCK = 2;

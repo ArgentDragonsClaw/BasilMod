@@ -44,7 +44,6 @@ public class Procrastinate extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 0;
-    private static final int UPGRADED_COST = 0;
 
     private static final int MAGIC = 1;
     private static final int UP_MAG = 1;
@@ -81,7 +80,6 @@ public class Procrastinate extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UP_MAG);
             initializeDescription();
         }

@@ -37,7 +37,6 @@ public class LongDraw extends AbstractDynamicCard {
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 10;
     private static final int UPGRADED_DAMAGE = 5;
@@ -69,7 +68,6 @@ public class LongDraw extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             upgradeDamage(UPGRADED_DAMAGE);
             initializeDescription();
         }
