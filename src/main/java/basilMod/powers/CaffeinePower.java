@@ -3,6 +3,7 @@ package basilMod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import basilMod.BasilMod;
 import basilMod.cards.attacks.CaffeineJitters;
+import basilMod.relics.EndlessMug;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -59,7 +61,8 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        if (true) { //If we don't have the coffee cup //TODO:: CHANGE ONCE THE COFFEE CUP EXISTS
+
+        if (!AbstractDungeon.player.hasRelic(EndlessMug.ID)) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else if (amount > 1) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
@@ -78,7 +81,11 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
             if (abstractCreature.hasPower(CaffeinePower.POWER_ID)) {
                 if (abstractCreature.getPower(CaffeinePower.POWER_ID).amount + abstractPower.amount >= 3) {
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractCreature, source, CaffeinePower.POWER_ID, 3));
-                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1)); //TODO:: The coffee cup relic doubles this
+                    if (!AbstractDungeon.player.hasRelic(EndlessMug.ID)) {
+                        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+                    } else {
+                        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
+                    }
                 }
             }
         }

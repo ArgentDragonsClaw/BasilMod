@@ -54,5 +54,12 @@
       "#yFickle cards are #g25% #gless likely to activate. Right click to flip.",
       "#yFickle cards are #r25% #rmore likely to activate. Right click to flip."
     ]
+  },
+  "basilMod:EndlessMug": {
+    "NAME": "Endless Mug",
+    "FLAVOR": "Sleep is for people without infinite coffee.",
+    "DESCRIPTIONS": [
+      "When you would gain [E] from #yCaffeine, gain [E] [E] instead."
+    ]
   }
 }

@@ -11,6 +11,7 @@ import basilMod.cards.skills.*;
 import basilMod.cards.skills.Nightmares;
 import basilMod.characters.TheScholar;
 import basilMod.potions.CoffeePotion;
+import basilMod.relics.EndlessMug;
 import basilMod.relics.ScholarsNotes;
 import basilMod.relics.ScholarsThesis;
 import basilMod.relics.TrickCoin;
@@ -277,11 +278,6 @@ public class BasilMod implements
 
         // =============== EVENTS =================
 
-        // This event will be exclusive to the City (act 2). If you want an event that's present at any
-        // part of the game, simply don't include the dungeon ID
-        // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
-        // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -323,6 +319,7 @@ public class BasilMod implements
         BaseMod.addRelicToCustomPool(new ScholarsNotes(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new ScholarsThesis(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new TrickCoin(), TheScholar.Enums.BASIL_PURPLE);
+        BaseMod.addRelicToCustomPool(new EndlessMug(), TheScholar.Enums.BASIL_PURPLE);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
 

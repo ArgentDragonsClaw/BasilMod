@@ -17,8 +17,8 @@ import static basilMod.BasilMod.makeRelicPath;
 public class ScholarsNotes extends CustomRelic {
     public static final String ID = BasilMod.makeID("ScholarsNotes");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("scholars_notes.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("scholars_notes.png"));
 
     public ScholarsNotes() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
