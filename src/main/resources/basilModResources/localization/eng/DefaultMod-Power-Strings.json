@@ -107,5 +107,12 @@
       " Block.",
       " Block and Thorns."
     ]
+  },
+  "basilMod:FaerieRune": {
+    "NAME": "Faerie Rune",
+    "DESCRIPTIONS": [
+      "If you would die, remove this power and heal ",
+      "% of your Max HP."
+    ]
   }
 }
