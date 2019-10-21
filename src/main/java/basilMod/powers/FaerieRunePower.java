@@ -42,7 +42,7 @@ public class FaerieRunePower extends AbstractPower implements CloneablePowerInte
         player = owner;
         this.owner = owner;
         this.source = source;
-        this.amount = amount;
+        this.amount = 1;
         if (player.hasPower(RunescarredPower.POWER_ID)) {
             rs = player.getPower(RunescarredPower.POWER_ID).amount;
         } else {
