@@ -56,9 +56,9 @@ public class BasilMod implements
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+    public static Properties basilDefaultSettings = new Properties();
+    public static final String USE_DEV_ART = "useDevArt";
+    public static boolean useDevArt = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Scholar";
@@ -71,14 +71,6 @@ public class BasilMod implements
     // Colors (RGB)
     // Character Color
     public static final Color BASIL_PURPLE = CardHelper.getColor(103.0f, 78.0f, 167.0f);
-
-
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_DEFAULT_GRAY = "basilModResources/images/512/bg_attack_default_gray.png";
@@ -110,6 +102,7 @@ public class BasilMod implements
     // =============== MAKE IMAGE PATHS =================
 
     public static String makeCardPath(String resourcePath) {
+        if (useDevArt) return getModID() + "Resources/images/dev_art/" + resourcePath; //for fun, y'know?
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
 
@@ -144,30 +137,7 @@ public class BasilMod implements
         logger.info("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
-        
-      /*
-           (   ( /(  (     ( /( (            (  `   ( /( )\ )    )\ ))\ )
-           )\  )\()) )\    )\()))\ )   (     )\))(  )\()|()/(   (()/(()/(
-         (((_)((_)((((_)( ((_)\(()/(   )\   ((_)()\((_)\ /(_))   /(_))(_))
-         )\___ _((_)\ _ )\ _((_)/(_))_((_)  (_()((_) ((_|_))_  _(_))(_))_
-        ((/ __| || (_)_\(_) \| |/ __| __| |  \/  |/ _ \|   \  |_ _||   (_)
-         | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
-          \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
-      */
-
         setModID("basilMod");
-        // cool
-        // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
-
-        // 1. Go to your resources folder in the project panel, and refactor> rename theDefaultResources to
-        // yourModIDResources.
-
-        // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
-        // replace all instances of theDefault with yourModID.
-        // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
-
-        // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
-        // Change their locations to reflect your actual ID rather than theDefault. They get loaded before getID is a thing.
 
         logger.info("Done subscribing");
 
@@ -185,12 +155,12 @@ public class BasilMod implements
         logger.info("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+        basilDefaultSettings.setProperty(USE_DEV_ART, "FALSE"); // This is the default setting. It's actually set...
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
+            SpireConfig config = new SpireConfig("basilMod", "basilConfig", basilDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            useDevArt = config.getBool(USE_DEV_ART);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -281,19 +251,19 @@ public class BasilMod implements
         ModPanel settingsPanel = new ModPanel();
 
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("Use dev art instead of final art? (Requires restart)",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                useDevArt, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
 
-                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    useDevArt = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                        SpireConfig config = new SpireConfig("basilMod", "basilConfig", basilDefaultSettings);
+                        config.setBool(USE_DEV_ART, useDevArt);
                         config.save();
                     } catch (Exception e) {
                         e.printStackTrace();
