@@ -238,5 +238,9 @@
     "NAME": "Crow Rune",
     "DESCRIPTION": "Gain !basilMod:RunescarredValue! Flight. NL Ethereal.",
     "UPGRADE_DESCRIPTION": "Gain !basilMod:RunescarredValue! Flight."
+  },
+  "basilMod:FaerieDust": {
+    "NAME": "Faerie Dust",
+    "DESCRIPTION": "Deal !D! Damage for each enemy in combat. NL basilmod:Fickle: Deal !D! Damage to all enemies."
   }
 }
