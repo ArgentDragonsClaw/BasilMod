@@ -2,6 +2,7 @@ package basilMod.cards.attacks;
 
 import basemod.interfaces.OnPowersModifiedSubscriber;
 import basemod.interfaces.OnStartBattleSubscriber;
+import basemod.interfaces.PostBattleSubscriber;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
@@ -22,7 +23,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static basilMod.BasilMod.makeCardPath;
 
-public class CaffeineJitters extends AbstractDynamicCard implements OnStartBattleSubscriber {
+public class CaffeineJitters extends AbstractDynamicCard {
 
 
 // TEXT DECLARATION
@@ -70,6 +71,7 @@ public class CaffeineJitters extends AbstractDynamicCard implements OnStartBattl
         }
     }
 
+
     // Upgraded stats.
     @Override
     public void upgrade() {
@@ -80,11 +82,6 @@ public class CaffeineJitters extends AbstractDynamicCard implements OnStartBattl
         }
     }
 
-
-    @Override
-    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        caff_amount = 0;
-    }
 
     @Override
     public void update() {

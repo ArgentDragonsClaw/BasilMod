@@ -79,7 +79,9 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
         if (abstractPower.ID.equals(POWER_ID)) {
             // We're applying Caffeine
             if (abstractCreature.hasPower(CaffeinePower.POWER_ID)) {
-                if (abstractCreature.getPower(CaffeinePower.POWER_ID).amount + abstractPower.amount >= 3) {
+                int total = abstractCreature.getPower(CaffeinePower.POWER_ID).amount + abstractPower.amount;
+                while (total >= 3) {
+                    total -= 3;
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractCreature, source, CaffeinePower.POWER_ID, 3));
                     if (!AbstractDungeon.player.hasRelic(EndlessMug.ID)) {
                         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
