@@ -4,6 +4,7 @@ import basilMod.BasilMod;
 import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
+import basilMod.powers.BasilFlightPower;
 import basilMod.powers.FaerieRunePower;
 import basilMod.powers.RunescarredPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -63,7 +64,7 @@ public class CrowRune extends AbstractDynamicCard {
             amount += pow.amount;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FlightPower(p, amount), amount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BasilFlightPower(p, amount), amount));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RunescarredPower(p, p, 1), 1));
     }
 
