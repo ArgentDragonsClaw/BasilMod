@@ -914,6 +914,13 @@
       "flavorText": "The deranged writings of a scholar well behind on his grant proposals."
     },
     {
+      "name": "Endless Mug",
+      "tier": "Uncommon",
+      "pool": "Basil_purple_color",
+      "description": "When you would gain [E] from Caffeine, gain [E] [E] instead.",
+      "flavorText": "Sleep is for people without infinite coffee."
+    },
+    {
       "name": "Trick Coin",
       "tier": "Uncommon",
       "pool": "Basil_purple_color",

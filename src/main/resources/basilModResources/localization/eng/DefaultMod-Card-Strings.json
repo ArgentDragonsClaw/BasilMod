@@ -231,13 +231,13 @@
   },
   "basilMod:FaerieRune": {
     "NAME": "Faerie Rune",
-    "DESCRIPTION": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred."
+    "DESCRIPTION": "basilmod:Rune. NL If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred."
   },
   "basilMod:CrowRune": {
     "NAME": "Crow Rune",
-    "DESCRIPTION": "Gain !basilMod:RunescarredValue! Flight. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Gain !basilMod:RunescarredValue! Flight."
+    "DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! Flight. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! Flight."
   },
   "basilMod:FaerieDust": {
     "NAME": "Faerie Dust",

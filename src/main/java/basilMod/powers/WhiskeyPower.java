@@ -27,8 +27,8 @@ public class WhiskeyPower extends AbstractPower implements CloneablePowerInterfa
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("whiskey84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("whiskey32.png"));
 
     public WhiskeyPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -46,6 +46,14 @@ public class WhiskeyPower extends AbstractPower implements CloneablePowerInterfa
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
+
+        if (owner.isPlayer && owner.hasPower(InebriatedPower.POWER_ID)) {
+            // gain X temp strength and dex
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, source, new StrengthPower(owner, amount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, source, new LoseStrengthPower(owner, amount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, source, new DexterityPower(owner, amount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, source, new LoseDexterityPower(owner, amount)));
+        }
 
     }
 
