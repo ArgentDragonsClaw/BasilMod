@@ -3,11 +3,13 @@ package basilMod.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import basilMod.cards.attacks.QuickDraw;
+import basilMod.cards.attacks.RunicStrike;
 import basilMod.cards.attacks.Strike;
 import basilMod.cards.powers.Coffee;
 import basilMod.cards.skills.Counter;
 import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
+import basilMod.cards.skills.RunicDefend;
 import basilMod.relics.ScholarsNotes;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -162,12 +164,17 @@ public class TheScholar extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        for (int i =0; i<5; i++){
+        for (int i = 0; i < 4; i++) {
             retVal.add(Strike.ID);
         }
-        for (int i = 0; i < 5; i++) {
+
+        for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+
+        retVal.add(RunicDefend.ID);
+        retVal.add(RunicStrike.ID);
+
 
         retVal.add(Counter.ID);
         retVal.add(QuickDraw.ID);

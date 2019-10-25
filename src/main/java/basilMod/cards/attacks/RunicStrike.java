@@ -1,5 +1,6 @@
 package basilMod.cards.attacks;
 
+import basemod.helpers.BaseModCardTags;
 import basilMod.BasilMod;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
@@ -50,6 +51,7 @@ public class RunicStrike extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC;
 
 
+        this.tags.add(BaseModCardTags.BASIC_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
 
     }

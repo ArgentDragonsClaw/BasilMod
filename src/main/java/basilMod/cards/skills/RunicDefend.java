@@ -1,5 +1,6 @@
 package basilMod.cards.skills;
 
+import basemod.helpers.BaseModCardTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
@@ -53,6 +54,7 @@ public class RunicDefend extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = block = BLOCK;
 
+        this.tags.add(BaseModCardTags.BASIC_DEFEND);
     }
 
 
