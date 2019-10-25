@@ -36,15 +36,15 @@ public class Cleanse extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int MAGIC = 5;
+    private static final int MAGIC_UP = 3;
 
     // /STAT DECLARATION/
 
 
     public Cleanse() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = MAGIC;
     }
 
 
@@ -72,7 +72,7 @@ public class Cleanse extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(MAGIC_UP);
             initializeDescription();
         }
     }

@@ -91,7 +91,7 @@
   },
   "basilMod:Cleanse": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each stack of basilmod:Runescarred. NL Remove all basilmod:Runescarred."
+    "DESCRIPTION": "Deal !M! damage to a random enemy for each stack of basilmod:Runescarred. NL Remove all basilmod:Runescarred. NL Not affected by strength."
   },
   "basilMod:Procrastinate": {
     "NAME": "Procrastinate",
