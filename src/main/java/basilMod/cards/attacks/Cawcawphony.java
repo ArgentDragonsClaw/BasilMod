@@ -39,7 +39,7 @@ public class Cawcawphony extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 2;
     private static final int UPGRADED_DAMAGE = 1;
 
     private static final int MAGIC = 10;
