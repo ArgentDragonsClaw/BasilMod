@@ -36,6 +36,7 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("research32.png"));
     private boolean upgraded = false;
     private int cost = 0;
+    private boolean removing = false;
 
 
     public ResearchPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
@@ -86,8 +87,10 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(null, null, this));
+
+        if (this.amount <= 0 && !removing) {
+            removing = true;
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, source, this));
         }
     }
 
@@ -99,8 +102,5 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
         card.modifyCostForCombat(-cost);
         AbstractDungeon.effectList.add(new CardFlashVfx(card));
         this.amount--;
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(null, null, this));
-        }
     }
 }
