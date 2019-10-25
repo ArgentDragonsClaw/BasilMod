@@ -127,7 +127,7 @@
   },
   "basilMod:DueDate": {
     "NAME": "Due Date",
-    "DESCRIPTION": "Can only be played if enemy is at full HP. NL If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Can only be played if enemy is at full HP. NL If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. NL Exhaust."
   },
   "basilMod:Papercut": {
     "NAME": "Papercut",

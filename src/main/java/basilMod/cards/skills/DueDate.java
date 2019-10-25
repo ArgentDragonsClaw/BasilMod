@@ -1,4 +1,4 @@
-package basilMod.cards.powers;
+package basilMod.cards.skills;
 
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
@@ -46,6 +46,7 @@ public class DueDate extends AbstractDynamicCard {
     public DueDate() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         exhaust = true;
+        isInnate = true;
     }
 
     // Actions the card should do.
