@@ -34,8 +34,8 @@ public class Rebuttal extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
 
-    private static final int COST = 5;
-    private static final int UPGRADED_COST = 4;
+    private static final int COST = 4;
+    private static final int UPGRADED_COST = 3;
 
     // /STAT DECLARATION/
 
