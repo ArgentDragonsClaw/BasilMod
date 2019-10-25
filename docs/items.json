@@ -62,7 +62,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 3 Damage and draw 1 card."
+      "description": "Deal 4 Damage and draw 1 card."
     },
     {
       "name": "Quick Draw+",
@@ -70,7 +70,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 4 Damage and draw 2 cards."
+      "description": "Deal 5 Damage and draw 2 cards."
     },
     {
       "name": "Strike",
@@ -206,7 +206,7 @@
       "rarity": "Common",
       "type": "Power",
       "cost": "2",
-      "description": "Gain 2 Thorns at the start of your turn."
+      "description": "Gain 1 Thorns at the start of your turn."
     },
     {
       "name": "Creeping Briars+",
@@ -214,7 +214,7 @@
       "rarity": "Common",
       "type": "Power",
       "cost": "2",
-      "description": "Gain 3 Thorns at the start of your turn."
+      "description": "Gain 2 Thorns at the start of your turn."
     },
     {
       "name": "Crow Cloak",
@@ -430,7 +430,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 1 Damage to a random enemy 10 times."
+      "description": "Deal 2 Damage to a random enemy 10 times."
     },
     {
       "name": "Cawcawphony+",
@@ -438,7 +438,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 2 Damage to a random enemy 10 times."
+      "description": "Deal 3 Damage to a random enemy 10 times."
     },
     {
       "name": "Cleanse",
@@ -446,7 +446,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 5 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred."
+      "description": "Deal 5 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred.\nNot affected by strength."
     },
     {
       "name": "Cleanse+",
@@ -454,7 +454,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 8 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred."
+      "description": "Deal 8 damage to a random enemy for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred.\nNot affected by strength."
     },
     {
       "name": "Coffee",
@@ -478,7 +478,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Can only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
+      "description": "Innate.\nCan only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
     },
     {
       "name": "Due Date+",
@@ -486,7 +486,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Can only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
+      "description": "Innate.\nCan only be played if enemy is at full HP.\nIf you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP.\nExhaust."
     },
     {
       "name": "Earth Rune",
@@ -750,7 +750,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "Gain !basilMod:RunescarredValue! Flight.\nEthereal."
+      "description": "basilmod:Rune.\nGain !basilMod:RunescarredValue! Flight.\nEthereal."
     },
     {
       "name": "Crow Rune+",
@@ -758,7 +758,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "Gain !basilMod:RunescarredValue! Flight."
+      "description": "basilmod:Rune.\nGain !basilMod:RunescarredValue! Flight."
     },
     {
       "name": "Fae Form",
@@ -782,7 +782,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred.\nEthereal."
+      "description": "basilmod:Rune.\nIf you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred.\nEthereal."
     },
     {
       "name": "Faerie Rune+",
@@ -790,7 +790,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred."
+      "description": "basilmod:Rune.\nIf you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred."
     },
     {
       "name": "Finals Week",
@@ -861,7 +861,7 @@
       "color": "Basil_purple_color",
       "rarity": "Rare",
       "type": "Attack",
-      "cost": "5",
+      "cost": "4",
       "description": "Deal Damage equal to an enemy's intended damage."
     },
     {
@@ -869,7 +869,7 @@
       "color": "Basil_purple_color",
       "rarity": "Rare",
       "type": "Attack",
-      "cost": "4",
+      "cost": "3",
       "description": "Deal Damage equal to an enemy's intended damage."
     },
     {

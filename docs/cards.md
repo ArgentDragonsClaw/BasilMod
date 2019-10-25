@@ -3,7 +3,7 @@
 | Curse Rune | ![](small-card-images/CurseRune.png) | ![]() | Curse | Curse |  | Unplayable. basilmod:Rune. At the end of your turn, lose !basilMod:RunescarredValue! HP. Exhaust. |
 | Counter | ![](small-card-images/Counter.png) | ![](small-card-images/CounterPlus.png) | Basic | Skill | 0 | If the enemy intends to attack, gain 2(4) Thorns. |
 | Defend | ![](small-card-images/Defend.png) | ![](small-card-images/DefendPlus.png) | Basic | Skill | 1 | Gain 5(8) Block. |
-| Quick Draw | ![](small-card-images/QuickDraw.png) | ![](small-card-images/QuickDrawPlus.png) | Basic | Attack | 0 | Deal 3(4) Damage and draw 1(2) card(s). |
+| Quick Draw | ![](small-card-images/QuickDraw.png) | ![](small-card-images/QuickDrawPlus.png) | Basic | Attack | 0 | Deal 4(5) Damage and draw 1(2) card(s). |
 | Strike | ![](small-card-images/Strike.png) | ![](small-card-images/StrikePlus.png) | Basic | Attack | 1 | Deal 6(9) Damage. |
 | Research | ![](small-card-images/Research.png) | ![](small-card-images/ResearchPlus.png) | Special | Power | X | The next X cards you draw cost 1(2) less this combat. |
 | Caffeine Jitters | ![](small-card-images/CaffeineJitters.png) | ![](small-card-images/CaffeineJittersPlus.png) | Common | Attack | 1 | Deal 3(4) Damage to a random enemy for each stack of basilmod:Caffeine gained this combat. |
@@ -12,7 +12,7 @@
 | Counterspell | ![](small-card-images/Counterspell.png) | ![](small-card-images/CounterspellPlus.png) | Common | Skill | 1 | If the enemy intends to debuff, gain 1(2) Artifact. |
 | Counterstatus | ![](small-card-images/Counterstatus.png) | ![](small-card-images/CounterstatusPlus.png) | Common | Power | 2 | When you draw a Status, gain 5 Block (and Thorns). |
 | Cover Page | ![](small-card-images/CoverPage.png) | ![](small-card-images/CoverPagePlus.png) | Common | Skill | 1 | Gain 3(5) Block and draw a card. basilmod:Fickle: Gain 5(7) Block (not affected by Dexterity). |
-| Creeping Briars | ![](small-card-images/CreepingBriars.png) | ![](small-card-images/CreepingBriarsPlus.png) | Common | Power | 2 | Gain 2(3) Thorns at the start of your turn. |
+| Creeping Briars | ![](small-card-images/CreepingBriars.png) | ![](small-card-images/CreepingBriarsPlus.png) | Common | Power | 2 | Gain 1(2) Thorns at the start of your turn. |
 | Crow Cloak | ![](small-card-images/CrowCloak.png) | ![](small-card-images/CrowCloakPlus.png) | Common | Power | 2(1) | Gain 2 Dexterity. |
 | Deal With It | ![](small-card-images/DealWithIt.png) | ![](small-card-images/DealWithItPlus.png) | Common | Power | 2 | When you draw a card, gain 1(2) Block. |
 | Inscribe | ![](small-card-images/Inscribe.png) | ![](small-card-images/InscribePlus.png) | Common | Skill |  | Unplayable. basilmod:Fickle: Gain 1(2) basilmod:Runescarred. |
@@ -26,10 +26,10 @@
 | Slurp | ![](small-card-images/Slurp.png) | ![](small-card-images/SlurpPlus.png) | Common | Skill | 1 | Gain 1(2) basilmod:Inebriated. |
 | Another Book | ![](small-card-images/AnotherBook.png) | ![](small-card-images/AnotherBookPlus.png) | Uncommon | Skill | 0 | Add a (an upgraded) random skill to your hand. Exhaust. |
 | Blank Rune | ![](small-card-images/BlankRune.png) | ![](small-card-images/BlankRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Copy the effects of another basilmod:Rune in your deck. Exhaust. (not Exhaust.) |
-| Cawcawphony | ![](small-card-images/Cawcawphony.png) | ![](small-card-images/CawcawphonyPlus.png) | Uncommon | Attack | 2 | Deal 1(2) Damage to a random enemy 10 times. |
-| Cleanse | ![](small-card-images/Cleanse.png) | ![](small-card-images/CleansePlus.png) | Uncommon | Attack | 2 | Deal 5(8) damage to a random enemy for each stack of basilmod:Runescarred. Remove all basilmod:Runescarred. |
+| Cawcawphony | ![](small-card-images/Cawcawphony.png) | ![](small-card-images/CawcawphonyPlus.png) | Uncommon | Attack | 2 | Deal 2(3) Damage to a random enemy 10 times. |
+| Cleanse | ![](small-card-images/Cleanse.png) | ![](small-card-images/CleansePlus.png) | Uncommon | Attack | 2 | Deal 5(8) damage to a random enemy for each stack of basilmod:Runescarred. Remove all basilmod:Runescarred. Not affected by strength. |
 | Coffee | ![](small-card-images/Coffee.png) | ![](small-card-images/CoffeePlus.png) | Uncommon | Power | 3(2) | Gain 2 basilmod:Caffeine each turn. |
-| Due Date | ![](small-card-images/DueDate.png) | ![](small-card-images/DueDatePlus.png) | Uncommon | Skill | 2(1) | Can only be played if enemy is at full HP. If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. Exhaust. |
+| Due Date | ![](small-card-images/DueDate.png) | ![](small-card-images/DueDatePlus.png) | Uncommon | Skill | 2(1) | Innate. Can only be played if enemy is at full HP. If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. Exhaust. |
 | Earth Rune | ![](small-card-images/EarthRune.png) | ![](small-card-images/EarthRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Gain !basilMod:RunescarredValue! block per enemy. Exhaust. (not Exhaust.) |
 | Experiment | ![](small-card-images/Experiment.png) | ![](small-card-images/ExperimentPlus.png) | Uncommon | Skill | 1 | Add basilmod:Research (basilmod:Research+) to your hand and Exhaust. basilmod:Fickle: Draw 2(3) cards. |
 | Faerie Dust | ![](small-card-images/FaerieDust.png) | ![](small-card-images/FaerieDustPlus.png) | Uncommon | Attack | 1(0) | Deal 3(4) Damage for each enemy in combat. basilmod:Fickle: Deal 3(4) Damage to all enemies. |
@@ -46,13 +46,13 @@
 | Take A Break! | ![](small-card-images/TakeABreak!.png) | ![](small-card-images/TakeABreak!Plus.png) | Uncommon | Skill | 2 | Heal 2(3) HP for each stack of basilmod:Runescarred. Remove all basilmod:Runescarred. Exhaust. |
 | Whiskey | ![](small-card-images/Whiskey.png) | ![](small-card-images/WhiskeyPlus.png) | Uncommon | Power | 3(2) | Gain 2 extra Strength and Dexterity from basilmod:Inebriated . |
 | Astral Brew | ![](small-card-images/AstralBrew.png) | ![](small-card-images/AstralBrewPlus.png) | Rare | Skill | 2(1) | Gain 1 Intangible. |
-| Crow Rune | ![](small-card-images/CrowRune.png) | ![](small-card-images/CrowRunePlus.png) | Rare | Power | 2 | Gain !basilMod:RunescarredValue! Flight. Ethereal. (not Ethereal.) |
+| Crow Rune | ![](small-card-images/CrowRune.png) | ![](small-card-images/CrowRunePlus.png) | Rare | Power | 2 | basilmod:Rune. Gain !basilMod:RunescarredValue! Flight. Ethereal. (not Ethereal.) |
 | Fae Form | ![](small-card-images/FaeForm.png) | ![](small-card-images/FaeFormPlus.png) | Rare | Power | 3(2) | At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity. basilmod:Fickle: Draw a card. |
-| Faerie Rune | ![](small-card-images/FaerieRune.png) | ![](small-card-images/FaerieRunePlus.png) | Rare | Power | 2 | If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred. Ethereal. (not Ethereal.) |
+| Faerie Rune | ![](small-card-images/FaerieRune.png) | ![](small-card-images/FaerieRunePlus.png) | Rare | Power | 2 | basilmod:Rune. If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred. Ethereal. (not Ethereal.) |
 | Finals Week | ![](small-card-images/FinalsWeek.png) | ![](small-card-images/FinalsWeekPlus.png) | Rare | Attack | 7 | This card's cost cannot be externally modified. Deal 7 Damage 7 times to all enemies and Exhaust. basilmod:Fickle: Reduce this card's cost by 1(2). |
 | Mixed Bag | ![](small-card-images/MixedBag.png) | ![](small-card-images/MixedBagPlus.png) | Rare | Skill | 1 | Draw 3 (Upgraded) basilmod:Runes. |
 | Naptime | ![](small-card-images/Naptime.png) | ![](small-card-images/NaptimePlus.png) | Rare | Skill | 3(2) | Put all enemies to sleep. Exhaust. |
 | Procrastinate | ![](small-card-images/Procrastinate.png) | ![](small-card-images/ProcrastinatePlus.png) | Rare | Skill | 0 | Every time you draw this card, increase its effects by 1(2). Gain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity. Exhaust. |
-| Rebuttal | ![](small-card-images/Rebuttal.png) | ![](small-card-images/RebuttalPlus.png) | Rare | Attack | 5(4) | Deal Damage equal to an enemy's intended damage. |
+| Rebuttal | ![](small-card-images/Rebuttal.png) | ![](small-card-images/RebuttalPlus.png) | Rare | Attack | 4(3) | Deal Damage equal to an enemy's intended damage. |
 | Retribution | ![](small-card-images/Retribution.png) | ![](small-card-images/RetributionPlus.png) | Rare | Power | 2(1) | Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies. |
 | Runic Overload | ![](small-card-images/RunicOverload.png) | ![](small-card-images/RunicOverloadPlus.png) | Rare | Skill | 2 | Double (Triple) your basilmod:Runescarred. Exhaust. |
