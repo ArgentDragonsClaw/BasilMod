@@ -32,7 +32,7 @@ public class CreepingBriars extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UP_MAGIC = 1;
     // /STAT DECLARATION/
 
