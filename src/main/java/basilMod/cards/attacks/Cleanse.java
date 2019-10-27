@@ -55,7 +55,7 @@ public class Cleanse extends AbstractDynamicCard {
         for (; amount > 0; amount--) {
             AbstractMonster target = AbstractDungeon.getRandomMonster();
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(target, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+                    new DamageAction(target, new DamageInfo(p, magicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, RunescarredPower.POWER_ID));
 
