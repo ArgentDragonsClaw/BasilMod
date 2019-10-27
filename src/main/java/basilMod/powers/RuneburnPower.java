@@ -67,7 +67,7 @@ public class RuneburnPower extends AbstractPower implements CloneablePowerInterf
         if (pow != null) {
             for (int i = amount; i > 0; i--) {
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(owner, pow.amount), AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(owner, pow.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             }
         }
 
