@@ -27,6 +27,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -52,7 +53,8 @@ public class BasilMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        PostBattleSubscriber {
+        PostBattleSubscriber,
+        OnPlayerDamagedSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(BasilMod.class.getName());
@@ -581,6 +583,15 @@ public class BasilMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         CaffeineJitters.caff_amount = 0;
+        Rebuttal.DAMAGE_TAKEN.clear();
+    }
+
+    @Override
+    public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
+        if (!damageInfo.owner.isPlayer) {
+            Rebuttal.DAMAGE_TAKEN.add(i);
+        }
+        return i;
     }
 }
 

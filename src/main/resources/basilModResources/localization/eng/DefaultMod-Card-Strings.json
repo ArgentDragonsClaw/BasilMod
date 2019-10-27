@@ -30,7 +30,12 @@
   },
   "basilMod:Rebuttal": {
     "NAME": "Rebuttal",
-    "DESCRIPTION": "Deal Damage equal to an enemy's intended damage."
+    "DESCRIPTION": "Deal Damage for each attack you've taken this combat and reset this card.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Total Damage across ",
+      " attacks)"
+    ]
   },
   "basilMod:Counter": {
     "NAME": "Counter",
