@@ -1,10 +1,9 @@
 package basilMod.cards.skills;
 
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.cards.powers.Research;
 import basilMod.characters.TheScholar;
-
 import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -15,7 +14,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import static basilMod.BasilMod.makeCardPath;
 

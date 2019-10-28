@@ -3,7 +3,6 @@ package basilMod.cards.powers;
 import basilMod.BasilMod;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import basilMod.powers.CoffeePower;
 import basilMod.powers.WhiskeyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

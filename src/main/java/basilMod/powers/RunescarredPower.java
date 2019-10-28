@@ -32,11 +32,7 @@ public class RunescarredPower extends AbstractPower implements CloneablePowerInt
         ID = POWER_ID;
 
         this.owner = owner;
-        if (amount > 999) {
-            this.amount = 999;
-        } else {
-            this.amount = amount;
-        }
+        this.amount = Math.min(amount, 999);
         this.source = source;
 
 

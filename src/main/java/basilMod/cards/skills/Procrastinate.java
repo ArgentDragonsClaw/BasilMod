@@ -1,24 +1,17 @@
 package basilMod.cards.skills;
 
-import basemod.devcommands.deck.DeckRemove;
+import basilMod.BasilMod;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basilMod.BasilMod;
-import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 import static basilMod.BasilMod.makeCardPath;
 

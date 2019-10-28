@@ -1,15 +1,9 @@
 package basilMod.relics;
 
 import basemod.abstracts.CustomRelic;
-import basemod.interfaces.PostPowerApplySubscriber;
 import basilMod.BasilMod;
-import basilMod.powers.CaffeinePower;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static basilMod.BasilMod.makeRelicOutlinePath;
 import static basilMod.BasilMod.makeRelicPath;

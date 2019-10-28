@@ -2,12 +2,11 @@ package basilMod.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import basilMod.BasilMod;
 import basilMod.cards.attacks.QuickDraw;
 import basilMod.cards.attacks.RunicStrike;
 import basilMod.cards.attacks.Strike;
-import basilMod.cards.powers.Coffee;
 import basilMod.cards.skills.Counter;
-import basilMod.cards.skills.Counterspell;
 import basilMod.cards.skills.Defend;
 import basilMod.cards.skills.RunicDefend;
 import basilMod.relics.ScholarsNotes;
@@ -27,13 +26,8 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import basilMod.BasilMod;
-import basilMod.cards.*;
-import basilMod.relics.PlaceholderRelic;
-import basilMod.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
 

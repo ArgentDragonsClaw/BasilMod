@@ -1,12 +1,10 @@
 package basilMod.cards.attacks;
 
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-
 import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;

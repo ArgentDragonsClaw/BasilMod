@@ -1,15 +1,12 @@
 package basilMod.cards.powers;
 
-import basemod.BaseMod;
 import basemod.helpers.BaseModCardTags;
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-
 import basilMod.powers.FaeFormPower;
 import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,8 +14,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import javax.swing.*;
 
 import static basilMod.BasilMod.makeCardPath;
 

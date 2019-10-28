@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 
 public class ResearchAction extends AbstractGameAction {
-    private boolean freeToPlayOnce = false;
+    private boolean freeToPlayOnce;
     private AbstractPlayer p;
-    private int energyOnUse = -1;
+    private int energyOnUse;
     private boolean upgraded;
 
     public ResearchAction(AbstractPlayer p, int energyOnUse, boolean upgraded, boolean freeToPlayOnce) {

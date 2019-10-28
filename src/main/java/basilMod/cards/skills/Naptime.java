@@ -1,15 +1,13 @@
 package basilMod.cards.skills;
 
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 
 import static basilMod.BasilMod.makeCardPath;
 

@@ -447,6 +447,7 @@ public class BasilMod implements
                 case CURSE:
                     break;
                 case STATUS:
+                    //noinspection DuplicateBranchesInSwitch
                     break;
             }
 
@@ -466,6 +467,7 @@ public class BasilMod implements
                 case CURSE:
                     break;
                 case SPECIAL:
+                    //noinspection DuplicateBranchesInSwitch
                     break;
             }
 

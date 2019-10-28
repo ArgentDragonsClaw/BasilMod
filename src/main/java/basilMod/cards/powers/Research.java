@@ -1,12 +1,9 @@
 package basilMod.cards.powers;
 
+import basilMod.BasilMod;
 import basilMod.actions.ResearchAction;
 import basilMod.cards.AbstractDynamicCard;
-import basilMod.BasilMod;
 import basilMod.characters.TheScholar;
-
-import basilMod.powers.ResearchPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

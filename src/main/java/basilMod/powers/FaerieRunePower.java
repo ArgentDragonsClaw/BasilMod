@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +32,7 @@ public class FaerieRunePower extends AbstractPower implements CloneablePowerInte
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("faerierune84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("faerierune32.png"));
-    private int rs = 0;
+    private int rs;
     private AbstractCreature player;
 
     public FaerieRunePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {

@@ -26,7 +26,7 @@ public class DueDatePower extends AbstractPower implements CloneablePowerInterfa
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("duedate84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("duedate32.png"));
-    private int healing = 0;
+    private int healing;
 
     private static int idOffset = 0;
     public static float PERCENT = 0.1f;

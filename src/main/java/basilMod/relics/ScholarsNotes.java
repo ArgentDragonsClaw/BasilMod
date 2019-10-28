@@ -5,11 +5,8 @@ import basilMod.BasilMod;
 import basilMod.actions.DeckToHandAction;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.BetterDrawPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static basilMod.BasilMod.makeRelicOutlinePath;
 import static basilMod.BasilMod.makeRelicPath;

@@ -5,8 +5,6 @@ import basilMod.BasilMod;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -34,8 +32,8 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("research84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("research32.png"));
-    private boolean upgraded = false;
-    private int cost = 0;
+    private boolean upgraded;
+    private int cost;
     private boolean removing = false;
 
 
@@ -73,7 +71,7 @@ public class ResearchPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void updateDescription() {
-        if (amount >= 1) {
+        if (amount == 1) {
             description = DESCRIPTIONS[0] + DESCRIPTIONS[2] + cost + DESCRIPTIONS[3];
         } else if (amount > 1) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + cost + DESCRIPTIONS[3];

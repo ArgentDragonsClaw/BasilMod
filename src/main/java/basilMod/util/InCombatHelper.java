@@ -14,6 +14,7 @@ public class InCombatHelper {
         _inCombat = false;
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public static boolean inCombat() {
         return _inCombat;
     }

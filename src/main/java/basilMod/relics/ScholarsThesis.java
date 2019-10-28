@@ -5,11 +5,9 @@ import basilMod.BasilMod;
 import basilMod.actions.DeckToHandAction;
 import basilMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
 import static basilMod.BasilMod.makeRelicOutlinePath;
 import static basilMod.BasilMod.makeRelicPath;
