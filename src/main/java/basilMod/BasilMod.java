@@ -5,16 +5,18 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.interfaces.*;
 import basilMod.cards.attacks.*;
-import basilMod.cards.curses.*;
+import basilMod.cards.curses.CurseRune;
 import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
-import basilMod.cards.skills.Nightmares;
 import basilMod.characters.TheScholar;
 import basilMod.potions.CoffeePotion;
 import basilMod.relics.EndlessMug;
 import basilMod.relics.ScholarsNotes;
 import basilMod.relics.ScholarsThesis;
 import basilMod.relics.TrickCoin;
+import basilMod.util.IDCheckDontTouchPls;
+import basilMod.util.InCombatHelper;
+import basilMod.util.TextureLoader;
 import basilMod.variables.DueDateValue;
 import basilMod.variables.MiscValue;
 import basilMod.variables.RunescarredValue;
@@ -36,8 +38,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import basilMod.util.IDCheckDontTouchPls;
-import basilMod.util.TextureLoader;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -53,6 +53,7 @@ public class BasilMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
+        OnStartBattleSubscriber,
         PostBattleSubscriber,
         OnPlayerDamagedSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
@@ -579,11 +580,16 @@ public class BasilMod implements
         return getModID() + ":" + idText;
     }
 
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        InCombatHelper.startCombat();
+    }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         CaffeineJitters.caff_amount = 0;
         Rebuttal.DAMAGE_TAKEN.clear();
+        InCombatHelper.stopCombat();
     }
 
     @Override
@@ -593,6 +599,7 @@ public class BasilMod implements
         }
         return i;
     }
+
 }
 
 

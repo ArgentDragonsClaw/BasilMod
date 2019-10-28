@@ -1,9 +1,11 @@
 package basilMod.cards.attacks;
 
+import basilMod.BasilMod;
 import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.RunescarredPower;
+import basilMod.util.InCombatHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -13,7 +15,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basilMod.BasilMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
@@ -29,7 +30,7 @@ public class LightningRune extends AbstractDynamicCard {
 
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -53,7 +54,6 @@ public class LightningRune extends AbstractDynamicCard {
         damage = baseDamage = 1;
         tags.add(CustomTags.BASIL_RUNE);
 
-
     }
 
 
@@ -63,10 +63,8 @@ public class LightningRune extends AbstractDynamicCard {
         AbstractPower pow = p.getPower(RunescarredPower.POWER_ID);
         int[] amount = new int[1];
         if (pow != null) {
-
             amount[0] = 1 + pow.amount;
         } else {
-
             amount[0] = 1;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, amount, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
@@ -78,16 +76,25 @@ public class LightningRune extends AbstractDynamicCard {
 
     }
 
+    @Override
+    public void initializeDescription() {
+        rawDescription = cardStrings.DESCRIPTION;
+
+        if (!InCombatHelper.inCombat()) rawDescription += EXTENDED_DESCRIPTION[0];
+        else rawDescription += EXTENDED_DESCRIPTION[1];
+        if (!upgraded) rawDescription += EXTENDED_DESCRIPTION[2];
+
+        super.initializeDescription();
+    }
+
+
 
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
-
             exhaust = false;
         }
     }
@@ -95,6 +102,7 @@ public class LightningRune extends AbstractDynamicCard {
     @Override
     public void update() {
         super.update();
+        initializeDescription();
         retain = true;
     }
 }

@@ -47,23 +47,40 @@
   },
   "basilMod:LightningRune": {
     "NAME": "Lightning Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! Damage to all enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !basilMod:RunescarredValue! Damage to all enemies."
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Damage all enemies based on your basilmod:Runescarred.",
+      "Deal !basilMod:RunescarredValue! Damage to all enemies.",
+      " NL Exhaust."
+    ]
+
   },
   "basilMod:FlameRune": {
     "NAME": "Flame Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Deal !D! Damage and gain !basilMod:RunescarredValue! Strength."
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! Damage and gain Strength based on your basilmod:Runescarred.",
+      "Deal !D! Damage and gain !basilMod:RunescarredValue! Strength.",
+      " NL Exhaust."
+    ]
   },
   "basilMod:FrostRune": {
     "NAME": "Frost Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Apply !basilMod:RunescarredValue! Slow. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Apply !basilMod:RunescarredValue! Slow."
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Apply Slow based on your basilmod:Runescarred.",
+      "Apply !basilMod:RunescarredValue! Slow.",
+      " NL Exhaust."
+    ]
   },
   "basilMod:EarthRune": {
     "NAME": "Earth Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! block per enemy."
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain Block for each enemy in combat based on your basilmod:Runescarred.",
+      "Gain !basilMod:RunescarredValue! Block per enemy.",
+      " NL Exhaust."
+    ]
   },
   "basilMod:MixedBag": {
     "NAME": "Mixed Bag",
@@ -241,8 +258,12 @@
   },
   "basilMod:CrowRune": {
     "NAME": "Crow Rune",
-    "DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! Flight. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "basilmod:Rune. NL Gain !basilMod:RunescarredValue! Flight."
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain Flight based on your basilmod:Runescarred.",
+      "Gain !basilMod:RunescarredValue! Flight.",
+      " NL Ethereal."
+    ]
   },
   "basilMod:FaerieDust": {
     "NAME": "Faerie Dust",

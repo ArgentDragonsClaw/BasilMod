@@ -1,8 +1,11 @@
 package basilMod.cards.skills;
 
+import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.RunescarredPower;
+import basilMod.util.InCombatHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,9 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basilMod.BasilMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import basilMod.CustomTags;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -24,9 +25,8 @@ public class EarthRune extends AbstractDynamicCard {
     public static final String ID = BasilMod.makeID(EarthRune.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
     public static final String IMG = makeCardPath("EarthRune.png");// "public static final String IMG = makeCardPath("LightningRune.png");
 
-
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -71,15 +71,25 @@ public class EarthRune extends AbstractDynamicCard {
     }
 
 
+    @Override
+    public void initializeDescription() {
+        rawDescription = cardStrings.DESCRIPTION;
+
+        if (!InCombatHelper.inCombat()) rawDescription += EXTENDED_DESCRIPTION[0];
+        else rawDescription += EXTENDED_DESCRIPTION[1];
+        if (!upgraded) rawDescription += EXTENDED_DESCRIPTION[2];
+
+        super.initializeDescription();
+    }
+
+
+
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
-
             exhaust = false;
         }
     }
@@ -87,6 +97,7 @@ public class EarthRune extends AbstractDynamicCard {
     @Override
     public void update() {
         super.update();
+        initializeDescription();
         retain = true;
     }
 }

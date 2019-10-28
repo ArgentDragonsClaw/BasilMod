@@ -5,8 +5,8 @@ import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.BasilFlightPower;
-import basilMod.powers.FaerieRunePower;
 import basilMod.powers.RunescarredPower;
+import basilMod.util.InCombatHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FlightPower;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -28,7 +27,7 @@ public class CrowRune extends AbstractDynamicCard {
 
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -69,13 +68,23 @@ public class CrowRune extends AbstractDynamicCard {
     }
 
 
+    @Override
+    public void initializeDescription() {
+        rawDescription = cardStrings.DESCRIPTION;
+
+        if (!InCombatHelper.inCombat()) rawDescription += EXTENDED_DESCRIPTION[0];
+        else rawDescription += EXTENDED_DESCRIPTION[1];
+        if (!upgraded) rawDescription += EXTENDED_DESCRIPTION[2];
+
+        super.initializeDescription();
+    }
+
+
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
             isEthereal = false;
             retain = true;
@@ -85,6 +94,7 @@ public class CrowRune extends AbstractDynamicCard {
     @Override
     public void update() {
         super.update();
+        initializeDescription();
         if (upgraded) retain = true;
     }
 
