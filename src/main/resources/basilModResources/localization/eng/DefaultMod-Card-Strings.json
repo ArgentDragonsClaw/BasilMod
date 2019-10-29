@@ -268,5 +268,34 @@
   "basilMod:FaerieDust": {
     "NAME": "Faerie Dust",
     "DESCRIPTION": "Deal !D! Damage for each enemy in combat. NL basilmod:Fickle: Deal !D! Damage to all enemies."
+  },
+  "basilMod:RedRune": {
+    "NAME": "Red Rune",
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Deal Damage based on your basilmod:Runescarred.",
+      "Deal !basilMod:RunescarredValue! Damage.",
+      " NL Exhaust."
+    ]
+  },
+  "basilMod:BlueRune": {
+    "NAME": "Blue Rune",
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Gain Block based on your basilmod:Runescarred.",
+      "Gain !basilMod:RunescarredValue! Block.",
+      " NL Exhaust."
+    ]
+  },
+  "basilMod:GreenRune": {
+    "NAME": "Green Rune",
+    "DESCRIPTION": "basilmod:Rune. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Draw cards based on your basilmod:Runescarred.",
+      "Draw !basilMod:RunescarredValue! ",
+      " NL Exhaust.",
+      "Card.",
+      "Cards."
+    ]
   }
 }

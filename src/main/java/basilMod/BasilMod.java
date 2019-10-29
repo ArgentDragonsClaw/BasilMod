@@ -411,6 +411,9 @@ public class BasilMod implements
         library.add(new FaerieRune());
         library.add(new CrowRune());
         library.add(new FaerieDust());
+        library.add(new RedRune());
+        library.add(new BlueRune());
+        library.add(new GreenRune());
 
         int counter_basic = 0;
         int counter_common = 0;
