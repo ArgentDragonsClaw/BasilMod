@@ -114,5 +114,13 @@
       "If you would die, remove this power and heal ",
       "% of your Max HP."
     ]
+  },
+  "basilMod:CreamAndSugar": {
+    "NAME": "Cream And Sugar",
+    "DESCRIPTIONS": [
+      "The next ",
+      "time you gain energy from #yCaffeine, gain an extra [E] .",
+      " times you gain energy from #yCaffeine, gain an extra [E] ."
+    ]
   }
 }

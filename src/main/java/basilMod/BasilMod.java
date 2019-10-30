@@ -417,6 +417,7 @@ public class BasilMod implements
         library.add(new ThinSkin());
         library.add(new ThornArrow());
         library.add(new PiercingStrike());
+        library.add(new CreamAndSugar());
 
         int counter_basic = 0;
         int counter_common = 0;

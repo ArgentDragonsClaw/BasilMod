@@ -56,7 +56,6 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
     }
 
 
-
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
@@ -82,11 +81,16 @@ public class CaffeinePower extends AbstractPower implements CloneablePowerInterf
                 while (total >= 3) {
                     total -= 3;
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractCreature, source, CaffeinePower.POWER_ID, 3));
-                    if (!AbstractDungeon.player.hasRelic(EndlessMug.ID)) {
-                        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-                    } else {
-                        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
+                    int to_gain = 1;
+                    if (AbstractDungeon.player.hasRelic(EndlessMug.ID)) to_gain++;
+                    if (owner.hasPower(CreamAndSugarPower.POWER_ID)) {
+                        to_gain++;
+                        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractCreature, null, abstractCreature.getPower(CreamAndSugarPower.POWER_ID), 1));
                     }
+
+
+                    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(to_gain));
+
                 }
             }
         }

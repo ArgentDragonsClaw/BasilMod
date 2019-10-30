@@ -327,5 +327,10 @@
     "EXTENDED_DESCRIPTION": [
       "I have no Thorns!"
     ]
+  },
+  "basilMod:CreamAndSugar": {
+    "NAME": "Cream And Sugar",
+    "DESCRIPTION": "The next time you gain [E] from basilmod:Caffeine, gain an extra [E].",
+    "UPGRADE_DESCRIPTION": "The next !M! times you gain [E] from basilmod:Caffeine, gain an extra [E]."
   }
 }

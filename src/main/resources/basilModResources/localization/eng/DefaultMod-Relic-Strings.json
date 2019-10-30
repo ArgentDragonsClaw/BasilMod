@@ -59,7 +59,7 @@
     "NAME": "Endless Mug",
     "FLAVOR": "Sleep is for people without infinite coffee.",
     "DESCRIPTIONS": [
-      "When you would gain [E] from #yCaffeine, gain [E] [E] instead."
+      "When you would gain [E] from #yCaffeine, gain an extra [E] ."
     ]
   },
   "basilMod:RuneBag": {
