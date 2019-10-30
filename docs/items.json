@@ -521,6 +521,22 @@
       "description": "Gain 2 basilmod:Caffeine each turn."
     },
     {
+      "name": "Cream And Sugar",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "1",
+      "description": "The next time you gain [E] from basilmod:Caffeine, gain an extra [E]."
+    },
+    {
+      "name": "Cream And Sugar+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "0",
+      "description": "The next 2 times you gain [E] from basilmod:Caffeine, gain an extra [E]."
+    },
+    {
       "name": "Due Date",
       "color": "Basil_purple_color",
       "rarity": "Uncommon",
@@ -633,6 +649,22 @@
       "description": "basilmod:Rune.\nDamage all enemies based on your basilmod:Runescarred."
     },
     {
+      "name": "Lucky Break",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nWhen drawn, discard this card and draw 1 card."
+    },
+    {
+      "name": "Lucky Break+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "",
+      "description": "Unplayable.\nWhen drawn, discard this card and draw 2 cards."
+    },
+    {
       "name": "Nightmares",
       "color": "Basil_purple_color",
       "rarity": "Uncommon",
@@ -663,6 +695,22 @@
       "type": "Attack",
       "cost": "1",
       "description": "Deal 9 Damage to a random enemy.\nbasilmod:Fickle: Gain 2 basilmod:Inebriated."
+    },
+    {
+      "name": "Piercing Strike",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 6 basilmod:Piercing Damage."
+    },
+    {
+      "name": "Piercing Strike+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 9 basilmod:Piercing Damage."
     },
     {
       "name": "Robin Hood",
@@ -759,6 +807,22 @@
       "type": "Skill",
       "cost": "2",
       "description": "Heal 3 HP for each stack of basilmod:Runescarred.\nRemove all basilmod:Runescarred.\nExhaust."
+    },
+    {
+      "name": "Thorn Arrow",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal basilmod:Piercing Damage equal to your Thorns."
+    },
+    {
+      "name": "Thorn Arrow+",
+      "color": "Basil_purple_color",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal basilmod:Piercing Damage equal to twice your Thorns."
     },
     {
       "name": "Whiskey",
@@ -862,7 +926,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "2",
-      "description": "Deals 3 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
+      "description": "Can be upgraded any number of times.\nDeals 3 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
     },
     {
       "name": "Lucky Shot+1",
@@ -870,7 +934,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "2",
-      "description": "Deals 4 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
+      "description": "Can be upgraded any number of times.\nDeals 4 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
     },
     {
       "name": "Lucky Shot+1",
@@ -878,7 +942,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "2",
-      "description": "Deals 4 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
+      "description": "Can be upgraded any number of times.\nDeals 4 Damage for each basilmod:Fickle card in your deck.\nbasilmod:Fickle: Upgrade this card."
     },
     {
       "name": "Mixed Bag",
@@ -975,6 +1039,22 @@
       "type": "Skill",
       "cost": "2",
       "description": "Triple your basilmod:Runescarred.\nExhaust."
+    },
+    {
+      "name": "Thin Skin",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "X",
+      "description": "Gain X Vulnerable and X times 3 basilmod:Runescarred."
+    },
+    {
+      "name": "Thin Skin+",
+      "color": "Basil_purple_color",
+      "rarity": "Rare",
+      "type": "Skill",
+      "cost": "X",
+      "description": "Gain X Vulnerable and X times 5 basilmod:Runescarred."
     }
   ],
   "relics": [
@@ -989,8 +1069,15 @@
       "name": "Endless Mug",
       "tier": "Uncommon",
       "pool": "Basil_purple_color",
-      "description": "When you would gain [E] from Caffeine, gain [E] [E] instead.",
+      "description": "When you would gain [E] from Caffeine, gain an extra [E] .",
       "flavorText": "Sleep is for people without infinite coffee."
+    },
+    {
+      "name": "Rune Bag",
+      "tier": "Uncommon",
+      "pool": "Basil_purple_color",
+      "description": "Every 3 turns, draw a random Rune.",
+      "flavorText": "The basic example of probability, but for runescholars."
     },
     {
       "name": "Trick Coin",

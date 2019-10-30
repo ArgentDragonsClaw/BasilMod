@@ -35,6 +35,7 @@
 | Cawcawphony | ![](small-card-images/Cawcawphony.png) | ![](small-card-images/CawcawphonyPlus.png) | Uncommon | Attack | 2 | Deal 2(3) Damage to a random enemy 10 times. |
 | Cleanse | ![](small-card-images/Cleanse.png) | ![](small-card-images/CleansePlus.png) | Uncommon | Attack | 2 | Deal 5(8) damage to a random enemy for each stack of basilmod:Runescarred. Remove all basilmod:Runescarred. Not affected by strength. |
 | Coffee | ![](small-card-images/Coffee.png) | ![](small-card-images/CoffeePlus.png) | Uncommon | Power | 3(2) | Gain 2 basilmod:Caffeine each turn. |
+| Cream And Sugar | ![](small-card-images/CreamAndSugar.png) | ![](small-card-images/CreamAndSugarPlus.png) | Uncommon | Skill | 1(0) | The next (1(2)) time(s) you gain [E] from basilmod:Caffeine, gain an extra [E]. |
 | Due Date | ![](small-card-images/DueDate.png) | ![](small-card-images/DueDatePlus.png) | Uncommon | Skill | 2(1) | Innate. Can only be played if enemy is at full HP. If you defeat this enemy within !basilMod:DueDateValue! turns (10% of Enemy's HP), gain !basilMod:DueDateValue! Max HP. Exhaust. |
 | Earth Rune | ![](small-card-images/EarthRune.png) | ![](small-card-images/EarthRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Gain Block for each enemy in combat based on your basilmod:Runescarred. Exhaust. (not Exhaust.) |
 | Experiment | ![](small-card-images/Experiment.png) | ![](small-card-images/ExperimentPlus.png) | Uncommon | Skill | 1 | Add basilmod:Research (basilmod:Research+) to your hand and Exhaust. basilmod:Fickle: Draw 2(3) cards. |
@@ -42,28 +43,32 @@
 | Flame Rune | ![](small-card-images/FlameRune.png) | ![](small-card-images/FlameRunePlus.png) | Uncommon | Attack | 1 | basilmod:Rune. Deal 1 Damage and gain Strength based on your basilmod:Runescarred. Exhaust. (not Exhaust.) |
 | Frost Rune | ![](small-card-images/FrostRune.png) | ![](small-card-images/FrostRunePlus.png) | Uncommon | Skill | 1 | basilmod:Rune. Apply Slow based on your basilmod:Runescarred. Exhaust. (not Exhaust.) |
 | Lightning Rune | ![](small-card-images/LightningRune.png) | ![](small-card-images/LightningRunePlus.png) | Uncommon | Attack | 1 | basilmod:Rune. Damage all enemies based on your basilmod:Runescarred. Exhaust. (not Exhaust.) |
+| Lucky Break | ![](small-card-images/LuckyBreak.png) | ![](small-card-images/LuckyBreakPlus.png) | Uncommon | Skill |  | Unplayable. When drawn, discard this card and draw 1(2) card(s). |
 | Nightmares | ![](small-card-images/Nightmares.png) | ![](small-card-images/NightmaresPlus.png) | Uncommon | Skill |  | Unplayable. At the end of your turn, gain 5(10) Thorns. basilmod:Fickle: Take 5(10) Damage. |
 | Nock One Back | ![](small-card-images/NockOneBack.png) | ![](small-card-images/NockOneBackPlus.png) | Uncommon | Attack | 1 | Deal 7(9) Damage to a random enemy. basilmod:Fickle: Gain 1(2) basilmod:Inebriated. |
+| Piercing Strike | ![](small-card-images/PiercingStrike.png) | ![](small-card-images/PiercingStrikePlus.png) | Uncommon | Attack | 1 | Deal 6(9) basilmod:Piercing Damage. |
 | Robin Hood | ![](small-card-images/RobinHood.png) | ![](small-card-images/RobinHoodPlus.png) | Uncommon | Attack | 1 | Deal 6(9) Damage and gain 1(2) gold for each point of unblocked damage. |
 | Rope Arrow | ![](small-card-images/RopeArrow.png) | ![](small-card-images/RopeArrowPlus.png) | Uncommon | Attack | 2(1) | Deal 3 Damage and apply 3 Constricted. |
 | Runeburn | ![](small-card-images/Runeburn.png) | ![](small-card-images/RuneburnPlus.png) | Uncommon | Power | 2 | (Innate.)  At the end of your turn, do damage equal to your basilmod:Runescarred to a random enemy. |
 | Shots! | ![](small-card-images/Shots!.png) | ![](small-card-images/Shots!Plus.png) | Uncommon | Attack | 1 | Deal 3(5) Damage to ALL enemies. If you have basilmod:Inebriated, increase this damage by 2(3). |
 | Sleepless Night | ![](small-card-images/SleeplessNight.png) | ![](small-card-images/SleeplessNightPlus.png) | Uncommon | Skill | 2(1) | Apply 2(3) Vulnerable and Weak to all enemies. basilmod:Fickle: Lose [E] and gain 2 basilmod:Caffeine. |
 | Take A Break! | ![](small-card-images/TakeABreak!.png) | ![](small-card-images/TakeABreak!Plus.png) | Uncommon | Skill | 2 | Heal 2(3) HP for each stack of basilmod:Runescarred. Remove all basilmod:Runescarred. Exhaust. |
+| Thorn Arrow | ![](small-card-images/ThornArrow.png) | ![](small-card-images/ThornArrowPlus.png) | Uncommon | Attack | 1 | Deal basilmod:Piercing Damage equal to (twice) your Thorns. |
 | Whiskey | ![](small-card-images/Whiskey.png) | ![](small-card-images/WhiskeyPlus.png) | Uncommon | Power | 3(2) | Gain 2 extra Strength and Dexterity from basilmod:Inebriated . |
 | Astral Brew | ![](small-card-images/AstralBrew.png) | ![](small-card-images/AstralBrewPlus.png) | Rare | Skill | 2(1) | Gain 1 Intangible. |
 | Crow Rune | ![](small-card-images/CrowRune.png) | ![](small-card-images/CrowRunePlus.png) | Rare | Power | 2 | basilmod:Rune. Gain Flight based on your basilmod:Runescarred. Ethereal. (not Ethereal.) |
 | Fae Form | ![](small-card-images/FaeForm.png) | ![](small-card-images/FaeFormPlus.png) | Rare | Power | 3(2) | At the end of your turn, gain a random amount of one of the following: Thorns, Artifact, Strength, or Dexterity. basilmod:Fickle: Draw a card. |
 | Faerie Rune | ![](small-card-images/FaerieRune.png) | ![](small-card-images/FaerieRunePlus.png) | Rare | Power | 2 | basilmod:Rune. If you would die, Heal a percent of your Max HP based on your current basilmod:Runescarred. Ethereal. (not Ethereal.) |
 | Finals Week | ![](small-card-images/FinalsWeek.png) | ![](small-card-images/FinalsWeekPlus.png) | Rare | Attack | 7 | This card's cost cannot be externally modified. Deal 7 Damage 7 times to all enemies and Exhaust. basilmod:Fickle: Reduce this card's cost by 1(2). |
-| Lucky Shot | ![](small-card-images/LuckyShot.png) | ![](small-card-images/LuckyShotPlus1.png) | Rare | Attack | 2 | Deals 3(4) Damage for each basilmod:Fickle card in your deck. basilmod:Fickle: Upgrade this card. |
-| Lucky Shot+1 | ![](small-card-images/LuckyShotPlus1.png) | ![]() | Rare | Attack | 2 | Deals 4 Damage for each basilmod:Fickle card in your deck. basilmod:Fickle: Upgrade this card. |
+| Lucky Shot | ![](small-card-images/LuckyShot.png) | ![](small-card-images/LuckyShotPlus1.png) | Rare | Attack | 2 | Can be upgraded any number of times. Deals 3(4) Damage for each basilmod:Fickle card in your deck. basilmod:Fickle: Upgrade this card. |
+| Lucky Shot+1 | ![](small-card-images/LuckyShotPlus1.png) | ![]() | Rare | Attack | 2 | Can be upgraded any number of times. Deals 4 Damage for each basilmod:Fickle card in your deck. basilmod:Fickle: Upgrade this card. |
 | Mixed Bag | ![](small-card-images/MixedBag.png) | ![](small-card-images/MixedBagPlus.png) | Rare | Skill | 1 | Draw 3 (Upgraded) basilmod:Runes. |
 | Naptime | ![](small-card-images/Naptime.png) | ![](small-card-images/NaptimePlus.png) | Rare | Skill | 3(2) | Put all enemies to sleep. Exhaust. |
 | Procrastinate | ![](small-card-images/Procrastinate.png) | ![](small-card-images/ProcrastinatePlus.png) | Rare | Skill | 0 | Every time you draw this card, increase its effects by 1(2). Gain !basilMod:MiscValue! stacks of basilmod:Regen, Strength, and Dexterity. Exhaust. |
 | Rebuttal | ![](small-card-images/Rebuttal.png) | ![](small-card-images/RebuttalPlus.png) | Rare | Attack | 4(3) | Deal Damage for each attack you've taken this combat and reset this card. |
 | Retribution | ![](small-card-images/Retribution.png) | ![](small-card-images/RetributionPlus.png) | Rare | Power | 2(1) | Whenever an enemy inflicts a debuff, apply 2 Constricted to ALL enemies. |
 | Runic Overload | ![](small-card-images/RunicOverload.png) | ![](small-card-images/RunicOverloadPlus.png) | Rare | Skill | 2 | Double (Triple) your basilmod:Runescarred. Exhaust. |
+| Thin Skin | ![](small-card-images/ThinSkin.png) | ![](small-card-images/ThinSkinPlus.png) | Rare | Skill | X | Gain X Vulnerable and X times 3(5) basilmod:Runescarred. |
 
 
 
@@ -83,7 +88,8 @@
 | Image | Name | Rarity | Color | Description | Flavor |
 | ----- | ---- | ------ | ----- | ----------- | ------ |
 | ![](relics/ScholarsNotes.png) | Scholar's Notes | Starter | Basil_purple_color | At the start of combat, choose a card to add to your hand from your deck. | The deranged writings of a scholar well behind on his grant proposals. |
-| ![](relics/EndlessMug.png) | Endless Mug | Uncommon | Basil_purple_color | When you would gain [E] from #yCaffeine, gain [E] [E] instead. | Sleep is for people without infinite coffee. |
+| ![](relics/EndlessMug.png) | Endless Mug | Uncommon | Basil_purple_color | When you would gain [E] from #yCaffeine, gain an extra [E] . | Sleep is for people without infinite coffee. |
+| ![](relics/RuneBag.png) | Rune Bag | Uncommon | Basil_purple_color | Every 3 turns, draw a random #yRune. | The basic example of probability, but for runescholars. |
 | ![](relics/TrickCoin.png) | Trick Coin | Uncommon | Basil_purple_color | #yFickle cards are #g25% #gless likely to activate on heads, and #r25% #rmore likely to activate on tails. Right click to flip. | Who needs luck when you can cheat? |
 | ![](relics/ScholarsThesis.png) | Scholar's Thesis | Boss | Basil_purple_color | Every 3 turns, choose a card to add to your hand from your deck. NL Replaces Scholar's Notes. | I sure hope that angel got their degree. |
 
