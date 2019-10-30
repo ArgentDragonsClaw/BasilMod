@@ -311,5 +311,9 @@
     "NAME": "Lucky Break",
     "DESCRIPTION": "Unplayable. NL When drawn, discard this card and draw !M! card.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL When drawn, discard this card and draw !M! cards."
+  },
+  "basilMod:ThinSkin": {
+    "NAME": "Thin Skin",
+    "DESCRIPTION": "Gain X Vulnerable and X times !M! basilmod:Runescarred."
   }
 }

@@ -416,6 +416,7 @@ public class BasilMod implements
         library.add(new GreenRune());
         library.add(new LuckyShot());
         library.add(new LuckyBreak());
+        library.add(new ThinSkin());
 
         int counter_basic = 0;
         int counter_common = 0;

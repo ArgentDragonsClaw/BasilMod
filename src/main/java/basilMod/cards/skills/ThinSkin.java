@@ -1,7 +1,7 @@
-package basilMod.cards.powers;
+package basilMod.cards.skills;
 
 import basilMod.BasilMod;
-import basilMod.actions.ResearchAction;
+import basilMod.actions.ThinSkinAction;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,46 +12,42 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static basilMod.BasilMod.makeCardPath;
 
-public class Research extends AbstractDynamicCard {
+public class ThinSkin extends AbstractDynamicCard {
 
 
 // TEXT DECLARATION
 
-    public static final String ID = BasilMod.makeID(Research.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
-    public static final String IMG = makeCardPath("Research.png");// "public static final String IMG = makeCardPath("Research.png");
-
+    public static final String ID = BasilMod.makeID(ThinSkin.class.getSimpleName()); // USE THIS ONE FOR THE TEMPLATE;
+    public static final String IMG = makeCardPath("ThinSkin.png");// "public static final String IMG = makeCardPath("ThinSkin.png");
+    public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 // /TEXT DECLARATION/
 
 
-// STAT DECLARATION
-
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
-    private static final CardTarget TARGET = CardTarget.NONE;
-    private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheScholar.Enums.BASIL_PURPLE;
-
+    // STAT DECLARATION
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
     private static final int COST = -1;
 
-    private static final int MAGIC = 1;
-    private static final int UPGRADED_MAGIC = 1;
+    private static final int MAGIC = 3;
+    private static final int UPGRADED_MAGIC = 2;
 
 // /STAT DECLARATION/
 
 
-    public Research() {
+    public ThinSkin() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
-
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ResearchAction(p, -1, upgraded, freeToPlayOnce));
+        AbstractDungeon.actionManager.addToBottom(new ThinSkinAction(p, -1, magicNumber, freeToPlayOnce));
     }
 
 
