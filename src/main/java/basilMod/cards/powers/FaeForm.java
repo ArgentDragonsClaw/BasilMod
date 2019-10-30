@@ -2,6 +2,7 @@ package basilMod.cards.powers;
 
 import basemod.helpers.BaseModCardTags;
 import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.FaeFormPower;
@@ -57,6 +58,8 @@ public class FaeForm extends AbstractDynamicCard {
     public FaeForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(BaseModCardTags.FORM);
+
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
 

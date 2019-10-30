@@ -1,6 +1,7 @@
 package basilMod.cards.attacks;
 
 import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.powers.InebriatedPower;
@@ -56,6 +57,7 @@ public class NockOneBack extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseDamage = damage = DAMAGE;
 
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
     @Override

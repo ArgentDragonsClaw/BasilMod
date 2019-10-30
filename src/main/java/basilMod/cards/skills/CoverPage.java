@@ -1,9 +1,9 @@
 package basilMod.cards.skills;
 
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.CustomTags;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-
 import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -54,6 +54,7 @@ public class CoverPage extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = block = BLOCK;
 
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
 

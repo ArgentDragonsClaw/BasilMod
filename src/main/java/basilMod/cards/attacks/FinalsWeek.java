@@ -1,6 +1,7 @@
 package basilMod.cards.attacks;
 
 import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.util.FickleHelper;
@@ -54,6 +55,7 @@ public class FinalsWeek extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         exhaust = true;
 
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
 

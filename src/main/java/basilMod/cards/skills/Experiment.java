@@ -1,6 +1,7 @@
 package basilMod.cards.skills;
 
 import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.cards.powers.Research;
 import basilMod.characters.TheScholar;
@@ -52,6 +53,7 @@ public class Experiment extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         //TODO:: Make the Research card show up here?
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
 

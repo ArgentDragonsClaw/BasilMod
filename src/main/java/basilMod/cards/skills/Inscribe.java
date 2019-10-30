@@ -1,9 +1,9 @@
 package basilMod.cards.skills;
 
-import basilMod.cards.AbstractDynamicCard;
 import basilMod.BasilMod;
+import basilMod.CustomTags;
+import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
-
 import basilMod.powers.RunescarredPower;
 import basilMod.util.FickleHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -50,6 +50,7 @@ public class Inscribe extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
 
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
     @Override

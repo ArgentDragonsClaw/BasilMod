@@ -1,6 +1,7 @@
 package basilMod.cards.attacks;
 
 import basilMod.BasilMod;
+import basilMod.CustomTags;
 import basilMod.cards.AbstractDynamicCard;
 import basilMod.characters.TheScholar;
 import basilMod.util.FickleHelper;
@@ -51,7 +52,7 @@ public class FaerieDust extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = damage = DAMAGE;
-
+        tags.add(CustomTags.BASIL_FICKLE);
     }
 
 
