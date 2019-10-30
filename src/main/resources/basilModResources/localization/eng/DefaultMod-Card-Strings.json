@@ -300,11 +300,16 @@
   },
   "basilMod:LuckyShot": {
     "NAME": "Lucky Shot",
-    "DESCRIPTION": "Can be Upgraded any number of times. NL Deals !D! Damage for each basilmod:Fickle card in your deck.",
+    "DESCRIPTION": "Can be upgraded any number of times. NL Deals !D! Damage for each basilmod:Fickle card in your deck.",
     "EXTENDED_DESCRIPTION": [
       " NL (Attacks ",
       " times)",
       " NL basilmod:Fickle: Upgrade this card."
     ]
+  },
+  "basilMod:LuckyBreak": {
+    "NAME": "Lucky Break",
+    "DESCRIPTION": "Unplayable. NL When drawn, discard this card and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When drawn, discard this card and draw !M! cards."
   }
 }
