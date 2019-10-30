@@ -315,5 +315,17 @@
   "basilMod:ThinSkin": {
     "NAME": "Thin Skin",
     "DESCRIPTION": "Gain X Vulnerable and X times !M! basilmod:Runescarred."
+  },
+  "basilMod:ThornArrow": {
+    "NAME": "Thorn Arrow",
+    "DESCRIPTION": "Deal basilmod:Piercing Damage equal to your Thorns.",
+    "UPGRADE_DESCRIPTION": "Deal basilmod:Piercing Damage equal to twice your Thorns."
+  },
+  "basilMod:PiercingStrike": {
+    "NAME": "Piercing Strike",
+    "DESCRIPTION": "Deal !D! basilmod:Piercing Damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I have no Thorns!"
+    ]
   }
 }

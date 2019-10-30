@@ -1,19 +1,14 @@
 package basilMod.cards.skills;
 
-import basilMod.CustomTags;
+import basilMod.BasilMod;
+import basilMod.actions.DrawRuneAction;
 import basilMod.cards.AbstractDynamicCard;
-import basilMod.cards.curses.CurseRune;
 import basilMod.characters.TheScholar;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import basilMod.BasilMod;
-
-import java.util.ArrayList;
 
 import static basilMod.BasilMod.makeCardPath;
 
@@ -39,43 +34,19 @@ public class MixedBag extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    private ArrayList<AbstractCard> runes;
 
     // /STAT DECLARATION/
 
 
     public MixedBag() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        ArrayList<AbstractCard> runes = AbstractDungeon.uncommonCardPool.group;
-        runes.removeIf((x) -> !x.hasTag(CustomTags.BASIL_RUNE));
-        this.runes = runes;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> to_draw = new ArrayList<>();
-
-        //get three random runes
-        for (int i = 0; i < 3; i++) {
-            int choice = AbstractDungeon.cardRandomRng.random(runes.size() - 1);
-            AbstractCard to_add = runes.get(choice);
-            if (upgraded) {
-                to_add.upgrade();
-            }
-            to_draw.add(to_add);
-        }
-        //rarely, draw the curse rune
-        if (AbstractDungeon.cardRandomRng.random(0f, 1f) > .95) {
-            to_draw.remove(0); //Arbitrarily remove the first card and replace it with the curse
-            to_draw.add(new CurseRune());
-        }
-
-
-        for (AbstractCard card : to_draw) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
-        }
+        AbstractDungeon.actionManager.addToBottom(new DrawRuneAction(3, upgraded, true));
     }
 
 

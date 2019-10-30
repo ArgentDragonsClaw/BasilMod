@@ -10,10 +10,7 @@ import basilMod.cards.powers.*;
 import basilMod.cards.skills.*;
 import basilMod.characters.TheScholar;
 import basilMod.potions.CoffeePotion;
-import basilMod.relics.EndlessMug;
-import basilMod.relics.ScholarsNotes;
-import basilMod.relics.ScholarsThesis;
-import basilMod.relics.TrickCoin;
+import basilMod.relics.*;
 import basilMod.util.IDCheckDontTouchPls;
 import basilMod.util.InCombatHelper;
 import basilMod.util.TextureLoader;
@@ -325,6 +322,7 @@ public class BasilMod implements
         BaseMod.addRelicToCustomPool(new ScholarsThesis(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new TrickCoin(), TheScholar.Enums.BASIL_PURPLE);
         BaseMod.addRelicToCustomPool(new EndlessMug(), TheScholar.Enums.BASIL_PURPLE);
+        BaseMod.addRelicToCustomPool(new RuneBagRelic(), TheScholar.Enums.BASIL_PURPLE);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
 
@@ -417,11 +415,15 @@ public class BasilMod implements
         library.add(new LuckyShot());
         library.add(new LuckyBreak());
         library.add(new ThinSkin());
+        library.add(new ThornArrow());
+        library.add(new PiercingStrike());
 
         int counter_basic = 0;
         int counter_common = 0;
         int counter_uncommon = 0;
         int counter_rare = 0;
+        int counter_special = 0;
+        int counter_curse = 0;
 
         int counter_attack = 0;
         int counter_skill = 0;
@@ -471,9 +473,10 @@ public class BasilMod implements
                     counter_rare++;
                     break;
                 case CURSE:
+                    counter_curse++;
                     break;
                 case SPECIAL:
-                    //noinspection DuplicateBranchesInSwitch
+                    counter_special++;
                     break;
             }
 
@@ -505,7 +508,7 @@ public class BasilMod implements
         }
 
         logger.info("Rarity Info\nBasic: " + counter_basic + "\nCommon: " + counter_common + "\nUncommon: " + counter_uncommon +
-                "\nRare: " + counter_rare);
+                "\nRare: " + counter_rare + "\nSpecial: " + counter_special + "\nCurse: " + counter_curse);
         logger.info("Type Info\nAttack: " + counter_attack + "\nSkill: " + counter_skill + "\nPower: " + counter_power);
         logger.info("Cost Info:\nUnplayable: " + cost_U + "\nX: " + cost_X + "\n0: " + cost_0 + "\n1: " + cost_1 + "\n2: " + cost_2 + "\n3: " + cost_3 + "\n4+: " + cost_4plus);
 

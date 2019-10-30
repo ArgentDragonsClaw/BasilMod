@@ -58,5 +58,14 @@
       "Research+"
     ],
     "DESCRIPTION": "An X cost power that lowers the cost of X other cards for the rest of combat."
+  },
+  {
+    "PROPER_NAME": "Piercing",
+    "NAMES": [
+      "piercing",
+      "pierce"
+    ],
+    "DESCRIPTION": "Piercing Damage ignores Block."
+
   }
 ]

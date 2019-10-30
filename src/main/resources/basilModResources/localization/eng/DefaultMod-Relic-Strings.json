@@ -61,5 +61,13 @@
     "DESCRIPTIONS": [
       "When you would gain [E] from #yCaffeine, gain [E] [E] instead."
     ]
+  },
+  "basilMod:RuneBag": {
+    "NAME": "Rune Bag",
+    "FLAVOR": "The basic example of probability, but for runescholars.",
+    "DESCRIPTIONS": [
+      "Every ",
+      " turns, draw a random #yRune."
+    ]
   }
 }
